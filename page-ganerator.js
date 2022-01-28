@@ -6,7 +6,7 @@ const colorIt = (str, code) => {
 }
 
 console.log('┌------------------------┐')
-console.log('|  ' + colorIt('gatsby-starter-oasis', 32) + '  |')
+console.log('|  ' + colorIt('gatsby-starter-oasis', 34) + '  |')
 console.log('└------------------------┘\n')
 
 const pageNameQa = [
