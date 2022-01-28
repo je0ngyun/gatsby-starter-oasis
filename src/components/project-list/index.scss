@@ -1,0 +1,76 @@
+@import '../../styles/util.scss';
+
+.table-container {
+  padding: 0.5rem 0 0.5rem 0;
+  .item {
+    cursor: pointer;
+    border-radius: 2px;
+    margin-bottom: 1rem;
+    &:hover {
+      background: $light;
+    }
+    .left-bullet {
+      flex-grow: 0;
+      flex-shrink: 0;
+      flex-basis: 13rem;
+      padding: 0.5rem 0.3rem 0.3rem 0.3rem;
+      > * {
+        margin-bottom: 0.2rem;
+      }
+    }
+    .right-bullet {
+      flex-grow: 0;
+      line-height: 30px;
+      padding: 0.3rem;
+      overflow: auto;
+    }
+  }
+}
+
+.project {
+  &-title {
+    font-weight: 500;
+    font-size: 1.3rem;
+  }
+  &-tags {
+    font-weight: 500;
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+  }
+  &-tech {
+    margin-top: 0.7rem;
+    * {
+      border-radius: 2px;
+      background: $word-2;
+      font-size: smaller;
+      color: $word-4;
+      margin: {
+        right: 0.3rem;
+        bottom: 0.5rem;
+      }
+      padding: {
+        top: 0;
+        right: 0.3rem;
+        bottom: 0;
+        left: 0.3rem;
+      }
+    }
+  }
+  &-desc {
+    font-size: 0.95rem;
+    ul {
+      margin: 0;
+      padding: 0 20px 0 20px;
+    }
+  }
+  &-period {
+    font-size: small;
+    color: $dark;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .item {
+    flex-wrap: wrap;
+  }
+}

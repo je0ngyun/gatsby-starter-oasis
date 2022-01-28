@@ -1,0 +1,49 @@
+@import '../../styles/util.scss';
+
+.prev-post {
+  font-size: small;
+  color: $primary;
+  border: {
+    radius: 4px;
+  }
+  padding: 4px 7px;
+  margin-right: auto;
+  span {
+    i * {
+      position: relative;
+      top: 4px;
+      color: $primary;
+    }
+    color: $primary;
+    font-size: medium;
+    margin-right: auto;
+    margin-bottom: 3px;
+  }
+  &:hover {
+    background: $light;
+  }
+}
+
+.next-post {
+  font-size: small;
+  color: $primary;
+  border: {
+    radius: 4px;
+  }
+  padding: 4px 7px;
+  margin-left: auto;
+  span {
+    i * {
+      position: relative;
+      top: 4px;
+      color: $primary;
+    }
+    color: $primary;
+    font-size: medium;
+    margin-left: auto;
+    margin-bottom: 3px;
+  }
+  &:hover {
+    background: $light;
+  }
+}

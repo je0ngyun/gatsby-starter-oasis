@@ -1,0 +1,12 @@
+.main-container {
+  width: 950px;
+  overflow-x: hidden;
+  padding: 5rem 1.5rem;
+}
+
+@media screen and (max-width: 726px) {
+  .main-container {
+    overflow-x: hidden;
+    padding: 6rem 2rem 3rem 2rem;
+  }
+}

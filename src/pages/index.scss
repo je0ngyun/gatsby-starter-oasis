@@ -1,0 +1,108 @@
+@import '../styles/util.scss';
+.home-container {
+  width: 950px;
+  overflow-x: hidden;
+  padding: {
+    top: 7%;
+    right: 1.5rem;
+    bottom: 10%;
+    left: 1.5rem;
+  }
+  .home-title {
+    font: {
+      size: 6rem;
+    }
+    color: $primary;
+    animation: fadeInAnimation 0.7s ease-in-out forwards;
+    span {
+      color: $primary;
+      margin: {
+        left: 0.5rem;
+      }
+      animation: fadeInAnimation 0.7 ease-in-out forwards;
+    }
+  }
+  .home-sub-title {
+    font: {
+      size: 4rem;
+    }
+    color: $word-1;
+    margin: {
+      top: -1rem;
+      bottom: 2rem;
+    }
+    animation: fadeInAnimation 0.7s ease-in-out forwards;
+  }
+  .home-intro {
+    font: {
+      size: 2rem;
+    }
+    margin: {
+      left: 0.3rem;
+    }
+    animation: fadeInAnimation 1s ease-in-out forwards;
+  }
+  .home-sub-intro {
+    color: $word-4;
+    margin: {
+      top: 2rem;
+    }
+    font: {
+      size: 1.7rem;
+    }
+    margin: {
+      left: 0.4rem;
+    }
+    animation: fadeInAnimation 1.2s ease-in-out forwards;
+  }
+  .home-info {
+    margin-top: 2rem;
+    animation: fadeInAnimation 1.5s ease-in-out forwards;
+    font: {
+      size: 1.5rem;
+    }
+    margin: {
+      left: 0.5rem;
+    }
+    * {
+      color: $word-1;
+      margin: {
+        bottom: 0.3rem;
+      }
+    }
+    :nth-child(2) {
+      margin: {
+        bottom: 1rem;
+      }
+    }
+  }
+}
+@media screen and (max-width: 726px) {
+  .home-container {
+    padding: {
+      top: 4rem;
+      right: 2rem;
+      bottom: 3rem;
+      left: 2rem;
+    }
+    .home-title {
+      font: {
+        size: 4rem;
+      }
+    }
+    .home-sub-title {
+      font: {
+        size: 3rem;
+      }
+    }
+  }
+}
+
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

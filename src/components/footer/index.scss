@@ -1,0 +1,16 @@
+@import '../../styles/util.scss';
+.footer {
+  padding: 0.5rem;
+  text-align: center;
+  font: {
+    size: x-small;
+  }
+  margin: {
+    top: auto;
+  }
+  background: $bg-1;
+  * {
+    color: $word-1;
+    margin: 0 0 0 auto;
+  }
+}

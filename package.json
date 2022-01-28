@@ -1,0 +1,67 @@
+{
+  "name": "gatsby-starter-oasis",
+  "description": "Gatsby blog template",
+  "version": "0.1.0",
+  "private": "true",
+  "author": {
+    "name": "je0ngyun",
+    "email": "jeongyunniim@gmail.com",
+    "url": "https://github.com/je0ngyun"
+  },
+  "homepage": "https://github.com/je0ngyun/gatsby-starter-oasis#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/je0ngyun/gatsby-starter-oasis"
+  },
+  "bugs": {
+    "url": "https://github.com/je0ngyun/gatsby-starter-oasis/issues",
+    "email": "jeongyunniim@gmail.com"
+  },
+  "keywords": [
+    "gatsby",
+    "gatsby-starter",
+    "gatsby-starter-oasis"
+  ],
+  "license": "0BSD",
+  "dependencies": {
+    "gatsby": "^4.5.2",
+    "gatsby-plugin-gatsby-cloud": "^4.5.1",
+    "gatsby-plugin-image": "^2.5.1",
+    "gatsby-plugin-manifest": "^4.5.1",
+    "gatsby-plugin-offline": "^5.5.1",
+    "gatsby-plugin-react-helmet": "^5.5.0",
+    "gatsby-plugin-robots-txt": "^1.7.0",
+    "gatsby-plugin-sass": "^5.5.0",
+    "gatsby-plugin-sharp": "^4.6.0",
+    "gatsby-plugin-sitemap": "^5.5.0",
+    "gatsby-remark-autolink-headers": "^5.5.0",
+    "gatsby-remark-images": "^6.6.0",
+    "gatsby-remark-images-medium-zoom": "^1.7.0",
+    "gatsby-remark-katex": "^6.6.0",
+    "gatsby-remark-prismjs": "^6.5.0",
+    "gatsby-source-filesystem": "^4.5.1",
+    "gatsby-transformer-remark": "^5.6.0",
+    "gatsby-transformer-sharp": "^4.5.0",
+    "katex": "^0.13.24",
+    "prop-types": "^15.8.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-helmet": "^6.1.0",
+    "react-icons": "^4.3.1",
+    "react-moment": "^1.1.1"
+  },
+  "devDependencies": {
+    "fs-extra": "^10.0.0",
+    "inquire": "^0.4.8",
+    "prettier": "^2.5.1"
+  },
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "makepage": "node ./page-ganerator.js",
+    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js' 'posts/**/*.md'"
+  }
+}

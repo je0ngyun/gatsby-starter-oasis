@@ -1,0 +1,44 @@
+@import '../../styles/util.scss';
+
+.sidebar-catgory-header {
+  border-left: 0.3rem solid $bg-1;
+  min-height: 1.5rem;
+  margin-bottom: 0.5rem;
+  padding: {
+    top: 0.5rem;
+    right: 2rem;
+    bottom: 0.5rem;
+    left: 0.5rem;
+  }
+  &.is-primary {
+    border-left: 0.3rem solid $primary;
+  }
+  > button {
+    background-color: $bg-1;
+    border: 0;
+    outline: 0;
+    font-size: larger;
+    margin: {
+      right: auto;
+      bottom: auto;
+    }
+  }
+}
+
+.link-btn {
+  border: 0;
+  outline: 0;
+  font-size: larger;
+  margin: {
+    right: auto;
+    top: auto;
+    bottom: auto;
+  }
+  span {
+    font-weight: 500;
+    padding-left: 0.3rem;
+    &:hover {
+      color: $primary;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+@import '../../styles/util.scss';
+
+.page-descripton {
+  margin-bottom: 2rem;
+  span {
+    color: $primary;
+    font-size: x-large;
+    font-weight: 500;
+  }
+}
