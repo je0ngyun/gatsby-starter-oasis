@@ -23,7 +23,7 @@ const Layout = ({ pageName, children }) => {
 }
 
 Layout.propTypes = {
-  pageName: PropTypes.string,
+  pageName: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
 }
 
