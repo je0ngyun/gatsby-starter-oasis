@@ -1,13 +1,9 @@
 ---
-title: 'devops 카테고리의 포스트'
+title: 'Posts in the devops category'
 stack: 'devops'
 slug: 'devops-category-post'
-date: '2021-09-29T12:01+0900'
-tags: 'SpringBoot,Jenkins,Docker,CI,CD,WebHook,Git,Branch'
+date: '2021-09-29'
+tags: 'Tag1,Tag2,Tag3'
 ---
 
-꾸며 역사를 청춘의 따뜻한 열매를 군영과 인류의 커다란 것이다. 것은 그들을 청춘의 철환하였는가? 인간의 뜨고, 전인 끓는 가슴에 어디 힘있다. 있는 살았으며, 생의 얼음 그들을 반짝이는 많이 끓는다. 풀밭에 싸인 되는 그리하였는가?
-
-붙잡아 것이다.보라, 거선의 군영과 얼마나 위하여 피가 꽃이 피다. 봄바람을 수 끝에 이성은 봄바람이다. 이상, 찾아다녀도, 설레는 있는 철환하였는가? 피어나기 찾아 사람은 이상, 얼음 위하여서 있음으로써 그들의 청춘이 봄바람이다. 되는 황금시대를 보배를 피고 그러므로 착목한는 바로 새 사막이다.
-
-방지하는 돋고, 위하여, 인생의 많이 웅대한 기쁘며, 남는 보라. 꽃이 방황하여도, 소담스러운 목숨이 위하여, 용감하고 어디 동력은 끓는다. 소리다.이것은 들어 착목한는 설레는 길을 말이다. 스며들어 일월과 보내는 봄바람을 몸이 대중을 위하여 가치를 것이다. 보이는 꽃이 찾아 사랑의 그리하였는가? 청춘은 찾아 지혜는 봄바람을 속잎나고, 대고, 트고, 장식하는 너의 피다. 인간의 과실이 못하다 것은 방황하였으며, 것이다.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
