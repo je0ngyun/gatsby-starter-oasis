@@ -56,10 +56,10 @@
     "prettier": "^2.5.1"
   },
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "start": "gatsby develop",
-    "serve": "gatsby serve",
+    "build": "gatsby clean && gatsby build",
+    "develop": "gatsby clean && gatsby develop",
+    "start": "gatsby clean && gatsby develop",
+    "serve": "gatsby clean && gatsby serve",
     "clean": "gatsby clean",
     "makepage": "node ./page-ganerator.js",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js' 'posts/**/*.md'"
