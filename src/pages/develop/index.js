@@ -5,7 +5,7 @@ import { Layout } from '../../components/layout'
 import { Seo } from '../../components/seo'
 import { Sidebar } from '../../components/sidebar'
 import { Container } from '../../components/container'
-import { PostThumbnails } from '../../components/post-thumbnails'
+import { PostItems } from '../../components/post-items'
 import { Title } from '../../components/title'
 import { PageDescription } from '../../components/page-description'
 import { capitalize } from '../../utils/capitalize'
@@ -26,7 +26,7 @@ const Develop = ({ data }) => {
       <Container>
         <Title title={'👨‍💻 ' + pageName} />
         <PageDescription title={pageName} description={description} />
-        <PostThumbnails posts={posts} />
+        <PostItems posts={posts} />
       </Container>
     </Layout>
   )
@@ -48,7 +48,6 @@ export const qurey = graphql`
     posts: allFile(
       filter: { sourceInstanceName: { eq: "develop" } }
       sort: { fields: childrenMarkdownRemark___frontmatter___date, order: DESC }
-      limit: 5
     ) {
       nodes {
         childMarkdownRemark {
