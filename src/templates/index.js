@@ -54,7 +54,7 @@ export const query = graphql`
       frontmatter {
         stack
         title
-        date
+        date(formatString: "MMMM DD , YYYY")
         tags
         slug
       }

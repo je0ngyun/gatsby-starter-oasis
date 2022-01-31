@@ -2,8 +2,7 @@
 .date {
   padding-top: 5px;
   padding-bottom: 5px;
-  * {
-    color: $dark;
-    font-size: medium;
-  }
+  color: $dark;
+  font-size: 0.95rem;
+  font-style: italic;
 }

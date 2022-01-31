@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
-import Moment from 'react-moment'
 import { Link } from 'gatsby'
 import './index.scss'
 
@@ -24,9 +23,7 @@ const PostItems = ({ posts }) => {
             >
               <div>
                 <span className="post-item-title">{title}</span>
-                <span className="post-item-date">
-                  <Moment format="YYYY-MM-DD">{date}</Moment>
-                </span>
+                <span className="post-item-date">{date}</span>
               </div>
               <div
                 className="post-item-excerpt"

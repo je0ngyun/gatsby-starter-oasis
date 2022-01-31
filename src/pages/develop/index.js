@@ -52,7 +52,7 @@ export const qurey = graphql`
       nodes {
         childMarkdownRemark {
           frontmatter {
-            date
+            date(formatString: "MMMM DD , YYYY")
             slug
             stack
             title
