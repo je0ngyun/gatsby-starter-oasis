@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import * as ScrollManager from '../utils/scroll'
 import { graphql } from 'gatsby'
 import { Layout } from '../components/layout'
 import { Sidebar } from '../components/sidebar'
@@ -19,6 +20,11 @@ const PostTemplate = ({ data, pageContext }) => {
   const { title, stack, date, tags } = data.markdown.frontmatter
   const { curSrcInsName, commentRepo } = pageContext
   const directorys = data.directorys.nodes
+
+  useEffect(() => {
+    ScrollManager.init()
+    return () => ScrollManager.destroy()
+  }, [])
 
   return (
     <Layout pageName={curSrcInsName}>

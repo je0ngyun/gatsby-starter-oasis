@@ -33,8 +33,6 @@ const config = {
             resolve: `gatsby-remark-autolink-headers`,
             options: {
               className: `anchor-header`,
-              maintainCase: false,
-              removeAccents: true,
               elements: [`h1`, `h2`, `h3`],
             },
           },
