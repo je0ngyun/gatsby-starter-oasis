@@ -11,7 +11,7 @@ import { PageDescription } from '../../components/page-description'
 import { capitalize } from '../../utils/capitalize'
 import './index.scss'
 
-const PostGenComponent = ({ data }) => {
+export default ({ data }) => {
   const pageName = capitalize('PN#####')
   const posts = data.posts.nodes
   const directorys = data.directorys.nodes
@@ -30,8 +30,6 @@ const PostGenComponent = ({ data }) => {
     </Layout>
   )
 }
-
-export default PostGenComponent
 
 export const qurey = graphql`
   query PN#####Page {
