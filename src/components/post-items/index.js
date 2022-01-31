@@ -19,7 +19,7 @@ const PostItems = ({ posts }) => {
         return (
           <Link key={id} to={`/${stack}/${slug}`}>
             <div
-              ref={i === 0 ? setTargetElem : null}
+              ref={i === baseOfSlice - 1 ? setTargetElem : null}
               className="post-item-container"
             >
               <div>
@@ -44,8 +44,8 @@ const PostItems = ({ posts }) => {
     })
   }, [posts, targetIndex])
 
-  const onIntersectTop = async ([entry], observer) => {
-    if (!entry.isIntersecting) {
+  const onIntersect = async ([entry], observer) => {
+    if (entry.isIntersecting) {
       setTargetIndex((idx) => idx + baseOfSlice)
       observer.unobserve(entry.target)
     }
@@ -54,8 +54,7 @@ const PostItems = ({ posts }) => {
   useEffect(() => {
     let observer
     if (targetElem) {
-      observer = new IntersectionObserver(onIntersectTop, {
-        rootMargin: '0px 0px 3000px 0px',
+      observer = new IntersectionObserver(onIntersect, {
         threshold: 0.3,
       })
       observer.observe(targetElem)
