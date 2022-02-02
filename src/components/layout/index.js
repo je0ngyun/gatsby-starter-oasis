@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { useMetadata } from '../../hooks/'
 import { NavBar } from '../nav-bar'
+import { ThemeSwitch } from '../theme-switch'
 import { Footer } from '../footer'
 import './index.scss'
 
@@ -16,7 +17,8 @@ const Layout = ({ pageName, children }) => {
         slug={slug}
         menu={JSON.parse(menu)}
       />
-      <div className="content is-flex">{children}</div>
+      <ThemeSwitch />
+      <div className="content">{children}</div>
       <Footer description={description} copyright={copyright} />
     </div>
   )

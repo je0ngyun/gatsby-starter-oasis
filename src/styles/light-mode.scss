@@ -1,16 +1,36 @@
 @import '../styles/main.scss';
 body.light {
-  //layout
-  .content {
-    background-color: $light-background-color;
+  * {
+    color: black;
+  }
+
+  //body
+  background-color: $light-background-color;
+  text-shadow: $light-text-shadow;
+
+  //utils
+  .is-primary {
+    color: $light-primary-color;
+  }
+
+  //footer
+  .footer-container {
+    border-top: 1px solid $light-primary-color;
   }
 
   //nav-bar
   .nav-container {
     background-color: $light-background-color;
   }
-  .nav {
-    background-color: $light-background-color;
+  .search-box {
+    input {
+      background-color: $light-background-color;
+    }
+    svg {
+      * {
+        color: black;
+      }
+    }
   }
   .nav-title {
     a {
@@ -32,12 +52,6 @@ body.light {
     }
   }
   .nav-underline {
-    background: rgb(2, 0, 36);
-    background: linear-gradient(
-      90deg,
-      rgba(2, 0, 36, 1) 0%,
-      rgba(42, 116, 116, 1) 35%,
-      rgba(164, 240, 255, 1) 100%
-    );
+    background: $light-nav-underline-background-color;
   }
 }

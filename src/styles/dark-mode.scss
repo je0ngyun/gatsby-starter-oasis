@@ -1,0 +1,57 @@
+@import '../styles/main.scss';
+body.dark {
+  * {
+    color: white;
+  }
+
+  //body
+  background-color: $dark-background-color;
+  text-shadow: $dark-text-shadow;
+
+  //utils
+  .is-primary {
+    color: $dark-primary-color;
+  }
+
+  //footer
+  .footer-container {
+    border-top: 1px solid $dark-primary-color;
+  }
+
+  //nav-bar
+  .nav-container {
+    background-color: $dark-background-color;
+  }
+  .search-box {
+    input {
+      background-color: $dark-background-color;
+    }
+    svg {
+      * {
+        color: white;
+      }
+    }
+  }
+  .nav-title {
+    a {
+      color: $dark-primary-color;
+    }
+  }
+  .nav-search {
+    .search-box {
+      input {
+        border: 2px solid $dark-primary-color;
+      }
+    }
+  }
+  .nav-links {
+    a {
+      &::after {
+        background-color: $dark-primary-color;
+      }
+    }
+  }
+  .nav-underline {
+    background: $dark-nav-underline-background-color;
+  }
+}

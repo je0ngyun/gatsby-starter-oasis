@@ -1,9 +1,9 @@
 @import '../../styles/main.scss';
 @import '../../styles/light-mode.scss';
+@import '../../styles/dark-mode.scss';
 
 * {
   text-decoration: none;
-  color: $word-1;
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 400;
   box-sizing: border-box;
@@ -20,12 +20,12 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  text-shadow: 0 0 0.3px rgba(0, 0, 0, 0.35);
   -webkit-text-size-adjust: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
   text-rendering: optimizelegibility;
+  transition: background-color 0.4s, color 0.4s;
 }
 
 .layout {
