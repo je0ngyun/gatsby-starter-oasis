@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'gatsby'
 import { useAllPosts } from '../../hooks/'
+import { AiOutlineSearch } from 'react-icons/ai'
 import './index.scss'
 
 const Search = () => {
@@ -75,15 +76,17 @@ const Search = () => {
   }
 
   return (
-    <div>
+    <div className="search-box">
       <input
         type="text"
-        placeholder="🔍 태그 검색"
         aria-label="Search"
         onChange={(e) => handleInputChange(e)}
         onBlur={(e) => handleInputBlur(e)}
         key={inputEleKey}
       />
+      <i className="search-icon">
+        <AiOutlineSearch size={20} />
+      </i>
       {!isEmptyResult && (
         <div
           role="button"

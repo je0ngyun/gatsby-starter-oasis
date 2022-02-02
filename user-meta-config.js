@@ -14,13 +14,13 @@ const pageMetadata = {
   //menu - nav-bar에 추가될 메뉴 링크를 입력해 주세요.
   //nav-bar에 링크 추가를 원치 않으시면 입력을 하지 않으셔도 좋습니다.
   menu: [
-    { title: 'Home', path: '/', content: '소개' },
+    { title: 'Home', path: '/', content: 'Home' },
     {
       title: 'Projects',
       path: '/projects',
-      content: '프로젝트',
+      content: 'Projects',
     },
-    { title: 'Develop', path: '/develop', content: '개발' },
+    { title: 'Develop', path: '/develop', content: 'Develop' },
   ],
   //directorys - posts 폴더에 위치한 디렉토리를 꼭 모두 입력해 주세요.
   //해당 디렉토리는 자동으로 gatsby filesystem 에 연결됩니다.

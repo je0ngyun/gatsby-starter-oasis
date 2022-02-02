@@ -1,0 +1,43 @@
+@import '../styles/main.scss';
+body.light {
+  //layout
+  .content {
+    background-color: $light-background-color;
+  }
+
+  //nav-bar
+  .nav-container {
+    background-color: $light-background-color;
+  }
+  .nav {
+    background-color: $light-background-color;
+  }
+  .nav-title {
+    a {
+      color: $light-primary-color;
+    }
+  }
+  .nav-search {
+    .search-box {
+      input {
+        border: 2px solid $light-primary-color;
+      }
+    }
+  }
+  .nav-links {
+    a {
+      &::after {
+        background-color: $light-primary-color;
+      }
+    }
+  }
+  .nav-underline {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+      90deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(42, 116, 116, 1) 35%,
+      rgba(164, 240, 255, 1) 100%
+    );
+  }
+}

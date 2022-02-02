@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 import { Search } from '../search'
@@ -7,6 +7,12 @@ import { capitalize } from '../../utils/capitalize'
 import './index.scss'
 
 const NavBar = ({ pageName, title, slug, menu }) => {
+  const [isOpen, setIsOpen] = useState(false)
+
+  const handleCollapseClick = () => {
+    setIsOpen((isOpen) => !isOpen)
+  }
+
   const renderMenuLinks = menu.map((m) => {
     const isHighlight =
       capitalize(pageName) === capitalize(m.title) ? ' is-primary' : ''
@@ -19,24 +25,22 @@ const NavBar = ({ pageName, title, slug, menu }) => {
 
   return (
     <div className="nav-container">
-      <nav className="nav-bar is-flex">
-        <Link to="/">
-          <div className="title">
-            {title}
-            <span className="title-slug">{slug}</span>
-          </div>
-        </Link>
-        <div className="search-box">
+      <nav className={'nav'}>
+        <div className="nav-title">
+          <Link to="/">{title}</Link>
+        </div>
+        <div className="nav-search">
           <Search />
         </div>
         <div className="nav-links">{renderMenuLinks}</div>
-        <span className="menu-btn">
+        <button onClick={handleCollapseClick} className="nav-menu-btn">
           <AiOutlineMenu size={24} />
-          <div className="mobile-nav-links is-flex is-direction-column">
-            {renderMenuLinks}
-          </div>
-        </span>
+        </button>
       </nav>
+      <div className={'nav-links--mobile ' + (isOpen ? 'is-open' : '')}>
+        {renderMenuLinks}
+      </div>
+      <div className="nav-underline"></div>
     </div>
   )
 }

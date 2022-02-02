@@ -1,16 +1,20 @@
 @import '../../styles/main.scss';
 
-input {
-  padding: 0.25rem;
-  width: 100%;
-  background-color: $light;
-  margin-top: 0.1rem;
-  border: {
-    style: none;
-    radius: 4px;
+.search-box {
+  position: relative;
+  input {
+    width: 150px;
+    padding: 3px 3px 3px 25px;
+    margin-top: 1px;
+    border-radius: 50px;
+    &:focus {
+      outline: none;
+    }
   }
-  &:focus {
-    outline: none;
+  .search-icon {
+    position: absolute;
+    top: 6.3px;
+    left: 4.5px;
   }
 }
 

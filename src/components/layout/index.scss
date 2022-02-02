@@ -1,9 +1,12 @@
 @import '../../styles/main.scss';
+@import '../../styles/light-mode.scss';
+
 * {
   text-decoration: none;
   color: $word-1;
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 400;
+  box-sizing: border-box;
 }
 
 html {
@@ -33,5 +36,16 @@ body {
 .content {
   display: flex;
   justify-content: center;
-  background-color: $bg-1;
+}
+
+button,
+input[type='submit'],
+input[type='reset'] {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
 }
