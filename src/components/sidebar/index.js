@@ -65,7 +65,7 @@ const Sidebar = ({ directorys, currentPostId, currentCatName }) => {
   })
 
   return (
-    <div className="is-flex">
+    <>
       {!isOpen && (
         <button
           onClick={() => {
@@ -95,7 +95,7 @@ const Sidebar = ({ directorys, currentPostId, currentCatName }) => {
           {renderCategorys}
         </div>
       )}
-    </div>
+    </>
   )
 }
 

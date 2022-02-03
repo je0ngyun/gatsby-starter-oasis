@@ -2,28 +2,22 @@
 .side-bar {
   position: fixed;
   height: 100%;
-  left: 0;
-  top: 2.77rem;
+  width: 275px;
   z-index: 999;
+  top: 50;
+  left: 0;
   background: $bg-1;
+  overflow-x: scroll;
   border-right: 1px solid $word-2;
-  width: 16.5rem;
   animation: slideRight 0.2s;
   -moz-animation: slideRight 0.2s;
   -webkit-animation: slideRight 0.2s;
-  overflow-x: scroll;
 }
 
 .side-bar-open-btn {
-  * {
-    position: relative;
-    top: 1px;
-    left: -7px;
-    color: white;
-  }
   position: fixed;
-  top: 13%;
-  left: 0%;
+  top: 138px;
+  left: 0;
   background: $primary;
   width: 1.3rem;
   height: 4rem;
@@ -37,6 +31,12 @@
   outline: 0;
   background: $bg-1;
   margin: 1rem 1rem 0 auto;
+}
+
+@include large-tablets {
+  .side-bar-open-btn {
+    display: none;
+  }
 }
 
 @keyframes slideRight {

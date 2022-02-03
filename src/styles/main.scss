@@ -6,9 +6,9 @@ $light-primary-color: rgb(42, 116, 116);
 $light-background-color: #fff;
 $light-nav-underline-background-color: linear-gradient(
   90deg,
-  rgba(2, 0, 36, 1) 0%,
-  rgba(42, 116, 116, 1) 35%,
-  rgba(164, 240, 255, 1) 100%
+  rgba(113, 107, 172, 1) 0%,
+  rgba(42, 116, 116, 1) 51%,
+  rgba(51, 126, 199, 1) 88%
 );
 
 $dark-text-shadow: 0 0 0.3px rgba(255, 255, 255, 0.35);
@@ -23,6 +23,18 @@ $dark-nav-underline-background-color: linear-gradient(
 
 @mixin mobile {
   @media screen and (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin tablets {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin large-tablets {
+  @media screen and (max-width: 1024px) {
     @content;
   }
 }

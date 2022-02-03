@@ -2,18 +2,19 @@
 
 .search-box {
   position: relative;
+  margin-right: 10px;
   input {
     width: 150px;
     padding: 3px 3px 3px 25px;
-    margin-top: 1px;
     border-radius: 50px;
+    margin-top: 1.5px;
     &:focus {
       outline: none;
     }
   }
   .search-icon {
     position: absolute;
-    top: 6.3px;
+    top: 6.5px;
     left: 4.5px;
   }
 }

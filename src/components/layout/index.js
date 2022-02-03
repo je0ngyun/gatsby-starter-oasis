@@ -10,15 +10,17 @@ const Layout = ({ pageName, children }) => {
   const { title, slug, description, copyright, menu } = useMetadata()
 
   return (
-    <div className="layout is-flex is-direction-column">
+    <div className="layout">
       <NavBar
         pageName={pageName}
         title={title}
         slug={slug}
         menu={JSON.parse(menu)}
       />
-      <ThemeSwitch />
-      <div className="content">{children}</div>
+      <div className="content">
+        <ThemeSwitch />
+        {children}
+      </div>
       <Footer description={description} copyright={copyright} />
     </div>
   )

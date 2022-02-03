@@ -1,15 +1,5 @@
 .main-container {
-  width: 950px;
-  overflow-x: hidden;
-  min-height: 100vh;
-  box-sizing: border-box;
-  padding-left: 1px;
-  padding-right: 1px;
-}
-
-@media screen and (max-width: 726px) {
-  .main-container {
-    overflow-x: hidden;
-    padding: 6rem 2rem 3rem 2rem;
-  }
+  flex-basis: 950px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
