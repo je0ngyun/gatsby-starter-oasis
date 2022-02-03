@@ -5,11 +5,13 @@ import { GrSun, GrMoon } from 'react-icons/gr'
 import './index.scss'
 
 const ThemeSwitch = () => {
-  const [isCheck, setIsCheck] = useState(false)
+  const [isCheck, setIsCheck] = useState(() => {
+    return !ThemeManager.isLight()
+  })
 
   const handleChange = () => {
-    setIsCheck((isCheck) => !isCheck)
     ThemeManager.onSwitch()
+    setIsCheck((isCheck) => !isCheck)
   }
 
   return (
