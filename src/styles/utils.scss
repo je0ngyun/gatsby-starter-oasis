@@ -1,0 +1,40 @@
+@mixin mobile {
+  @media screen and (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin tablets {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin large-tablets {
+  @media screen and (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin animation($ani-name, $time) {
+  animation: $ani-name $time;
+  -moz-animation: $ani-name $time;
+  -webkit-animation: $ani-name $time;
+}
+
+@mixin keyframes($ani-name) {
+  @keyframes #{$ani-name} {
+    @content;
+  }
+  @-moz-keyframes #{$ani-name} {
+    @content;
+  }
+  @-webkit-keyframes #{$ani-name} {
+    @content;
+  }
+}
+
+@mixin neumorphism-box {
+  background: linear-gradient(145deg, #e6e6e6, #ffffff);
+  box-shadow: 19px 19px 38px #b8b8b8, -19px -19px 38px #ffffff;
+}

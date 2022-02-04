@@ -1,7 +1,7 @@
 @import '../styles/main.scss';
 body.light {
   * {
-    color: black;
+    color: #000000;
   }
 
   //body
@@ -10,7 +10,7 @@ body.light {
 
   //utils
   .is-primary {
-    color: $light-primary-color;
+    color: $light-primary-color !important;
   }
 
   //nav-bar
@@ -21,10 +21,8 @@ body.light {
     input {
       background-color: $light-background-color;
     }
-    svg {
-      * {
-        color: black;
-      }
+    svg * {
+      color: black;
     }
   }
   .nav-title {
@@ -40,13 +38,64 @@ body.light {
     }
   }
   .nav-links {
-    a {
-      &::after {
-        background-color: $light-primary-color;
-      }
+    a::after {
+      background-color: $light-primary-color;
     }
   }
   .nav-underline {
     background: $light-nav-underline-background-color;
+  }
+
+  //side-bar
+  .side-bar {
+    background-color: $light-background-color;
+    border-right: 2px solid $light-sidebar-light-border-color;
+    > div {
+      border-left: 5px solid $light-background-color;
+    }
+  }
+
+  .side-bar-open-btn {
+    background: $light-primary-color;
+    svg * {
+      color: $light-background-color;
+    }
+  }
+
+  .sidebar-catgory-header {
+    &.is-primary {
+      border-color: $light-primary-color !important;
+    }
+    a:hover {
+      color: $light-primary-color;
+    }
+  }
+
+  .sidebar-category {
+    &.is-primary {
+      border-color: $light-primary-color !important;
+    }
+    button {
+      &.is-primary {
+        i svg * {
+          color: $light-primary-color;
+        }
+      }
+      &:hover {
+        color: $light-primary-color;
+        i svg * {
+          color: $light-primary-color;
+        }
+      }
+    }
+  }
+
+  .side-bar-cat-links {
+    a {
+      color: $light-sidebar-cat-link-color;
+      &:hover {
+        color: $light-primary-color;
+      }
+    }
   }
 }

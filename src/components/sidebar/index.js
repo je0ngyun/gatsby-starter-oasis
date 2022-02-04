@@ -73,17 +73,16 @@ const Sidebar = ({ directorys, currentPostId, currentCatName }) => {
           }}
           className="side-bar-open-btn"
         >
-          <FaCaretRight size={24} />
+          <FaCaretRight size={26} />
         </button>
       )}
       {isOpen && (
         <div className="side-bar">
-          <div className="is-flex">
+          <div className="side-bar-close-btn">
             <button
               onClick={() => {
                 handleBtnClick()
               }}
-              className="side-bar-close-btn"
             >
               <IoClose size={24} />
             </button>

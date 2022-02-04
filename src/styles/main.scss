@@ -1,49 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@400&display=swap');
 
-$light-text-shadow: 0 0 0.3px rgba(0, 0, 0, 0.35);
-$light-primary-color: rgb(42, 116, 116);
-$light-background-color: #fff;
-$light-nav-underline-background-color: linear-gradient(
-  90deg,
-  rgba(113, 107, 172, 1) 0%,
-  rgba(42, 116, 116, 1) 51%,
-  rgba(51, 126, 199, 1) 88%
-);
-
-$dark-text-shadow: 0 0 0.3px rgba(255, 255, 255, 0.35);
-$dark-primary-color: #d5c48b;
-$dark-background-color: #282c35;
-$dark-nav-underline-background-color: linear-gradient(
-  90deg,
-  rgba(174, 221, 123, 1) 0%,
-  rgba(213, 195, 139, 1) 45%,
-  rgba(238, 205, 51, 1) 88%
-);
-
-@mixin mobile {
-  @media screen and (max-width: 480px) {
-    @content;
-  }
-}
-
-@mixin tablets {
-  @media screen and (max-width: 767px) {
-    @content;
-  }
-}
-
-@mixin large-tablets {
-  @media screen and (max-width: 1024px) {
-    @content;
-  }
-}
-
-@mixin neumorphism-box {
-  background: linear-gradient(145deg, #e6e6e6, #ffffff);
-  box-shadow: 19px 19px 38px #b8b8b8, -19px -19px 38px #ffffff;
-}
-
 /// before
 $primary: #2a7474;
 $bg-1: #ffffff;

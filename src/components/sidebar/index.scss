@@ -1,4 +1,5 @@
-@import '../../styles/main.scss';
+@import '../../styles/utils.scss';
+
 .side-bar {
   position: fixed;
   height: 100%;
@@ -6,31 +7,42 @@
   z-index: 999;
   top: 50;
   left: 0;
-  background: $bg-1;
   overflow-x: scroll;
-  border-right: 1px solid $word-2;
-  animation: slideRight 0.2s;
-  -moz-animation: slideRight 0.2s;
-  -webkit-animation: slideRight 0.2s;
+  > div {
+    margin-bottom: 7px;
+  }
+  @include animation('slideRight', 0.3s);
 }
 
 .side-bar-open-btn {
   position: fixed;
   top: 138px;
   left: 0;
-  background: $primary;
-  width: 1.3rem;
-  height: 4rem;
+  width: 22px;
+  height: 70px;
   border-radius: 0 7px 7px 0;
   outline: 0;
   border: 0;
+  svg {
+    position: absolute;
+    left: 0;
+    top: 20.5px;
+  }
 }
 
 .side-bar-close-btn {
-  border: 0;
-  outline: 0;
-  background: $bg-1;
-  margin: 1rem 1rem 0 auto;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  button {
+    padding-top: 15px;
+    padding-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    outline: 0;
+  }
 }
 
 @include large-tablets {
@@ -39,28 +51,7 @@
   }
 }
 
-@keyframes slideRight {
-  from {
-    transform: translateX(-10%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-@-moz-keyframes slideRight {
-  from {
-    transform: translateX(-10%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes slideRight {
+@include keyframes('slideRight') {
   from {
     transform: translateX(-10%);
     opacity: 0;

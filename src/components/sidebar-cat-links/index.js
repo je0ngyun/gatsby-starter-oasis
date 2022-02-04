@@ -9,15 +9,13 @@ const SidebarCatLinks = ({ posts, currentPostId }) => {
     const { stack, slug, title } = post.frontmatter
     const isHighlight = currentPostId === id ? ' is-primary' : ''
     return (
-      <Link className="links" to={`/${stack}/${slug}`} key={id}>
-        <div className={isHighlight} key={id}>
-          {title}
-        </div>
+      <Link className={isHighlight} to={`/${stack}/${slug}`} key={id}>
+        {title}
       </Link>
     )
   })
 
-  return <div className="link-container">{renderLinks}</div>
+  return <div className="side-bar-cat-links">{renderLinks}</div>
 }
 
 SidebarCatLinks.propTypes = {

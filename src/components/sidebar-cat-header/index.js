@@ -8,14 +8,9 @@ const SidebarCatHeader = ({ headerData, currentCatName }) => {
   const { name, id } = headerData
   const isHighlight = currentCatName === name ? ' is-primary' : ''
   return (
-    <div
-      className={
-        'sidebar-catgory-header is-flex is-direction-column' + isHighlight
-      }
-      key={id}
-    >
-      <Link className="link-btn" to={`/${name}`}>
-        <span className={isHighlight}>{capitalize(name)}</span>
+    <div className={'sidebar-catgory-header' + isHighlight} key={id}>
+      <Link className={isHighlight} to={`/${name}`}>
+        {capitalize(name)}
       </Link>
     </div>
   )

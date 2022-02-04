@@ -25,18 +25,15 @@ const SidebarCat = ({
 }) => {
   const isHighlight = currentCatName === categoryName ? ' is-primary' : ''
   return (
-    <div
-      className={'sidebar-category is-flex is-direction-column ' + isHighlight}
-    >
+    <div className={'sidebar-category' + isHighlight}>
       <button
+        className={isHighlight}
         onClick={() => {
           handleCategoryClick(categoryName)
         }}
       >
-        <span className={'post-btn ' + isHighlight}>
-          {capitalize(categoryName)}
-          {getArrowIcon(isOpen)}
-        </span>
+        {capitalize(categoryName)}
+        {getArrowIcon(isOpen)}
       </button>
       {isOpen && children}
     </div>

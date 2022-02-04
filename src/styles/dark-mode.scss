@@ -1,7 +1,7 @@
 @import '../styles/main.scss';
 body.dark {
   * {
-    color: white;
+    color: #dadada;
   }
 
   //body
@@ -10,7 +10,7 @@ body.dark {
 
   //utils
   .is-primary {
-    color: $dark-primary-color;
+    color: $dark-primary-color !important;
   }
 
   //nav-bar
@@ -21,10 +21,8 @@ body.dark {
     input {
       background-color: $dark-background-color;
     }
-    svg {
-      * {
-        color: white;
-      }
+    svg * {
+      color: white;
     }
   }
   .nav-title {
@@ -40,13 +38,64 @@ body.dark {
     }
   }
   .nav-links {
-    a {
-      &::after {
-        background-color: $dark-primary-color;
-      }
+    a::after {
+      background-color: $dark-primary-color;
     }
   }
   .nav-underline {
     background: $dark-nav-underline-background-color;
+  }
+
+  //side-bar
+  .side-bar {
+    background-color: $dark-background-color;
+    border-right: 2px solid $dark-sidebar-light-border-color;
+    > div {
+      border-left: 5px solid $dark-background-color;
+    }
+  }
+
+  .side-bar-open-btn {
+    background: $dark-primary-color;
+    svg * {
+      color: $dark-background-color;
+    }
+  }
+
+  .sidebar-catgory-header {
+    &.is-primary {
+      border-color: $dark-primary-color !important;
+    }
+    a:hover {
+      color: $dark-primary-color;
+    }
+  }
+
+  .sidebar-category {
+    &.is-primary {
+      border-color: $dark-primary-color !important;
+    }
+    button {
+      &.is-primary {
+        i svg * {
+          color: $dark-primary-color;
+        }
+      }
+      &:hover {
+        color: $dark-primary-color;
+        i svg * {
+          color: $dark-primary-color;
+        }
+      }
+    }
+  }
+
+  .side-bar-cat-links {
+    a {
+      color: $dark-sidebar-cat-link-color;
+      &:hover {
+        color: $dark-primary-color;
+      }
+    }
   }
 }

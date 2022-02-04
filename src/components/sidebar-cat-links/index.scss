@@ -1,46 +1,18 @@
-@import '../../styles/main.scss';
+@import '../../styles/utils.scss';
 
-.link-container {
-  animation: slideDown 0.3s;
-  -moz-animation: slideDown 0.3s; /* Firefox */
-  -webkit-animation: slideDown 0.3s; /* Safari and Chrome */
+.side-bar-cat-links {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 15px 0px 15px;
+  a {
+    font-size: 0.95rem;
+    margin-bottom: 5px;
+    font-weight: 500;
+  }
+  @include animation('slideDown', 0.3s);
 }
 
-.links > * {
-  margin: {
-    top: 0.4rem;
-    bottom: 0.4rem;
-    left: 1.5rem;
-  }
-  font-size: 0.9rem;
-  color: $word-3;
-  &:hover {
-    color: $primary;
-  }
-}
-
-@keyframes slideDown {
-  from {
-    transform: translateY(-10%);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-@-moz-keyframes slideDown {
-  from {
-    transform: translateY(-10%);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes slideDown {
+@include keyframes('slideDown') {
   from {
     transform: translateY(-10%);
     opacity: 0;
