@@ -6,7 +6,7 @@ import { AiOutlineMenu } from 'react-icons/ai'
 import { capitalize } from '../../utils/capitalize'
 import './index.scss'
 
-const NavBar = ({ pageName, title, slug, menu }) => {
+const Navbar = ({ pageName, title, slug, menu }) => {
   const [isOpen, setIsOpen] = useState(false)
 
   const handleCollapseClick = () => {
@@ -24,8 +24,8 @@ const NavBar = ({ pageName, title, slug, menu }) => {
   })
 
   return (
-    <div className="nav-container">
-      <nav className={'nav'}>
+    <nav className="nav-container">
+      <div className="nav">
         <div className="nav-title">
           <Link to="/">{title}</Link>
         </div>
@@ -36,20 +36,20 @@ const NavBar = ({ pageName, title, slug, menu }) => {
         <button onClick={handleCollapseClick} className="nav-menu-btn">
           <AiOutlineMenu size={24} />
         </button>
-      </nav>
+      </div>
       <div className={'nav-links--mobile ' + (isOpen ? 'is-open' : '')}>
         {renderMenuLinks}
       </div>
       <div className="nav-underline"></div>
-    </div>
+    </nav>
   )
 }
 
-NavBar.propTypes = {
+Navbar.propTypes = {
   pageName: PropTypes.string,
   title: PropTypes.string,
   slug: PropTypes.string,
   menus: PropTypes.arrayOf(PropTypes.object),
 }
 
-export { NavBar }
+export { Navbar }

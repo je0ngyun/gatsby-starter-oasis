@@ -1,9 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { useMetadata } from '../../hooks/'
-import { NavBar } from '../nav-bar'
+import { Navbar } from '../navbar'
 import { ThemeSwitch } from '../theme-switch'
 import { Footer } from '../footer'
+import { MainContent } from '../main-content'
 import './index.scss'
 
 const Layout = ({ pageName, children }) => {
@@ -11,16 +12,16 @@ const Layout = ({ pageName, children }) => {
 
   return (
     <div className="layout">
-      <NavBar
+      <Navbar
         pageName={pageName}
         title={title}
         slug={slug}
         menu={JSON.parse(menu)}
       />
-      <div className="content">
+      <MainContent>
         <ThemeSwitch />
         {children}
-      </div>
+      </MainContent>
       <Footer description={description} copyright={copyright} />
     </div>
   )

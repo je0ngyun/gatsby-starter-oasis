@@ -5,7 +5,6 @@ import { Layout } from '../../components/layout'
 import { Seo } from '../../components/seo'
 import { Sidebar } from '../../components/sidebar'
 import { ProjectList } from '../../components/project-list'
-import { Container } from '../../components/container'
 import { Title } from '../../components/title'
 import { PageDescription } from '../../components/page-description'
 import './index.scss'
@@ -22,11 +21,9 @@ const Projects = ({ data }) => {
     <Layout pageName={pageName}>
       <Seo title={pageName} description={description} />
       <Sidebar directorys={directorys} currentCatName={folderName} />
-      <Container>
-        <Title title={'💻 ' + pageName} />
-        <PageDescription title={pageName} description={description} />
-        <ProjectList projects={projects} />
-      </Container>
+      <Title title={'💻 ' + pageName} />
+      <PageDescription title={pageName} description={description} />
+      <ProjectList projects={projects} />
     </Layout>
   )
 }

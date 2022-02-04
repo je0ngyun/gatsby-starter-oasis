@@ -1,0 +1,12 @@
+.main-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.main {
+  width: 950px;
+  overflow-x: hidden;
+  padding-left: 15px;
+  padding-right: 15px;
+}

@@ -5,7 +5,6 @@ import { Layout } from '../components/layout'
 import { Sidebar } from '../components/sidebar'
 import { Comment } from '../components/comment'
 import { Seo } from '../components/seo'
-import { Container } from '../components/container'
 import { Title } from '../components/title'
 import { PostNavigator } from '../components/post-navigator'
 import { PostDate } from '../components/post-date'
@@ -34,16 +33,15 @@ const PostTemplate = ({ data, pageContext }) => {
         currentPostId={id}
         currentCatName={stack}
       />
-      <Container>
-        <Title title={title} />
-        <PostTags tags={tags} />
-        <PostDate date={date} />
-        <Hr />
-        <PostContent html={html} />
-        <Hr />
-        <PostNavigator pageContext={pageContext} />
-        <Comment repo={commentRepo} />
-      </Container>
+
+      <Title title={title} />
+      <PostTags tags={tags} />
+      <PostDate date={date} />
+      <Hr />
+      <PostContent html={html} />
+      <Hr />
+      <PostNavigator pageContext={pageContext} />
+      <Comment repo={commentRepo} />
     </Layout>
   )
 }

@@ -4,7 +4,6 @@ import { graphql } from 'gatsby'
 import { Layout } from '../../components/layout'
 import { Seo } from '../../components/seo'
 import { Sidebar } from '../../components/sidebar'
-import { Container } from '../../components/container'
 import { PostItems } from '../../components/post-items'
 import { Title } from '../../components/title'
 import { PageDescription } from '../../components/page-description'
@@ -23,11 +22,10 @@ const Develop = ({ data }) => {
     <Layout pageName={pageName}>
       <Seo title={pageName} description={description} />
       <Sidebar directorys={directorys} currentCatName={folderName} />
-      <Container>
-        <Title title={'👨‍💻 ' + pageName} />
-        <PageDescription title={pageName} description={description} />
-        <PostItems posts={posts} />
-      </Container>
+
+      <Title title={'👨‍💻 ' + pageName} />
+      <PageDescription title={pageName} description={description} />
+      <PostItems posts={posts} />
     </Layout>
   )
 }

@@ -3,12 +3,12 @@ import PropTypes from 'prop-types'
 import './index.scss'
 const Footer = ({ description, copyright }) => {
   return (
-    <div className="footer-container">
-      <footer>
+    <footer className="footer-container">
+      <div className="footer">
         <div>{description}</div>
         <div>{copyright}</div>
-      </footer>
-    </div>
+      </div>
+    </footer>
   )
 }
 
