@@ -1,25 +1,18 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Switch from 'react-switch'
-import { ThemeManager } from '../../utils/theme'
 import { GrSun, GrMoon } from 'react-icons/gr'
+import { useTheme } from '../../hooks'
 import './index.scss'
 
 const ThemeSwitch = () => {
-  const [isCheck, setIsCheck] = useState(() => {
-    return !ThemeManager.isLight()
-  })
-
-  const handleChange = () => {
-    ThemeManager.onSwitch()
-    setIsCheck((isCheck) => !isCheck)
-  }
+  const [themeFlag, toggleTheme] = useTheme()
 
   return (
     <div className="switch-container">
       <div className="switch">
         <Switch
-          onChange={handleChange}
-          checked={isCheck}
+          onChange={toggleTheme}
+          checked={themeFlag}
           height={24}
           width={49}
           onHandleColor={'#a5a6a7'}
