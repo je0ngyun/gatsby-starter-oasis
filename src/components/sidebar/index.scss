@@ -5,7 +5,7 @@
   height: 100%;
   width: 275px;
   z-index: 999;
-  top: 50;
+  top: 56px;
   left: 0;
   overflow-x: scroll;
   > div {
@@ -18,7 +18,7 @@
   position: fixed;
   top: 138px;
   left: 0;
-  width: 22px;
+  width: 20px;
   height: 70px;
   border-radius: 0 7px 7px 0;
   outline: 0;
@@ -32,14 +32,14 @@
 
 .side-bar-close-btn {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: center;
   button {
     padding-top: 15px;
     padding-right: 15px;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     border: 0;
     outline: 0;
   }

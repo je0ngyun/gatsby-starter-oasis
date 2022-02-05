@@ -1,8 +1,8 @@
 @import '../../styles/main.scss';
 .switch-container {
+  justify-content: flex-end;
   flex-basis: 950px;
   display: flex;
-  justify-content: end;
   margin-top: 40px;
   padding: 0px 15px;
 }
