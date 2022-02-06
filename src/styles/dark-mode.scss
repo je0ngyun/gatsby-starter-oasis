@@ -1,7 +1,7 @@
 @import '../styles/main.scss';
 body.dark {
   //body
-  color: #dadada;
+  color: #f0f0f0;
   background-color: $dark-background-color;
   text-shadow: $dark-text-shadow;
 
@@ -93,6 +93,27 @@ body.dark {
       &:hover {
         color: $dark-primary-color;
       }
+    }
+  }
+
+  //markdown
+  .markdown {
+    blockquote {
+      background-color: $dark-markdown-blq-background-color;
+      border-color: $dark-primary-color;
+    }
+    /* Code blocks */
+    pre[class*='language-'] {
+      background-color: $dark-markdown-code-background-color;
+    }
+    /* Inline code */
+    :not(pre) > code[class*='language-'] {
+      background-color: $dark-markdown-blq-background-color;
+      color: $dark-primary-color;
+    }
+    /*table highlight*/
+    table tr:nth-child(2n) {
+      background-color: $dark-markdown-blq-background-color;
     }
   }
 }

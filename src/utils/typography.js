@@ -3,14 +3,21 @@ import GitHubTheme from 'typography-theme-github'
 
 const googleFonts = [
   {
-    name: 'Do Hyeon',
+    name: 'Noto Sans Korean',
     styles: ['400', '500', '600', '700'],
+  },
+  {
+    name: 'Do Hyeon',
+    styles: ['400'],
   },
   {
     name: 'Montserrat',
     styles: ['400', '500', '600', '700'],
   },
 ]
+
+const baseFontSize = '18px'
+const baseFontFamily = ['Noto Sans Korean']
 
 GitHubTheme.overrideThemeStyles = () => {
   return {
@@ -32,7 +39,6 @@ GitHubTheme.overrideThemeStyles = () => {
     h1: {
       fontWeight: 700,
       lineHeight: 1.3,
-      marginTop: '50px',
       fontFamily: 'Montserrat',
       border: `none`,
     },
@@ -49,9 +55,9 @@ GitHubTheme.overrideThemeStyles = () => {
 }
 const typography = new Typography(GitHubTheme)
 typography.options.googleFonts.push(...googleFonts)
-typography.options.baseFontSize = '18px'
-
-console.log(typography)
+typography.options.baseFontSize = baseFontSize
+typography.options.headerFontFamily.unshift(...baseFontFamily)
+typography.options.bodyFontFamily.unshift(...baseFontFamily)
 
 export default typography
 export const rhythm = typography.rhythm

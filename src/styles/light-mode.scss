@@ -95,4 +95,25 @@ body.light {
       }
     }
   }
+
+  //markdown
+  .markdown {
+    blockquote {
+      background-color: $light-markdown-blq-background-color;
+      border-color: $light-primary-color;
+    }
+    /* Code blocks */
+    pre[class*='language-'] {
+      background-color: $light-markdown-code-background-color;
+    }
+    /* Inline code */
+    :not(pre) > code[class*='language-'] {
+      background-color: $light-markdown-blq-background-color;
+      color: $light-primary-color;
+    }
+    /*table highlight*/
+    table tr:nth-child(2n) {
+      background-color: $light-markdown-blq-background-color;
+    }
+  }
 }
