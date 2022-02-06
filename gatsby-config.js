@@ -13,6 +13,12 @@ const config = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-sitemap`,
     {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/utils/typography`,
+      },
+    },
+    {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
         host: userMetadata.siteUrl,

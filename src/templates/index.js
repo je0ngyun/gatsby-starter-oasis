@@ -11,7 +11,7 @@ import { PostDate } from '../components/post-date'
 import { PostContent } from '../components/post-content'
 import { PostTags } from '../components/post-tags'
 import { Hr } from '../components/elements'
-import './index.scss'
+
 import 'katex/dist/katex.min.css'
 
 const PostTemplate = ({ data, pageContext }) => {
@@ -33,7 +33,6 @@ const PostTemplate = ({ data, pageContext }) => {
         currentPostId={id}
         currentCatName={stack}
       />
-
       <Title title={title} />
       <PostTags tags={tags} />
       <PostDate date={date} />

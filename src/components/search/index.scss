@@ -12,10 +12,13 @@
       outline: none;
     }
   }
-  .search-icon {
+  i {
+    display: flex;
+    align-items: center;
+    height: 100%;
     position: absolute;
-    top: 6.5px;
-    left: 4.5px;
+    top: 0px;
+    left: 6px;
   }
 }
 

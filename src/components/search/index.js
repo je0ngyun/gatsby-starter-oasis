@@ -84,7 +84,7 @@ const Search = () => {
         onBlur={(e) => handleInputBlur(e)}
         key={inputEleKey}
       />
-      <i className="search-icon">
+      <i>
         <AiOutlineSearch size={20} />
       </i>
       {!isEmptyResult && (

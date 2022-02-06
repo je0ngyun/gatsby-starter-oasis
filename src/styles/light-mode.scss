@@ -1,10 +1,7 @@
 @import '../styles/main.scss';
 body.light {
-  * {
-    color: #000000;
-  }
-
   //body
+  color: #000000;
   background-color: $light-background-color;
   text-shadow: $light-text-shadow;
 

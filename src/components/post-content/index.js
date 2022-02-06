@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import './index.scss'
+import '../../styles/markdown.scss'
 
 const PostContent = ({ html }) => {
   return <div className="markdown" dangerouslySetInnerHTML={{ __html: html }} />

@@ -22,8 +22,9 @@
   display: flex;
   align-items: center;
   a {
-    font-size: large;
-    font-weight: bold;
+    font-family: Montserrat, Do Hyeon;
+    font-size: x-large;
+    font-weight: 700;
   }
 }
 
@@ -36,6 +37,7 @@
   display: flex;
   align-items: center;
   a {
+    color: inherit;
     position: relative;
     margin-left: 10px;
     font-weight: 500;
@@ -72,6 +74,7 @@
   transform: scaleY(0);
   transition: transform 0.4s;
   a {
+    color: inherit;
     font-weight: 500;
     margin-bottom: 5px;
     display: none;

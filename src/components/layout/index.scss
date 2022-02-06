@@ -3,14 +3,10 @@
 @import '../../styles/dark-mode.scss';
 
 * {
-  text-decoration: none;
-  font-family: 'Noto Sans KR', sans-serif;
-  font-weight: 400;
   box-sizing: border-box;
 }
 
 html {
-  font-size: 15.5px;
   height: 100%;
   margin: 0;
   padding: 0;

@@ -1,10 +1,7 @@
 @import '../styles/main.scss';
 body.dark {
-  * {
-    color: #dadada;
-  }
-
   //body
+  color: #dadada;
   background-color: $dark-background-color;
   text-shadow: $dark-text-shadow;
 
