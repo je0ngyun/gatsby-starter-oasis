@@ -41,10 +41,10 @@ const Search = () => {
     })
     const hasSearchResults = filteredData && keyword !== emptyKeyword
     const postCount = hasSearchResults ? filteredData.length : 0
-    if (postCount === 0) {
-      setResult((isEmptyResult) => (isEmptyResult = true))
+    if (!postCount) {
+      setResult(true)
     } else {
-      setResult((isEmptyResult) => (isEmptyResult = false))
+      setResult(false)
     }
   }
 
