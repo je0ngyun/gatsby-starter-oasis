@@ -116,4 +116,18 @@ body.dark {
       background-color: $dark-markdown-blq-background-color;
     }
   }
+
+  //post
+  //post
+  .post-navigator {
+    > div {
+      border-color: $dark-post-navigator-border-color;
+      background-color: $dark-post-navigator-background-color;
+      a {
+        .post-signpost {
+          color: $dark-primary-color;
+        }
+      }
+    }
+  }
 }

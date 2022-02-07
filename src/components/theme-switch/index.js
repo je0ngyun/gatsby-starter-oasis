@@ -1,6 +1,6 @@
 import React from 'react'
 import Switch from 'react-switch'
-import { GrSun, GrMoon } from 'react-icons/gr'
+import { HiSun, HiMoon } from 'react-icons/hi'
 import { useTheme } from '../../hooks'
 import './index.scss'
 
@@ -18,13 +18,13 @@ const ThemeSwitch = () => {
           onHandleColor={'#a5a6a7'}
           offHandleColor={'#a5a6a7'}
           checkedIcon={
-            <i style={{ position: 'relative', top: '2.5px', left: '2.5px' }}>
-              <GrMoon size={17} />
+            <i style={{ position: 'relative', top: '1.5px', left: '4px' }}>
+              <HiMoon size={17} />
             </i>
           }
           uncheckedIcon={
-            <i style={{ position: 'relative', top: '2.4px', left: '4px' }}>
-              <GrSun size={17} />
+            <i style={{ position: 'relative', top: '1.45px', left: '4px' }}>
+              <HiSun size={17} />
             </i>
           }
           onColor={'#e3e3e3'}

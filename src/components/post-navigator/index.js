@@ -7,32 +7,28 @@ import './index.scss'
 const PostNavigator = ({ pageContext }) => {
   const { previous, next } = pageContext
   return (
-    <div className="is-flex">
+    <div className="post-navigator">
       {previous && (
-        <div className="prev-post">
+        <div className="post-navigator-prev-link">
           <Link to={`/${previous.stack}/${previous.slug}`}>
-            <div className="is-flex">
-              <span>
-                <i>
-                  <FaCaretLeft size={20} />
-                </i>
-                이전 글
-              </span>
+            <div className="post-signpost">
+              <i>
+                <FaCaretLeft size={20} />
+              </i>
+              <span>Previous post</span>
             </div>
             <div>{previous.title}</div>
           </Link>
         </div>
       )}
       {next && (
-        <div className="next-post">
+        <div className="post-navigator-next-link">
           <Link to={`/${next.stack}/${next.slug}`}>
-            <div className="is-flex">
-              <span>
-                다음 글
-                <i>
-                  <FaCaretRight size={20} />
-                </i>
-              </span>
+            <div className="post-signpost">
+              <span>Next post</span>
+              <i>
+                <FaCaretRight size={20} />
+              </i>
             </div>
             <div>{next.title}</div>
           </Link>

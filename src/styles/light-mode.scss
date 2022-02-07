@@ -116,4 +116,17 @@ body.light {
       background-color: $light-markdown-blq-background-color;
     }
   }
+
+  //post
+  .post-navigator {
+    > div {
+      border-color: $light-post-navigator-border-color;
+      background-color: $light-post-navigator-background-color;
+      a {
+        .post-signpost {
+          color: $light-primary-color;
+        }
+      }
+    }
+  }
 }

@@ -1,49 +1,52 @@
 @import '../../styles/main.scss';
+@import '../../styles/utils.scss';
 
-.prev-post {
-  font-size: small;
-  color: $primary;
-  border: {
-    radius: 4px;
-  }
-  padding: 4px 7px;
-  margin-right: auto;
-  span {
-    i * {
-      position: relative;
-      top: 4px;
-      color: $primary;
+.post-navigator {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  > div {
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid;
+    padding: 8px 10px;
+    font-size: small;
+    a {
+      color: inherit;
+      i {
+        display: flex;
+      }
+      .post-signpost {
+        display: flex;
+        align-items: center;
+      }
     }
-    color: $primary;
-    font-size: medium;
-    margin-right: auto;
-    margin-bottom: 3px;
-  }
-  &:hover {
-    background: $light;
   }
 }
 
-.next-post {
-  font-size: small;
-  color: $primary;
-  border: {
-    radius: 4px;
+.post-navigator-prev-link {
+  .post-signpost {
+    margin-left: -6px;
   }
-  padding: 4px 7px;
+}
+
+.post-navigator-next-link {
   margin-left: auto;
-  span {
-    i * {
-      position: relative;
-      top: 4px;
-      color: $primary;
-    }
-    color: $primary;
-    font-size: medium;
-    margin-left: auto;
-    margin-bottom: 3px;
+  .post-signpost {
+    margin-right: -6px;
+    justify-content: flex-end;
   }
-  &:hover {
-    background: $light;
+}
+
+@include mobile {
+  .post-navigator-next-link {
+    .post-signpost {
+      justify-content: flex-start;
+    }
+  }
+  .post-navigator {
+    > div {
+      width: 100%;
+    }
   }
 }

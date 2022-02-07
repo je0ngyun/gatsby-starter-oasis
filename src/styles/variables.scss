@@ -7,10 +7,12 @@ $light-nav-underline-background-color: linear-gradient(
   rgba(42, 116, 116, 1) 51%,
   rgba(51, 126, 199, 1) 88%
 );
-$light-sidebar-light-border-color: #d9d9ef;
+$light-sidebar-light-border-color: #d9dfe9;
 $light-sidebar-cat-link-color: #504d4d;
 $light-markdown-blq-background-color: #f8f8f8;
 $light-markdown-code-background-color: #0e1116;
+$light-post-navigator-background-color: #f6f8fa;
+$light-post-navigator-border-color: #e0e4e8;
 
 $dark-text-shadow: 0 0 0.6px rgba(255, 255, 255, 0.425);
 $dark-primary-color: #ddc77f;
@@ -25,3 +27,5 @@ $dark-sidebar-light-border-color: #727272;
 $dark-sidebar-cat-link-color: #c0c0c0;
 $dark-markdown-blq-background-color: #23272e;
 $dark-markdown-code-background-color: #0e1116;
+$dark-post-navigator-background-color: #202020;
+$dark-post-navigator-border-color: #343434;

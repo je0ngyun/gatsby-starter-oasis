@@ -38,6 +38,7 @@ const PostTemplate = ({ data, pageContext }) => {
       <PostDate date={date} />
       <Hr style={{ marginBottom: '50px' }} />
       <PostContent html={html} />
+      <Hr style={{ marginBottom: '50px' }} />
       <PostNavigator pageContext={pageContext} />
       <Comment repo={commentRepo} />
     </Layout>
