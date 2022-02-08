@@ -4,10 +4,10 @@ import './index.scss'
 
 const PageDescription = ({ title, description }) => {
   return (
-    <li className="page-descripton">
-      <span>{title + ' '}</span>
+    <div className="page-descripton">
+      <span className="is-primary">{title + ' '}</span>
       {description}
-    </li>
+    </div>
   )
 }
 

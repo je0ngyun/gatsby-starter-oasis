@@ -1,76 +1,69 @@
-@import '../../styles/main.scss';
+@import '../../styles/utils.scss';
 
-.table-container {
-  padding: 0.5rem 0 0.5rem 0;
-  .item {
-    cursor: pointer;
-    border-radius: 2px;
-    margin-bottom: 1rem;
-    &:hover {
-      background: $light;
-    }
-    .left-bullet {
-      flex-grow: 0;
-      flex-shrink: 0;
-      flex-basis: 13rem;
-      padding: 0.5rem 0.3rem 0.3rem 0.3rem;
+.project-link {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px;
+  border-radius: 7px;
+  margin-bottom: 10px;
+  border: 1px solid;
+  color: inherit;
+  > div {
+    &:first-child {
+      width: 250px;
+      flex-shrink: 1;
+      padding: 10px 10px 0px 10px;
       > * {
-        margin-bottom: 0.2rem;
+        margin-bottom: 5px;
       }
     }
-    .right-bullet {
-      flex-grow: 0;
-      line-height: 30px;
-      padding: 0.3rem;
+    &:last-child {
+      padding: 10px;
       overflow: auto;
     }
   }
 }
 
-.project {
+.project-link {
   &-title {
-    font-weight: 500;
+    font-weight: 700;
     font-size: 1.3rem;
   }
   &-tags {
-    font-weight: 500;
-    font-size: 1.1rem;
-    margin-bottom: 0.3rem;
+    font-weight: 600;
+    font-size: 1.15rem;
+    margin-bottom: 7px;
   }
   &-tech {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     margin-top: 0.7rem;
+    padding-right: 15%;
     * {
-      border-radius: 2px;
-      background: $word-2;
-      font-size: smaller;
-      color: $word-4;
-      margin: {
-        right: 0.3rem;
-        bottom: 0.5rem;
-      }
-      padding: {
-        top: 0;
-        right: 0.3rem;
-        bottom: 0;
-        left: 0.3rem;
-      }
+      font-size: 0.85rem;
+      margin-right: 0.5rem;
+      margin-bottom: 0.5rem;
     }
   }
   &-desc {
     font-size: 0.95rem;
     ul {
       margin: 0;
-      padding: 0 20px 0 20px;
+      padding: 0 20px;
     }
   }
   &-period {
-    font-size: small;
-    color: $dark;
+    font-size: 0.9rem;
   }
 }
 
-@media screen and (max-width: 992px) {
-  .item {
-    flex-wrap: wrap;
+@include large-tablets {
+  .project-link {
+    > div {
+      &:first-child {
+        width: 100%;
+      }
+    }
   }
 }

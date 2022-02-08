@@ -1,9 +1,14 @@
 @import '../styles/main.scss';
 body.dark {
   //body
-  color: #f0f0f0;
+  color: #ffffff;
   background-color: $dark-background-color;
   text-shadow: $dark-text-shadow;
+
+  //date
+  .date {
+    color: $dark-date-color;
+  }
 
   //utils
   .is-primary {
@@ -14,19 +19,22 @@ body.dark {
   .nav-container {
     background-color: $dark-background-color;
   }
+
   .search-box {
     input {
       background-color: $dark-background-color;
     }
     svg * {
-      color: white;
+      color: #ffffff;
     }
   }
+
   .nav-title {
     a {
       color: $dark-primary-color;
     }
   }
+
   .nav-search {
     .search-box {
       input {
@@ -34,11 +42,13 @@ body.dark {
       }
     }
   }
+
   .nav-links {
     a::after {
       background-color: $dark-primary-color;
     }
   }
+
   .nav-underline {
     background: $dark-nav-underline-background-color;
   }
@@ -46,7 +56,7 @@ body.dark {
   //side-bar
   .side-bar {
     background-color: $dark-background-color;
-    border-right: 2px solid $dark-sidebar-light-border-color;
+    border-right: 2px solid $dark-sidebar-right-border-color;
     > div {
       border-left: 5px solid $dark-background-color;
     }
@@ -102,22 +112,24 @@ body.dark {
       background-color: $dark-markdown-blq-background-color;
       border-color: $dark-primary-color;
     }
+
     /* Code blocks */
     pre[class*='language-'] {
       background-color: $dark-markdown-code-background-color;
     }
+
     /* Inline code */
     :not(pre) > code[class*='language-'] {
       background-color: $dark-markdown-blq-background-color;
       color: $dark-primary-color;
     }
-    /*table highlight*/
+
+    /*table highdark*/
     table tr:nth-child(2n) {
       background-color: $dark-markdown-blq-background-color;
     }
   }
 
-  //post
   //post
   .post-navigator {
     > div {
@@ -128,6 +140,26 @@ body.dark {
           color: $dark-primary-color;
         }
       }
+    }
+  }
+
+  //project link
+  .project-link {
+    border-color: $dark-project-link-border-color;
+    box-shadow: $dark-project-link-shadow;
+    &:hover {
+      background-color: $dark-markdown-blq-background-color;
+    }
+    .project-link-tech {
+      * {
+        color: $dark-primary-color;
+      }
+    }
+    .project-link-period {
+      color: $dark-date-color;
+    }
+    .project-link-desc {
+      color: $dark-text-darker-color;
     }
   }
 }

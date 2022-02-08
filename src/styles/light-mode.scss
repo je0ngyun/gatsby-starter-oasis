@@ -5,6 +5,11 @@ body.light {
   background-color: $light-background-color;
   text-shadow: $light-text-shadow;
 
+  //date
+  .date {
+    color: $light-date-color;
+  }
+
   //utils
   .is-primary {
     color: $light-primary-color !important;
@@ -14,19 +19,22 @@ body.light {
   .nav-container {
     background-color: $light-background-color;
   }
+
   .search-box {
     input {
       background-color: $light-background-color;
     }
     svg * {
-      color: black;
+      color: #000000;
     }
   }
+
   .nav-title {
     a {
       color: $light-primary-color;
     }
   }
+
   .nav-search {
     .search-box {
       input {
@@ -34,11 +42,13 @@ body.light {
       }
     }
   }
+
   .nav-links {
     a::after {
       background-color: $light-primary-color;
     }
   }
+
   .nav-underline {
     background: $light-nav-underline-background-color;
   }
@@ -46,7 +56,7 @@ body.light {
   //side-bar
   .side-bar {
     background-color: $light-background-color;
-    border-right: 2px solid $light-sidebar-light-border-color;
+    border-right: 2px solid $light-sidebar-right-border-color;
     > div {
       border-left: 5px solid $light-background-color;
     }
@@ -102,15 +112,18 @@ body.light {
       background-color: $light-markdown-blq-background-color;
       border-color: $light-primary-color;
     }
+
     /* Code blocks */
     pre[class*='language-'] {
       background-color: $light-markdown-code-background-color;
     }
+
     /* Inline code */
     :not(pre) > code[class*='language-'] {
       background-color: $light-markdown-blq-background-color;
       color: $light-primary-color;
     }
+
     /*table highlight*/
     table tr:nth-child(2n) {
       background-color: $light-markdown-blq-background-color;
@@ -127,6 +140,26 @@ body.light {
           color: $light-primary-color;
         }
       }
+    }
+  }
+
+  //project link
+  .project-link {
+    border-color: $light-project-link-border-color;
+    box-shadow: $light-project-link-shadow;
+    &:hover {
+      background-color: $light-markdown-blq-background-color;
+    }
+    .project-link-tech {
+      * {
+        color: $light-primary-color;
+      }
+    }
+    .project-link-period {
+      color: $light-date-color;
+    }
+    .project-link-desc {
+      color: $light-text-darker-color;
     }
   }
 }

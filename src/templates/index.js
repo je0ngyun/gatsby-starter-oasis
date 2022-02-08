@@ -7,11 +7,12 @@ import { Comment } from '../components/comment'
 import { Seo } from '../components/seo'
 import { Title } from '../components/title'
 import { PostNavigator } from '../components/post-navigator'
-import { PostDate } from '../components/post-date'
+import { Date } from '../components/date'
 import { PostContent } from '../components/post-content'
 import { PostTags } from '../components/post-tags'
-import { Hr } from '../components/elements'
+import { Divider } from '../components/elements'
 
+import './index.scss'
 import 'katex/dist/katex.min.css'
 
 const PostTemplate = ({ data, pageContext }) => {
@@ -35,10 +36,10 @@ const PostTemplate = ({ data, pageContext }) => {
       />
       <Title title={title} />
       <PostTags tags={tags} />
-      <PostDate date={date} />
-      <Hr style={{ marginBottom: '50px' }} />
+      <Date date={date} className="post-date" />
+      <Divider style={{ marginBottom: '50px' }} />
       <PostContent html={html} />
-      <Hr style={{ marginBottom: '50px' }} />
+      <Divider style={{ marginBottom: '50px' }} />
       <PostNavigator pageContext={pageContext} />
       <Comment repo={commentRepo} />
     </Layout>
