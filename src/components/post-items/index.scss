@@ -1,44 +1,31 @@
 @import '../../styles/main.scss';
 
 .post-item-container {
-  :first-child {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  padding: 1rem;
-  margin-bottom: 0.5rem;
-  overflow: hidden;
-  border-radius: 2px;
-  -webkit-box-shadow: 0 0 15px $word-1;
-  box-shadow: 0 0 1.5px $word-1;
-  &:hover {
-    background: $light;
-  }
+  padding: 15px 20px;
+  border-radius: 7px;
+  margin-bottom: 20px;
+  border: 1px solid;
+  min-height: 160px;
 }
 
 .post-item {
-  &-date {
-    margin: {
-      top: auto;
-      right: auto;
-      bottom: 0.5rem;
-      left: 0;
+  &-info {
+    display: flex;
+    margin-bottom: 10px;
+    font-family: Montserrat;
+    > * {
+      margin-right: 7px;
+      font-weight: 600;
+      font-size: 0.9rem;
     }
-    font-size: 0.8rem;
-    color: $dark;
   }
   &-title {
-    flex-shrink: 0;
-    font-weight: 500;
-    color: $word-1;
-    width: 100%;
-    margin-bottom: 0.2rem;
+    font-size: larger;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: inherit;
   }
   &-excerpt {
-    color: $word-1;
-    font: {
-      size: small;
-      weight: 500;
-    }
+    font-size: 0.95rem;
   }
 }

@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
+import { Date } from '../../components/date'
+import { capitalize } from '../../utils/capitalize'
 import './index.scss'
 
 const PostItems = ({ posts }) => {
-  const baseOfSlice = 7
+  const baseOfSlice = 5
   const [targetElem, setTargetElem] = useState(null)
   const [targetIndex, setTargetIndex] = useState(0)
   const [renderList, setRenderList] = useState([])
@@ -16,14 +18,16 @@ const PostItems = ({ posts }) => {
         const { stack, title, date, slug } =
           file.childMarkdownRemark.frontmatter
         return (
-          <Link key={id} to={`/${stack}/${slug}`}>
+          <Link key={id} to={`/${stack}/${slug}`} style={{ color: 'inherit' }}>
             <div
               ref={i === baseOfSlice - 1 ? setTargetElem : null}
               className="post-item-container"
             >
-              <div>
-                <span className="post-item-title">{title}</span>
-                <span className="post-item-date">{date}</span>
+              <div className="post-item-title">{title}</div>
+              <div className="post-item-info">
+                <div className="is-primary">{capitalize(stack)}</div>
+                <div className="is-primary">|</div>
+                <Date className="post-item-date" date={date} />
               </div>
               <div
                 className="post-item-excerpt"

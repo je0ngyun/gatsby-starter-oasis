@@ -145,8 +145,8 @@ body.light {
 
   //project link
   .project-link {
-    border-color: $light-project-link-border-color;
-    box-shadow: $light-project-link-shadow;
+    border-color: $light-item-box-border-color;
+    box-shadow: $light-item-box-shadow;
     &:hover {
       background-color: $light-markdown-blq-background-color;
     }
@@ -159,6 +159,21 @@ body.light {
       color: $light-date-color;
     }
     .project-link-desc {
+      color: $light-text-darker-color;
+    }
+  }
+
+  //post-item
+  .post-item-container {
+    border-color: $light-item-box-border-color;
+    box-shadow: $light-item-box-shadow;
+    &:hover {
+      background: $light-markdown-blq-background-color;
+    }
+  }
+
+  .post-item {
+    &-excerpt {
       color: $light-text-darker-color;
     }
   }

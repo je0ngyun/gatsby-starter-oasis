@@ -145,8 +145,8 @@ body.dark {
 
   //project link
   .project-link {
-    border-color: $dark-project-link-border-color;
-    box-shadow: $dark-project-link-shadow;
+    border-color: $dark-item-box-border-color;
+    box-shadow: $dark-item-box-shadow;
     &:hover {
       background-color: $dark-markdown-blq-background-color;
     }
@@ -159,6 +159,20 @@ body.dark {
       color: $dark-date-color;
     }
     .project-link-desc {
+      color: $dark-text-darker-color;
+    }
+  }
+
+  //post-item
+  .post-item-container {
+    border-color: $dark-item-box-border-color;
+    box-shadow: $dark-item-box-shadow;
+    &:hover {
+      background: $dark-markdown-blq-background-color;
+    }
+  }
+  .post-item {
+    &-excerpt {
       color: $dark-text-darker-color;
     }
   }
