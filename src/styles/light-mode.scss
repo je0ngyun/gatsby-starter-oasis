@@ -177,4 +177,26 @@ body.light {
       color: $light-text-darker-color;
     }
   }
+
+  //search
+  .search-result-container {
+    background-color: $light-background-color;
+    border-color: $light-item-box-border-color;
+    box-shadow: $light-item-box-shadow;
+  }
+
+  .search-result-item {
+    color: $light-text-darker-color;
+    &:hover {
+      .search-result-title {
+        background-color: $light-markdown-blq-background-color;
+        border-color: $light-item-box-border-color;
+        box-shadow: $light-item-box-shadow;
+        color: $light-primary-color;
+      }
+    }
+  }
+  .search-result-title {
+    border-color: $light-background-color;
+  }
 }

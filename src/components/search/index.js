@@ -6,25 +6,20 @@ import './index.scss'
 
 const Search = () => {
   const data = useAllPosts()
-  const emptyKeyword = ''
-  const [state, setState] = useState({
-    filteredData: [],
-    keyword: emptyKeyword,
-  })
-  const [isEmptyResult, setResult] = useState(true)
+  const [filteredData, setFilteredDate] = useState([])
   const [inputEleKey, setInputEleKey] = useState(0)
 
-  const handleMouseDown = function (e) {
+  const handleResultMouseDown = function (e) {
     e.preventDefault()
   }
 
   const handleInputBlur = function () {
-    setResult((isEmptyResult) => (isEmptyResult = true))
-    setInputEleKey((inputEleKey) => inputEleKey + 1)
+    setFilteredDate([])
+    setInputEleKey(inputEleKey + 1)
   }
 
-  const handleInputChange = function (event) {
-    const keyword = event.target.value
+  const handleInputChange = function (e) {
+    const keyword = e.target.value
     const posts = data || []
     const filteredData = posts.filter((post) => {
       const { desc, title, tags, tech } = post.frontmatter
@@ -35,41 +30,25 @@ const Search = () => {
         (tech && tech.toLowerCase().includes(keyword))
       )
     })
-    setState({
-      filteredData,
-      keyword,
-    })
-    const hasSearchResults = filteredData && keyword !== emptyKeyword
-    const postCount = hasSearchResults ? filteredData.length : 0
-    if (!postCount) {
-      setResult(true)
-    } else {
-      setResult(false)
-    }
+
+    setFilteredDate(() => (keyword ? filteredData : []))
   }
 
   const renderSearchResults = function () {
-    const { keyword, filteredData } = state
-    const hasSearchResults = filteredData && keyword !== emptyKeyword
-    const posts = hasSearchResults ? filteredData : []
-
+    const posts = filteredData
     return (
       posts &&
       posts.map((post) => {
-        const { excerpt, id } = post
-        const { title, tags, stack, slug } = post.frontmatter
+        const { id } = post
+        const { title, stack, slug } = post.frontmatter
         return (
-          <div className="result-item" key={id}>
-            <Link to={`/${stack}/${slug}`}>
-              <div className="result-title">{title}</div>
-              <div className="result-tags is-flex is-flex-wrap">
-                {tags.split(',').map((tag, index) => {
-                  return <span key={index}>{tag}</span>
-                })}
-              </div>
-              <div className="result-excerpt">{excerpt}</div>
-            </Link>
-          </div>
+          <Link
+            key={id}
+            to={`/${stack}/${slug}`}
+            className="search-result-item"
+          >
+            <div className="search-result-title">{title}</div>
+          </Link>
         )
       })
     )
@@ -87,12 +66,12 @@ const Search = () => {
       <i>
         <AiOutlineSearch size={20} />
       </i>
-      {!isEmptyResult && (
+      {filteredData.length > 0 && (
         <div
           role="button"
           tabIndex={0}
-          onMouseDown={(e) => handleMouseDown(e)}
-          className="result-container"
+          onMouseDown={(e) => handleResultMouseDown(e)}
+          className="search-result-container"
         >
           {renderSearchResults()}
         </div>

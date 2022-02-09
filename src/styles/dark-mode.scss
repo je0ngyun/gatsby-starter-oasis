@@ -22,6 +22,7 @@ body.dark {
 
   .search-box {
     input {
+      color: inherit;
       background-color: $dark-background-color;
     }
     svg * {
@@ -175,5 +176,27 @@ body.dark {
     &-excerpt {
       color: $dark-text-darker-color;
     }
+  }
+
+  //search
+  .search-result-container {
+    background-color: $dark-background-color;
+    border-color: $dark-item-box-border-color;
+    box-shadow: $dark-item-box-shadow;
+  }
+
+  .search-result-item {
+    color: $dark-text-darker-color;
+    &:hover {
+      .search-result-title {
+        background-color: $dark-markdown-blq-background-color;
+        border-color: $dark-item-box-border-color;
+        box-shadow: $dark-item-box-shadow;
+        color: $dark-primary-color;
+      }
+    }
+  }
+  .search-result-title {
+    border-color: $dark-background-color;
   }
 }
