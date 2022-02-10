@@ -5,8 +5,8 @@ import { Layout } from '../../components/layout'
 import { Seo } from '../../components/seo'
 import { Sidebar } from '../../components/sidebar'
 import { PostItems } from '../../components/post-items'
-import { Title } from '../../components/title'
 import { PageDescription } from '../../components/page-description'
+import { PageTitle } from '../../components/page-title'
 import { capitalize } from '../../utils/capitalize'
 
 const Develop = ({ data }) => {
@@ -21,8 +21,7 @@ const Develop = ({ data }) => {
     <Layout pageName={pageName}>
       <Seo title={pageName} description={description} />
       <Sidebar directorys={directorys} currentCatName={folderName} />
-
-      <Title title={'👨‍💻 ' + pageName} />
+      <PageTitle title={pageName} />
       <PageDescription title={pageName} description={description} />
       <PostItems posts={posts} />
     </Layout>

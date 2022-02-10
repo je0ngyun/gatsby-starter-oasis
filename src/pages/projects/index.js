@@ -5,11 +5,12 @@ import { Layout } from '../../components/layout'
 import { Seo } from '../../components/seo'
 import { Sidebar } from '../../components/sidebar'
 import { ProjectList } from '../../components/project-list'
-import { Title } from '../../components/title'
 import { PageDescription } from '../../components/page-description'
+import { PageTitle } from '../../components/page-title'
+import { capitalize } from '../../utils/capitalize'
 
 const Projects = ({ data }) => {
-  const pageName = 'Projects'
+  const pageName = capitalize('Projects')
   const projects = data.posts.nodes
   const directorys = data.directorys.nodes
   const folderName = useFolderName()
@@ -20,7 +21,7 @@ const Projects = ({ data }) => {
     <Layout pageName={pageName}>
       <Seo title={pageName} description={description} />
       <Sidebar directorys={directorys} currentCatName={folderName} />
-      <Title title={'💻 ' + pageName} />
+      <PageTitle title={pageName} />
       <PageDescription title={pageName} description={description} />
       <ProjectList projects={projects} />
     </Layout>

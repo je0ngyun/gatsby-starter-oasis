@@ -10,6 +10,8 @@ tech: "Java,SpringBoot,SpringSecurity,JPA,MySql"
 period: "2021.09 ~ 2021.11"
 ---
 
+![img](../../../assets/favicon.png)
+
 ```js
 function a(arg) {
   console.log(arg)
