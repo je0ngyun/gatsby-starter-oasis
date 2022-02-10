@@ -1,27 +1,12 @@
-@import '../../styles/main.scss';
-
-.tags {
+.post-tags {
   padding-top: 5px;
   padding-bottom: 5px;
-  * {
+  div {
     display: inline-block;
-    background: $word-4;
-    color: $light;
-    font: {
-      size: small;
-    }
-    border: {
-      radius: 3px;
-    }
-    padding: {
-      top: 0.2rem;
-      right: 0.4rem;
-      bottom: 0.2rem;
-      left: 0.4rem;
-    }
-    margin: {
-      right: 0.5rem;
-      bottom: 0.2rem;
-    }
+    font-size: small;
+    border-radius: 3px;
+    padding: 2px 8px;
+    margin-right: 9px;
+    margin-bottom: 4px;
   }
 }

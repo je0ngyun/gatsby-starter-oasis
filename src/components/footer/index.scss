@@ -1,13 +1,11 @@
-@import '../../styles/main.scss';
-
 .footer-container {
-  flex-basis: 100px;
+  height: 100px;
   display: flex;
   justify-content: center;
 }
 .footer {
+  width: 950px;
   font-size: small;
-  flex-basis: 950px;
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -1,14 +1,15 @@
-@import '../../styles/main.scss';
-@import '../../styles/variables.scss';
 .search-box {
   position: relative;
   width: 150px;
   margin-right: 10px;
   input {
     width: 100%;
-    padding: 3px 3px 3px 25px;
+    padding: 3px 3px 3px 30px;
     border-radius: 50px;
+    border: 2px solid;
     margin-top: 1.5px;
+    background-color: inherit;
+    color: inherit;
     &:focus {
       outline: none;
     }

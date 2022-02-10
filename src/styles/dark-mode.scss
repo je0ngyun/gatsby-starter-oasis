@@ -1,46 +1,30 @@
-@import '../styles/main.scss';
 body.dark {
-  //body
-  color: #ffffff;
-  background-color: $dark-background-color;
+  /* body */
+  color: $dark-text-color-1;
+  background-color: $dark-background-color-1;
   text-shadow: $dark-text-shadow;
+  /* body end */
 
-  //date
+  /* date */
   .date {
-    color: $dark-date-color;
+    color: $dark-text-color-3;
   }
+  /* date end */
 
-  //utils
+  /* utils */
   .is-primary {
     color: $dark-primary-color !important;
   }
+  /* utils end */
 
-  //nav-bar
+  /* nav-bar */
   .nav-container {
-    background-color: $dark-background-color;
-  }
-
-  .search-box {
-    input {
-      color: inherit;
-      background-color: $dark-background-color;
-    }
-    svg * {
-      color: #ffffff;
-    }
+    background-color: $dark-background-color-1;
   }
 
   .nav-title {
     a {
       color: $dark-primary-color;
-    }
-  }
-
-  .nav-search {
-    .search-box {
-      input {
-        border: 2px solid $dark-primary-color;
-      }
     }
   }
 
@@ -53,24 +37,22 @@ body.dark {
   .nav-underline {
     background: $dark-nav-underline-background-color;
   }
+  /* nav-bar end */
 
-  //side-bar
+  /* side-bar */
   .side-bar {
-    background-color: $dark-background-color;
-    border-right: 2px solid $dark-sidebar-right-border-color;
-    > div {
-      border-left: 5px solid $dark-background-color;
-    }
+    background-color: $dark-background-color-1;
+    border-color: $dark-item-box-border-color;
   }
 
   .side-bar-open-btn {
     background: $dark-primary-color;
     svg * {
-      color: $dark-background-color;
+      color: $dark-background-color-1;
     }
   }
 
-  .sidebar-catgory-header {
+  .side-bar-catgory-header {
     &.is-primary {
       border-color: $dark-primary-color !important;
     }
@@ -79,7 +61,7 @@ body.dark {
     }
   }
 
-  .sidebar-category {
+  .side-bar-category {
     &.is-primary {
       border-color: $dark-primary-color !important;
     }
@@ -100,17 +82,18 @@ body.dark {
 
   .side-bar-cat-links {
     a {
-      color: $dark-sidebar-cat-link-color;
+      color: $dark-text-color-3;
       &:hover {
         color: $dark-primary-color;
       }
     }
   }
+  /* side-bar end */
 
-  //markdown
+  /* markdown */
   .markdown {
     blockquote {
-      background-color: $dark-markdown-blq-background-color;
+      background-color: $dark-background-color-2;
       border-color: $dark-primary-color;
     }
 
@@ -121,17 +104,28 @@ body.dark {
 
     /* Inline code */
     :not(pre) > code[class*='language-'] {
-      background-color: $dark-markdown-blq-background-color;
+      background-color: $dark-background-color-2;
       color: $dark-primary-color;
     }
 
     /*table highdark*/
     table tr:nth-child(2n) {
-      background-color: $dark-markdown-blq-background-color;
+      background-color: $dark-background-color-2;
+    }
+  }
+  /* markdown end */
+
+  /* post */
+  .post-tags {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    div {
+      display: inline-block;
+      background: $dark-post-tag-background-color;
+      color: $dark-post-tag-color;
     }
   }
 
-  //post
   .post-navigator {
     > div {
       border-color: $dark-post-navigator-border-color;
@@ -144,12 +138,27 @@ body.dark {
     }
   }
 
-  //project link
+  .post-item-container {
+    border-color: $dark-item-box-border-color;
+    box-shadow: $dark-item-box-shadow;
+    &:hover {
+      background: $dark-background-color-2;
+    }
+  }
+
+  .post-item {
+    &-excerpt {
+      color: $dark-text-color-2;
+    }
+  }
+  /* post end */
+
+  /* project-link */
   .project-link {
     border-color: $dark-item-box-border-color;
     box-shadow: $dark-item-box-shadow;
     &:hover {
-      background-color: $dark-markdown-blq-background-color;
+      background-color: $dark-background-color-2;
     }
     .project-link-tech {
       * {
@@ -157,39 +166,35 @@ body.dark {
       }
     }
     .project-link-period {
-      color: $dark-date-color;
+      color: $dark-text-color-3;
     }
     .project-link-desc {
-      color: $dark-text-darker-color;
+      color: $dark-text-color-2;
+    }
+  }
+  /* project-link end */
+
+  /* search */
+  .search-box {
+    svg * {
+      color: $dark-text-color-1;
+    }
+    input {
+      border-color: $dark-primary-color;
     }
   }
 
-  //post-item
-  .post-item-container {
-    border-color: $dark-item-box-border-color;
-    box-shadow: $dark-item-box-shadow;
-    &:hover {
-      background: $dark-markdown-blq-background-color;
-    }
-  }
-  .post-item {
-    &-excerpt {
-      color: $dark-text-darker-color;
-    }
-  }
-
-  //search
   .search-result-container {
-    background-color: $dark-background-color;
+    background-color: $dark-background-color-1;
     border-color: $dark-item-box-border-color;
     box-shadow: $dark-item-box-shadow;
   }
 
   .search-result-item {
-    color: $dark-text-darker-color;
+    color: $dark-text-color-2;
     &:hover {
       .search-result-title {
-        background-color: $dark-markdown-blq-background-color;
+        background-color: $dark-background-color-2;
         border-color: $dark-item-box-border-color;
         box-shadow: $dark-item-box-shadow;
         color: $dark-primary-color;
@@ -197,6 +202,7 @@ body.dark {
     }
   }
   .search-result-title {
-    border-color: $dark-background-color;
+    border-color: $dark-background-color-1;
   }
+  /* search end */
 }

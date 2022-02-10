@@ -8,8 +8,10 @@
   top: 64px;
   left: 0;
   overflow-x: scroll;
+  border-right: 2px solid;
   > div {
     margin-bottom: 7px;
+    border-left: 5px solid #00000000;
   }
   @include animation('slideRight', 0.3s);
 }
@@ -25,7 +27,7 @@
   border: 0;
   svg {
     position: absolute;
-    left: 0;
+    left: -2px;
     top: 20.5px;
   }
 }

@@ -25,7 +25,7 @@ const SidebarCat = ({
 }) => {
   const isHighlight = currentCatName === categoryName ? ' is-primary' : ''
   return (
-    <div className={'sidebar-category' + isHighlight}>
+    <div className={'side-bar-category' + isHighlight}>
       <button
         className={isHighlight}
         onClick={() => {

@@ -1,5 +1,3 @@
-@import '../../styles/main.scss';
-
 .post-item-container {
   padding: 15px 20px;
   border-radius: 7px;
@@ -8,24 +6,23 @@
   min-height: 160px;
 }
 
-.post-item {
-  &-info {
-    display: flex;
-    margin-bottom: 10px;
-    font-family: Montserrat;
-    > * {
-      margin-right: 7px;
-      font-weight: 600;
-      font-size: 0.9rem;
-    }
-  }
-  &-title {
-    font-size: larger;
+.post-item-info {
+  display: flex;
+  margin-bottom: 10px;
+  font-family: Montserrat;
+  div {
+    margin-right: 7px;
     font-weight: 600;
-    margin-bottom: 8px;
-    color: inherit;
+    font-size: 0.9rem;
   }
-  &-excerpt {
-    font-size: 0.95rem;
-  }
+}
+
+.post-item-title {
+  font-size: larger;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.post-item-excerpt {
+  font-size: 0.95rem;
 }

@@ -1,4 +1,3 @@
-@import '../../styles/main.scss';
 .switch-container {
   flex-basis: 950px;
   display: flex;
@@ -10,6 +9,6 @@
 
 .switch {
   i svg * {
-    color: #000000;
+    color: #000000 !important;
   }
 }

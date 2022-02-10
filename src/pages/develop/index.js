@@ -8,7 +8,6 @@ import { PostItems } from '../../components/post-items'
 import { Title } from '../../components/title'
 import { PageDescription } from '../../components/page-description'
 import { capitalize } from '../../utils/capitalize'
-import './index.scss'
 
 const Develop = ({ data }) => {
   const pageName = capitalize('develop')

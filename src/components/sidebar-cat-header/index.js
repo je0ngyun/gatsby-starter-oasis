@@ -8,7 +8,7 @@ const SidebarCatHeader = ({ headerData, currentCatName }) => {
   const { name, id } = headerData
   const isHighlight = currentCatName === name ? ' is-primary' : ''
   return (
-    <div className={'sidebar-catgory-header' + isHighlight} key={id}>
+    <div className={'side-bar-catgory-header' + isHighlight} key={id}>
       <Link className={isHighlight} to={`/${name}`}>
         {capitalize(name)}
       </Link>

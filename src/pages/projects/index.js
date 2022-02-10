@@ -7,7 +7,6 @@ import { Sidebar } from '../../components/sidebar'
 import { ProjectList } from '../../components/project-list'
 import { Title } from '../../components/title'
 import { PageDescription } from '../../components/page-description'
-import './index.scss'
 
 const Projects = ({ data }) => {
   const pageName = 'Projects'
