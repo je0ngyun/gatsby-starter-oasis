@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import * as ScrollManager from '../utils/scroll'
+import * as ScrollManager from '../utils/smoothScroll'
 import { graphql } from 'gatsby'
 import { Layout } from '../components/layout'
 import { Sidebar } from '../components/sidebar'
