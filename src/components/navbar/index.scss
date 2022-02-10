@@ -70,14 +70,20 @@
   align-items: center;
   transform-origin: top;
   transform: scaleY(0);
-  transition: transform 0.4s;
+  max-height: 0;
+  transition: max-height 1s, transform 0.2s;
   a {
+    &:last-child {
+      margin-bottom: 15px;
+    }
     color: inherit;
     font-weight: 500;
     margin-bottom: 5px;
     display: none;
   }
   &.is-open {
+    max-height: 500px;
+    transform: translateY(0);
     transform: scaleY(1);
     a {
       display: block;
