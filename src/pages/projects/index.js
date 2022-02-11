@@ -16,7 +16,7 @@ const Projects = ({ data }) => {
   const directorys = data.directorys.nodes
   const folderName = useFolderName()
   const description =
-    '현재까지 진행된 주요 프로젝트로 최근 개발순으로 정렬되어있습니다.'
+    'The major projects that have been carried out so far are sorted in order of recent development.'
 
   return (
     <Layout pageName={pageName}>

@@ -16,7 +16,7 @@ const Develop = ({ data }) => {
   const directorys = data.directorys.nodes
   const folderName = useFolderName()
   const description =
-    '개발을 하면서 필요하다고 생각하는 개념 및 문제 해결과정에 대한 글을 담고 있습니다.'
+    'It contains posts about concepts and troubleshooting processes required during development.'
 
   return (
     <Layout pageName={pageName}>
