@@ -22,7 +22,7 @@ const pageMetadata = {
     },
     { title: 'Develop', path: '/develop', content: 'Develop' },
   ],
-  //directorys - posts 폴더에 위치한 디렉토리를 꼭 모두 입력해 주세요.
+  //directorys - page와 맵핑될 디렉토리를 입력해 주세요.
   //해당 디렉토리는 자동으로 gatsby filesystem 에 연결됩니다.
   directorys: ['develop', 'projects'],
 }

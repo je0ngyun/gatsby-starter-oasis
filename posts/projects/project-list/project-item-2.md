@@ -49,6 +49,8 @@ Text
 
 ## 프로젝트 개요
 
+![cardme](https://user-images.githubusercontent.com/33706043/140515262-14d29e79-c3f1-4660-875e-723285c9edcc.png)
+
 <img alt="cardme 로고" src="https://user-images.githubusercontent.com/33706043/140515262-14d29e79-c3f1-4660-875e-723285c9edcc.png" width="30%">
 
 개발자들의 Github 및 블로그의 여러 프로필을 둘러보다 보면 Git Stat 을 보기 쉽게 디자인해놓은 SVG 들을 간혹 볼 수 있었습니다.  

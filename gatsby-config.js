@@ -55,7 +55,7 @@ const config = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 900,
+              maxWidth: 950,
               linkImagesToOriginal: false,
               wrapperStyle: 'margin-left: 0; margin-right: 0;',
             },
@@ -65,6 +65,7 @@ const config = {
             options: {
               margin: 30,
               scrollOffset: 0,
+              includedSelector: '#markdown img',
             },
           },
         ],
