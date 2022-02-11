@@ -41,7 +41,10 @@ export const qurey = graphql`
       }
     }
     posts: allFile(
-      filter: { sourceInstanceName: { eq: "projects" } }
+      filter: {
+        sourceInstanceName: { eq: "projects" }
+        absolutePath: { regex: "/.md$/" }
+      }
       sort: {
         fields: childrenMarkdownRemark___frontmatter___period
         order: DESC

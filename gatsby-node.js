@@ -1,4 +1,4 @@
-const path = require('path');
+const path = require('path')
 
 exports.createPages = async ({ graphql, actions }) => {
   const allFileEdges = await graphql(`
@@ -8,6 +8,7 @@ exports.createPages = async ({ graphql, actions }) => {
           order: [ASC, DESC]
           fields: [sourceInstanceName, childMarkdownRemark___frontmatter___date]
         }
+        filter: { absolutePath: { regex: "/.md$/" } }
       ) {
         edges {
           next {
@@ -42,25 +43,23 @@ exports.createPages = async ({ graphql, actions }) => {
         }
       }
     }
-  `).then((query) => query.data.allFile.edges);
+  `).then((query) => query.data.allFile.edges)
 
-  const allPostData = allFileEdges
-    .filter((edge) => edge.node.childMarkdownRemark)
-    .map((edge) => {
-      let { previous, node, next } = edge;
-      const curSrcInsName = node.sourceInstanceName;
-      if (previous?.sourceInstanceName !== curSrcInsName) previous = null;
-      if (next?.sourceInstanceName !== curSrcInsName) next = null;
-      return {
-        previous: previous && { ...previous?.childMarkdownRemark.frontmatter },
-        current: { ...node.childMarkdownRemark.frontmatter },
-        next: next && { ...next?.childMarkdownRemark.frontmatter },
-        curSrcInsName: curSrcInsName,
-      };
-    });
+  const allPostData = allFileEdges.map((edge) => {
+    let { previous, node, next } = edge
+    const curSrcInsName = node.sourceInstanceName
+    if (previous?.sourceInstanceName !== curSrcInsName) previous = null
+    if (next?.sourceInstanceName !== curSrcInsName) next = null
+    return {
+      previous: previous && { ...previous.childMarkdownRemark.frontmatter },
+      current: { ...node.childMarkdownRemark.frontmatter },
+      next: next && { ...next.childMarkdownRemark.frontmatter },
+      curSrcInsName: curSrcInsName,
+    }
+  })
 
   allPostData.forEach((data) => {
-    const { previous, current, next, curSrcInsName } = data;
+    const { previous, current, next, curSrcInsName } = data
     actions.createPage({
       path: `/${current.stack}/${current.slug}`,
       component: path.resolve('./src/templates/index.js'),
@@ -71,6 +70,6 @@ exports.createPages = async ({ graphql, actions }) => {
         previous: previous,
         next: next,
       },
-    });
-  });
-};
+    })
+  })
+}
