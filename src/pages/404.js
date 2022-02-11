@@ -6,7 +6,7 @@ const NotFound = () => (
     <h1>
       <strong>404</strong>Not Found
     </h1>
-    <h3>This request URL not found on this server</h3>
+    <h3>This request URL is not found on this server</h3>
   </Layout>
 )
 
