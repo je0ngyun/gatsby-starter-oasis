@@ -34,6 +34,10 @@ body.dark {
     }
   }
 
+  .nav-links--mobile {
+    background-color: $dark-background-color-1;
+  }
+
   .nav-underline {
     background: $dark-nav-underline-background-color;
   }

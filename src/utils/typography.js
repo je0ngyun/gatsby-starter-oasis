@@ -15,8 +15,8 @@ const googleFonts = [
     styles: ['400', '500', '600', '700'],
   },
   {
-    name: 'Montserrat',
-    styles: ['400', '500', '600', '700'],
+    name: 'Catamaran',
+    styles: ['400', '500', '600', '700', '800'],
   },
 ]
 
@@ -43,14 +43,14 @@ GitHubTheme.overrideThemeStyles = () => {
     h1: {
       fontWeight: 700,
       lineHeight: 1.3,
-      fontFamily: 'Montserrat',
+      fontFamily: 'Catamaran',
       border: `none`,
     },
 
     h2: {
       fontWeight: 700,
       lineHeight: 1.3,
-      fontFamily: 'Montserrat',
+      fontFamily: 'Catamaran',
       marginTop: '50px',
       marginBottom: '20px',
       border: `none`,
