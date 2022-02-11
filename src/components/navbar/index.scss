@@ -14,6 +14,7 @@
   display: flex;
   flex-wrap: wrap;
   padding: 10px 15px;
+  transition: background-color 0.4s;
 }
 
 .nav-title {
@@ -106,7 +107,7 @@
 .nav-scroll-gauge {
   width: 0%;
   height: 2.5px;
-  transition: width 0.6s;
+  transition: width 0.6s ease-out;
 }
 
 @include mobile {
