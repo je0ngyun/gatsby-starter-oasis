@@ -11,6 +11,8 @@ const Title = ({ title, style, className }) => {
 
 Title.propTypes = {
   title: PropTypes.string,
+  style: PropTypes.object,
+  className: PropTypes.string,
 }
 
 export { Title }

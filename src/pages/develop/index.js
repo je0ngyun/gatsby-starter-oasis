@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { useFolderName } from '../../hooks/'
 import { graphql } from 'gatsby'
 import { Layout } from '../../components/layout'
@@ -26,6 +27,10 @@ const Develop = ({ data }) => {
       <PostItems posts={posts} />
     </Layout>
   )
+}
+
+Develop.propTypes = {
+  data: PropTypes.object,
 }
 
 export default Develop

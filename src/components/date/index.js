@@ -11,6 +11,8 @@ const Date = ({ date, className, style }) => {
 
 Date.propTypes = {
   date: PropTypes.string,
+  className: PropTypes.string,
+  style: PropTypes.object,
 }
 
 export { Date }

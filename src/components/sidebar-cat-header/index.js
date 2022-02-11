@@ -15,9 +15,9 @@ const SidebarCatHeader = ({ headerData, currentCatName }) => {
     </div>
   )
 }
-SidebarCatHeader.defaultProps = {}
+
 SidebarCatHeader.propTypes = {
-  headerInfo: PropTypes.object,
+  headerData: PropTypes.object,
   currentCatName: PropTypes.string,
 }
 

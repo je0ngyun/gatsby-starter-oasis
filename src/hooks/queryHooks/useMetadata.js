@@ -6,7 +6,6 @@ const useMetadata = () => {
       site {
         siteMetadata {
           title
-          slug
           description
           author
           copyright

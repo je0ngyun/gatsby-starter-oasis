@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import PropTypes from 'prop-types'
 import * as ScrollManager from '../utils/smoothScroll'
 import { graphql } from 'gatsby'
 import { Layout } from '../components/layout'
@@ -44,6 +45,11 @@ const PostTemplate = ({ data, pageContext }) => {
       <Comment repo={commentRepo} />
     </Layout>
   )
+}
+
+PostTemplate.propTypes = {
+  data: PropTypes.object,
+  pageContext: PropTypes.object,
 }
 
 export default PostTemplate

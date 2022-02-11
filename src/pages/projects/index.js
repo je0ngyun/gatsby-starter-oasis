@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { useFolderName } from '../../hooks/'
 import { graphql } from 'gatsby'
 import { Layout } from '../../components/layout'
@@ -28,7 +29,12 @@ const Projects = ({ data }) => {
   )
 }
 
+Projects.propTypes = {
+  data: PropTypes.object,
+}
+
 export default Projects
+
 export const qurey = graphql`
   query ProjectPage {
     directorys: allDirectory(

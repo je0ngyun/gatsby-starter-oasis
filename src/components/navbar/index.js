@@ -7,7 +7,7 @@ import { AiOutlineMenu } from 'react-icons/ai'
 import { capitalize } from '../../utils/capitalize'
 import './index.scss'
 
-const Navbar = ({ pageName, title, slug, menu }) => {
+const Navbar = ({ pageName, title, menu }) => {
   const scrollGaugeBar = useRef(null)
   const [isOpen, setIsOpen] = useState(false)
 
@@ -69,7 +69,7 @@ Navbar.propTypes = {
   pageName: PropTypes.string,
   title: PropTypes.string,
   slug: PropTypes.string,
-  menus: PropTypes.arrayOf(PropTypes.object),
+  menu: PropTypes.arrayOf(PropTypes.object),
 }
 
 export { Navbar }
