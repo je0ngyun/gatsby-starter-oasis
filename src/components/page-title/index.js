@@ -10,11 +10,9 @@ const PageTitle = ({ title }) => {
   const { author } = useMetadata()
   return (
     <div className="page-title">
-      <GatsbyImage
-        image={profileImg}
-        style={{ borderRadius: '50px' }}
-        alt={author}
-      />
+      <div className="page-title-profile">
+        <GatsbyImage image={profileImg} alt={author} />
+      </div>
       <Title title={title} />
     </div>
   )
