@@ -1,6 +1,6 @@
 const userMetadata = {
   title: `Gatsby-Starter-Oasis`, // Blog title - Used for display in the navbar and used for SEO.
-  description: `Gatsby blog template`, //Blog Description - Used for display in the footer area and SEO.
+  description: `Gatsby blog template`, //Blog Description - Used for SEO.
   author: `Je0ngyun`,
   copyright: `Copyright ⓒ 2021 je0ngyun/JeongYun`,
   siteUrl: `https://www.xxx.xx`, // Enter the URL to deploy or deploy. Used to create a Sitemap and create Robots.txt.

@@ -5,7 +5,7 @@ const Footer = ({ description, copyright }) => {
   return (
     <footer className="footer-container">
       <div className="footer">
-        <div>{description}</div>
+        <div>Built with Gatsby-starter-oasis</div>
         <div>{copyright}</div>
       </div>
     </footer>
