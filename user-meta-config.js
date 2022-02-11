@@ -1,7 +1,6 @@
 const userMetadata = {
   title: `Gatsby-Starter-Oasis`, // Blog title - nav-bar에 표시 및 SEO에 사용됩니다.
   description: `Gatsby blog template`, //Blog Description - footer 영역에 표시 및 SEO에 사용됩니다.
-  slug: `making an easy blog.`, //Blog slug - nav-bar의 title 옆에 작게 표시됩니다.
   author: `Je0ngyun`,
   copyright: `Copyright ⓒ 2021 je0ngyun/JeongYun`,
   siteUrl: `https://www.xxx.xx`, // 배포 예정 혹은 배포후의 Url을 입력해 주세요 - Sitemap 생성 및 Robots.txt 생성에 사용됩니다.
