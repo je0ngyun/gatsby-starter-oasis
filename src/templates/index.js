@@ -1,14 +1,14 @@
 import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
-import * as ScrollManager from '../utils/smoothScroll'
+import * as SmoothScroll from '../utils/smoothScroll'
 import { graphql } from 'gatsby'
 import { Layout } from '../components/layout'
 import { Sidebar } from '../components/sidebar'
 import { Comment } from '../components/comment'
 import { Seo } from '../components/seo'
-import { Title } from '../components/title'
+import { Title } from '../components/elements'
 import { PostNavigator } from '../components/post-navigator'
-import { Date } from '../components/date'
+import { Date } from '../components/elements'
 import { PostContent } from '../components/post-content'
 import { PostTags } from '../components/post-tags'
 import { Divider } from '../components/elements'
@@ -23,8 +23,8 @@ const PostTemplate = ({ data, pageContext }) => {
   const directorys = data.directorys.nodes
 
   useEffect(() => {
-    ScrollManager.init()
-    return () => ScrollManager.destroy()
+    SmoothScroll.init()
+    return () => SmoothScroll.destroy()
   }, [])
 
   return (

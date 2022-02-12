@@ -24,6 +24,7 @@
   ],
   "license": "0BSD",
   "dependencies": {
+    "classnames": "^2.3.1",
     "gatsby": "^4.5.2",
     "gatsby-plugin-gatsby-cloud": "^4.5.1",
     "gatsby-plugin-image": "^2.5.1",
@@ -69,7 +70,8 @@
     "start": "gatsby clean && gatsby develop",
     "serve": "gatsby clean && gatsby serve",
     "clean": "gatsby clean",
-    "makepage": "node ./page-ganerator.js",
-    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js' 'posts/**/*.md'"
+    "page": "node ./page-ganerator.js",
+    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js' 'posts/**/*.md' 'page-gen-template/*.js'",
+    "lint": "./node_modules/.bin/eslint ./src"
   }
 }

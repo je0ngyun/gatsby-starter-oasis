@@ -1,7 +1,7 @@
 import React from 'react'
 import { Layout } from '../components/layout'
 import { Link } from 'gatsby'
-import { Title } from '../components/title'
+import { Title } from '../components/elements'
 import { Seo } from '../components/seo'
 import './index.scss'
 

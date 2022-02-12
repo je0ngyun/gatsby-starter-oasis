@@ -1,9 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import classNames from 'classnames'
 
-const Date = ({ date, className, style }) => {
+const Date = ({ date, className, ...rest }) => {
   return (
-    <div className={'date ' + className} style={style}>
+    <div className={classNames('date', className)} {...rest}>
       {date}
     </div>
   )

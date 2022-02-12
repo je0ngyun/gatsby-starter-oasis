@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
-import { Date } from '../date'
+import { Date } from '../elements'
 import './index.scss'
 
 const ProjectList = ({ projects }) => {

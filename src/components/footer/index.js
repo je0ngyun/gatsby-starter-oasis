@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import './index.scss'
-const Footer = ({ description, copyright }) => {
+const Footer = ({ copyright }) => {
   return (
     <footer className="footer-container">
       <div className="footer">
@@ -13,7 +13,6 @@ const Footer = ({ description, copyright }) => {
 }
 
 Footer.propTypes = {
-  description: PropTypes.string,
   copyright: PropTypes.string,
 }
 
