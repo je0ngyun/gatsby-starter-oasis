@@ -1,17 +1,16 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { useFolderName } from '../../hooks/'
 import { graphql } from 'gatsby'
 import { Layout } from '../../components/layout'
 import { Seo } from '../../components/seo'
 import { Sidebar } from '../../components/sidebar'
-import { Container } from '../../components/container'
 import { PostItems } from '../../components/post-items'
-import { Title } from '../../components/title'
 import { PageDescription } from '../../components/page-description'
+import { PageTitle } from '../../components/page-title'
 import { capitalize } from '../../utils/capitalize'
-import './index.scss'
 
-export default ({ data }) => {
+const PGT = ({ data }) => {
   const pageName = capitalize('PN#####')
   const posts = data.posts.nodes
   const directorys = data.directorys.nodes
@@ -22,14 +21,18 @@ export default ({ data }) => {
     <Layout pageName={pageName}>
       <Seo title={pageName} description={description} />
       <Sidebar directorys={directorys} currentCatName={folderName} />
-      <Container>
-        <Title title={'👨‍💻 ' + pageName} />
-        <PageDescription title={pageName} description={description} />
-        <PostItems posts={posts} />
-      </Container>
+      <PageTitle title={pageName} />
+      <PageDescription title={pageName} description={description} />
+      <PostItems posts={posts} />
     </Layout>
   )
 }
+
+PGT.propTypes = {
+  data: PropTypes.object,
+}
+
+export default PGT
 
 export const qurey = graphql`
   query PN#####Page {
@@ -43,7 +46,10 @@ export const qurey = graphql`
       }
     }
     posts: allFile(
-      filter: { sourceInstanceName: { eq: "PN#####" } }
+      filter: {
+        sourceInstanceName: { eq: "PN#####" }
+        absolutePath: { regex: "/.md$/" }
+      }
       sort: { fields: childrenMarkdownRemark___frontmatter___date, order: DESC }
     ) {
       nodes {
