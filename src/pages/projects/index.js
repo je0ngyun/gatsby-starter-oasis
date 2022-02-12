@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { useFolderName } from '../../hooks/'
+import { useTopLvFolderName } from '../../hooks/'
 import { graphql } from 'gatsby'
 import { Layout } from '../../components/layout'
 import { Seo } from '../../components/seo'
@@ -14,12 +14,12 @@ const Projects = ({ data }) => {
   const pageName = capitalize('Projects')
   const projects = data.posts.nodes
   const directorys = data.directorys.nodes
-  const folderName = useFolderName()
+  const folderName = useTopLvFolderName()
   const description =
     'The major projects that have been carried out so far are sorted in order of recent development.'
 
   return (
-    <Layout pageName={pageName}>
+    <Layout pageName={pageName} folderName={folderName}>
       <Seo title={pageName} description={description} />
       <Sidebar directorys={directorys} currentCatName={folderName} />
       <PageTitle title={pageName} />

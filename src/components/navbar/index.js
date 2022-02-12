@@ -1,14 +1,15 @@
 import React, { useState, useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
+import { pathToFolderName } from '../../utils/pathToFolderName'
 import { rAFthrottle } from '../../utils/rAFthrottle'
 import { Link } from 'gatsby'
 import { Search } from '../search'
 import { AiOutlineMenu } from 'react-icons/ai'
-import { capitalize } from '../../utils/capitalize'
+
 import './index.scss'
 
-const Navbar = ({ pageName, title, menu }) => {
+const Navbar = ({ folderName, title, menu }) => {
   const scrollGaugeBar = useRef(null)
   const [isOpen, setIsOpen] = useState(false)
 
@@ -30,14 +31,14 @@ const Navbar = ({ pageName, title, menu }) => {
   }
 
   const renderMenuLinks = menu.map((m) => {
-    const isHighlight = capitalize(pageName) === capitalize(m.title)
+    const isHighlight = folderName === pathToFolderName(m.path)
     return (
       <Link
         className={classNames({ 'is-primary': isHighlight })}
         to={m.path}
         key={m.path}
       >
-        {m.content}
+        {m.linkname}
       </Link>
     )
   })
@@ -70,7 +71,7 @@ const Navbar = ({ pageName, title, menu }) => {
 }
 
 Navbar.propTypes = {
-  pageName: PropTypes.string,
+  folderName: PropTypes.string,
   title: PropTypes.string,
   slug: PropTypes.string,
   menu: PropTypes.arrayOf(PropTypes.object),

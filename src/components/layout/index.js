@@ -7,13 +7,13 @@ import { Footer } from '../footer'
 import { MainContent } from '../main-content'
 import './index.scss'
 
-const Layout = ({ pageName, children }) => {
+const Layout = ({ folderName, children }) => {
   const { title, slug, description, copyright, menu } = useMetadata()
 
   return (
     <div className="layout">
       <Navbar
-        pageName={pageName}
+        folderName={folderName}
         title={title}
         slug={slug}
         menu={JSON.parse(menu)}
@@ -28,7 +28,7 @@ const Layout = ({ pageName, children }) => {
 }
 
 Layout.propTypes = {
-  pageName: PropTypes.string.isRequired,
+  folderName: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
 }
 
