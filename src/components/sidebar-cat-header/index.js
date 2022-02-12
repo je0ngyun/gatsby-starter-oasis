@@ -1,14 +1,21 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import classNames from 'classnames'
 import { Link } from 'gatsby'
 import { capitalize } from '../../utils/capitalize'
 import './index.scss'
 
 const SidebarCatHeader = ({ headerData, currentCatName }) => {
   const { name, id } = headerData
-  const isHighlight = currentCatName === name ? ' is-primary' : ''
+  const isHighlight = currentCatName === name
+
   return (
-    <div className={'side-bar-catgory-header' + isHighlight} key={id}>
+    <div
+      className={classNames('side-bar-catgory-header', {
+        'is-primary': isHighlight,
+      })}
+      key={id}
+    >
       <Link className={isHighlight} to={`/${name}`}>
         {capitalize(name)}
       </Link>

@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import classNames from 'classnames'
 import { Link } from 'gatsby'
 import './index.scss'
 
@@ -7,9 +8,14 @@ const SidebarCatLinks = ({ posts, currentPostId }) => {
   const renderLinks = posts.map((post) => {
     const { id } = post
     const { stack, slug, title } = post.frontmatter
-    const isHighlight = currentPostId === id ? ' is-primary' : ''
+    const isHighlight = currentPostId === id
+
     return (
-      <Link className={isHighlight} to={`/${stack}/${slug}`} key={id}>
+      <Link
+        className={classNames({ 'is-primary': isHighlight })}
+        to={`/${stack}/${slug}`}
+        key={id}
+      >
         {title}
       </Link>
     )

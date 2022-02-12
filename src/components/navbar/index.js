@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
+import classNames from 'classnames'
 import { rAFthrottle } from '../../utils/rAFthrottle'
 import { Link } from 'gatsby'
 import { Search } from '../search'
@@ -29,10 +30,13 @@ const Navbar = ({ pageName, title, menu }) => {
   }
 
   const renderMenuLinks = menu.map((m) => {
-    const isHighlight =
-      capitalize(pageName) === capitalize(m.title) ? ' is-primary' : ''
+    const isHighlight = capitalize(pageName) === capitalize(m.title)
     return (
-      <Link className={isHighlight} to={m.path} key={m.path}>
+      <Link
+        className={classNames({ 'is-primary': isHighlight })}
+        to={m.path}
+        key={m.path}
+      >
         {m.content}
       </Link>
     )
@@ -53,7 +57,7 @@ const Navbar = ({ pageName, title, menu }) => {
             <AiOutlineMenu size={24} />
           </button>
         </div>
-        <div className={'nav-links--mobile ' + (isOpen ? 'is-open' : '')}>
+        <div className={classNames('nav-links--mobile', { 'is-open': isOpen })}>
           {renderMenuLinks}
         </div>
         <div className="nav-underline-container">

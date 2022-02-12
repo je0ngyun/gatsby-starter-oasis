@@ -1,4 +1,5 @@
 import React from 'react'
+import classNames from 'classnames'
 import { capitalize } from '../../utils/capitalize'
 import { FaCaretRight, FaCaretDown } from 'react-icons/fa'
 import PropTypes from 'prop-types'
@@ -23,11 +24,13 @@ const SidebarCat = ({
   isOpen,
   handleCategoryClick,
 }) => {
-  const isHighlight = currentCatName === categoryName ? ' is-primary' : ''
+  const isHighlight = currentCatName === categoryName
+
   return (
-    <div className={'side-bar-category' + isHighlight}>
+    <div
+      className={classNames('side-bar-category', { 'is-primary': isHighlight })}
+    >
       <button
-        className={isHighlight}
         onClick={() => {
           handleCategoryClick(categoryName)
         }}

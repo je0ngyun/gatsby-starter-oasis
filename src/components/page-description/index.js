@@ -5,9 +5,7 @@ import './index.scss'
 const PageDescription = ({ title, description }) => {
   return (
     <div className="page-descripton">
-      <span className="is-primary" style={{ marginRight: `10px` }}>
-        {title}
-      </span>
+      <span className="is-primary">{title}</span>
       {description}
     </div>
   )
