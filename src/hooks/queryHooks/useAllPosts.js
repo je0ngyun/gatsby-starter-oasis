@@ -3,23 +3,30 @@ import { graphql, useStaticQuery } from 'gatsby'
 const useAllPosts = () => {
   return useStaticQuery(graphql`
     query AllPosts {
-      allMarkdownRemark(sort: { fields: frontmatter___date, order: DESC }) {
+      allFile(
+        filter: { absolutePath: { regex: "/.md$/" } }
+        sort: {
+          fields: childrenMarkdownRemark___frontmatter___period
+          order: DESC
+        }
+      ) {
         nodes {
-          frontmatter {
-            title
-            stack
-            slug
-            date
-            desc
-            tags
-            tech
+          relativeDirectory
+          childMarkdownRemark {
+            frontmatter {
+              slug
+              title
+              tags
+              tech
+              desc
+              period
+            }
+            id
           }
-          id
-          excerpt(pruneLength: 100, truncate: true)
         }
       }
     }
-  `).allMarkdownRemark.nodes
+  `).allFile.nodes
 }
 
 export { useAllPosts }

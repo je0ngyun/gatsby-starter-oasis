@@ -22,7 +22,7 @@ const Search = () => {
     const keyword = e.target.value
     const posts = data || []
     const filteredData = posts.filter((post) => {
-      const { desc, title, tags, tech } = post.frontmatter
+      const { desc, title, tags, tech } = post.childMarkdownRemark.frontmatter
       return (
         (desc && desc.toLowerCase().includes(keyword.toLowerCase())) ||
         (title && title.toLowerCase().includes(keyword.toLowerCase())) ||
@@ -39,12 +39,12 @@ const Search = () => {
     return (
       posts &&
       posts.map((post) => {
-        const { id } = post
-        const { title, stack, slug } = post.frontmatter
+        const { id, relativeDirectory } = post
+        const { title, slug } = post.childMarkdownRemark.frontmatter
         return (
           <Link
             key={id}
-            to={`/${stack}/${slug}`}
+            to={`/${relativeDirectory}/${slug}`}
             className="search-result-item"
           >
             <div className="search-result-title">{title}</div>

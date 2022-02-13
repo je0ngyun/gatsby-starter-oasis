@@ -11,7 +11,7 @@ import { PageTitle } from '../../components/page-title'
 import { capitalize } from '../../utils/capitalize'
 
 const Projects = ({ data }) => {
-  const pageName = capitalize('Projects')
+  const pageName = capitalize('projects')
   const projects = data.posts.nodes
   const directorys = data.directorys.nodes
   const folderName = useTopLvFolderName()
@@ -38,7 +38,10 @@ export default Projects
 export const qurey = graphql`
   query ProjectPage {
     directorys: allDirectory(
-      filter: { sourceInstanceName: { eq: "projects" } }
+      filter: {
+        sourceInstanceName: { eq: "projects" }
+        relativeDirectory: { regex: "/^$|^..$/" }
+      }
       sort: { order: ASC, fields: birthtime }
     ) {
       nodes {
@@ -57,10 +60,10 @@ export const qurey = graphql`
       }
     ) {
       nodes {
+        relativeDirectory
         childMarkdownRemark {
           frontmatter {
             slug
-            stack
             title
             tags
             tech

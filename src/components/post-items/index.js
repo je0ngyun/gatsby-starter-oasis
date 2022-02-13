@@ -14,18 +14,24 @@ const PostItems = ({ posts }) => {
   useEffect(() => {
     const slicedItem = (base) => {
       return posts.slice(targetIndex, targetIndex + base).map((file, i) => {
+        const { relativeDirectory } = file
         const { id, excerpt } = file.childMarkdownRemark
-        const { stack, title, date, slug } =
-          file.childMarkdownRemark.frontmatter
+        const { title, date, slug } = file.childMarkdownRemark.frontmatter
         return (
-          <Link key={id} to={`/${stack}/${slug}`} style={{ color: 'inherit' }}>
+          <Link
+            key={id}
+            to={`/${relativeDirectory}/${slug}`}
+            style={{ color: 'inherit' }}
+          >
             <div
               ref={i === baseOfSlice - 1 ? setTargetElem : null}
               className="post-item-container"
             >
               <div className="post-item-title">{title}</div>
               <div className="post-item-info">
-                <div className="is-primary">{capitalize(stack)}</div>
+                <div className="is-primary">
+                  {capitalize(relativeDirectory)}
+                </div>
                 <div className="is-primary">|</div>
                 <Date className="post-item-date" date={date} />
               </div>

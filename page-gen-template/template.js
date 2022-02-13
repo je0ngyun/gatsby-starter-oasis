@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { useFolderName } from '../../hooks/'
+import { useTopLvFolderName } from '../../hooks/'
 import { graphql } from 'gatsby'
 import { Layout } from '../../components/layout'
 import { Seo } from '../../components/seo'
@@ -10,15 +10,15 @@ import { PageDescription } from '../../components/page-description'
 import { PageTitle } from '../../components/page-title'
 import { capitalize } from '../../utils/capitalize'
 
-const PGT = ({ data }) => {
+const Index = ({ data }) => {
   const pageName = capitalize('PN#####')
   const posts = data.posts.nodes
   const directorys = data.directorys.nodes
-  const folderName = useFolderName()
+  const folderName = useTopLvFolderName()
   const description = 'DS#####'
 
   return (
-    <Layout pageName={pageName}>
+    <Layout pageName={pageName} folderName={folderName}>
       <Seo title={pageName} description={description} />
       <Sidebar directorys={directorys} currentCatName={folderName} />
       <PageTitle title={pageName} />
@@ -28,16 +28,19 @@ const PGT = ({ data }) => {
   )
 }
 
-PGT.propTypes = {
+Index.propTypes = {
   data: PropTypes.object,
 }
 
-export default PGT
+export default Index
 
 export const qurey = graphql`
   query PN#####Page {
     directorys: allDirectory(
-      filter: { sourceInstanceName: { eq: "PN#####" } }
+      filter: {
+        sourceInstanceName: { eq: "PN#####" }
+        relativeDirectory: { regex: "/^$|^..$/" }
+      }
       sort: { order: ASC, fields: birthtime }
     ) {
       nodes {
@@ -53,11 +56,11 @@ export const qurey = graphql`
       sort: { fields: childrenMarkdownRemark___frontmatter___date, order: DESC }
     ) {
       nodes {
+        relativeDirectory
         childMarkdownRemark {
           frontmatter {
             date(formatString: "MMMM DD , YYYY")
             slug
-            stack
             title
           }
           excerpt(truncate: true)

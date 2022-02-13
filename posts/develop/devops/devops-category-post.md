@@ -1,6 +1,5 @@
 ---
 title: 'Posts in the devops category sit amet consectertur adipiscing elit'
-stack: 'devops'
 slug: 'devops-category-post'
 date: '2021-09-29'
 tags: 'Tag1,Tag2,Tag3'

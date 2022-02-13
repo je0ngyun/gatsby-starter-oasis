@@ -19,7 +19,9 @@ const Navbar = ({ folderName, title, menu }) => {
       const winHeight = window.innerHeight
       const scrollY = window.scrollY
       const per = Math.round((scrollY / (docHeight - winHeight)) * 100)
-      scrollGaugeBar.current.style.width = `${per}%`
+      if (scrollGaugeBar.current) {
+        scrollGaugeBar.current.style.width = `${per}%`
+      }
     })
     window.addEventListener('scroll', scrollEventCb, { passive: true })
     return () =>

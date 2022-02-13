@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
+import { pathToFolderName } from '../../utils/pathToFolderName'
 import { useAllPosts } from '../../hooks'
 import { FaCaretRight } from 'react-icons/fa'
 import { IoClose } from 'react-icons/io5'
@@ -43,7 +44,9 @@ const Sidebar = ({ directorys, currentPostId, currentCatName }) => {
   }
 
   const filterPosts = function (categoryName) {
-    return posts.filter((post) => post.frontmatter.stack === categoryName)
+    return posts.filter(
+      (post) => pathToFolderName(post.relativeDirectory) === categoryName
+    )
   }
 
   const renderCategorys = directorys.slice(1).map((directory) => {

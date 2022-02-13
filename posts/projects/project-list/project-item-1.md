@@ -1,6 +1,5 @@
 ---
 title: '프로젝트 타이틀'
-stack: 'project-list'
 slug: 'project-item-1'
 date: '2022-01-26T00:01+0900'
 tags: '프로젝트 태그 (프로젝트 주제)'

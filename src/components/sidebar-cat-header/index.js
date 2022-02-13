@@ -16,9 +16,7 @@ const SidebarCatHeader = ({ headerData, currentCatName }) => {
       })}
       key={id}
     >
-      <Link className={isHighlight} to={`/${name}`}>
-        {capitalize(name)}
-      </Link>
+      <Link to={`/${name}`}>{capitalize(name)}</Link>
     </div>
   )
 }

@@ -15,30 +15,30 @@ exports.createPages = async ({ graphql, actions }) => {
             childMarkdownRemark {
               frontmatter {
                 slug
-                stack
                 title
               }
             }
             sourceInstanceName
+            relativeDirectory
           }
           node {
             childMarkdownRemark {
               frontmatter {
                 slug
-                stack
               }
             }
             sourceInstanceName
+            relativeDirectory
           }
           previous {
             childMarkdownRemark {
               frontmatter {
                 slug
-                stack
                 title
               }
             }
             sourceInstanceName
+            relativeDirectory
           }
         }
       }
@@ -50,23 +50,32 @@ exports.createPages = async ({ graphql, actions }) => {
     const curSrcInsName = node.sourceInstanceName
     if (previous?.sourceInstanceName !== curSrcInsName) previous = null
     if (next?.sourceInstanceName !== curSrcInsName) next = null
+
     return {
-      previous: previous && { ...previous.childMarkdownRemark.frontmatter },
-      current: { ...node.childMarkdownRemark.frontmatter },
-      next: next && { ...next.childMarkdownRemark.frontmatter },
-      curSrcInsName: curSrcInsName,
+      previous: previous && {
+        ...previous.childMarkdownRemark.frontmatter,
+        relativeDirectory: previous.relativeDirectory,
+      },
+      current: {
+        ...node.childMarkdownRemark.frontmatter,
+        sourceInstanceName: node.sourceInstanceName,
+        relativeDirectory: node.relativeDirectory,
+      },
+      next: next && {
+        ...next.childMarkdownRemark.frontmatter,
+        relativeDirectory: next.relativeDirectory,
+      },
     }
   })
 
   allPostData.forEach((data) => {
-    const { previous, current, next, curSrcInsName } = data
+    const { previous, current, next } = data
     actions.createPage({
-      path: `/${current.stack}/${current.slug}`,
+      path: `/${current.relativeDirectory}/${current.slug}`,
       component: path.resolve('./src/templates/index.js'),
       context: {
         slug: current.slug,
-        stack: current.stack,
-        curSrcInsName: curSrcInsName,
+        curSrcInsName: current.sourceInstanceName,
         previous: previous,
         next: next,
       },

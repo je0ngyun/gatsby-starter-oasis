@@ -1,6 +1,5 @@
 ---
 title: "CardMe"
-stack: "project-list"
 slug: "cardme"
 date: "2021-09-10T00:01+0900"
 tags: "자신을 소개하는 간단한 카드형식의 SVG를 제공하는 서비스"

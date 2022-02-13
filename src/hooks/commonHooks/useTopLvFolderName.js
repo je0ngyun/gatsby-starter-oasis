@@ -1,7 +1,10 @@
 import { useLocation } from '@reach/router'
 
 const useTopLvFolderName = () => {
-  return useLocation().pathname.slice(1).split('/')[0]
+  const pathNames = useLocation()
+    .pathname.split('/')
+    .filter((p) => p)
+  return pathNames.length ? pathNames[0] : ''
 }
 
 export { useTopLvFolderName }

@@ -6,14 +6,15 @@ import './index.scss'
 
 const SidebarCatLinks = ({ posts, currentPostId }) => {
   const renderLinks = posts.map((post) => {
-    const { id } = post
-    const { stack, slug, title } = post.frontmatter
+    const { relativeDirectory } = post
+    const { id } = post.childMarkdownRemark
+    const { slug, title } = post.childMarkdownRemark.frontmatter
     const isHighlight = currentPostId === id
 
     return (
       <Link
         className={classNames({ 'is-primary': isHighlight })}
-        to={`/${stack}/${slug}`}
+        to={`/${relativeDirectory}/${slug}`}
         key={id}
       >
         {title}

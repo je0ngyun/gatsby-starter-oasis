@@ -38,7 +38,10 @@ export default Develop
 export const qurey = graphql`
   query DevelopPage {
     directorys: allDirectory(
-      filter: { sourceInstanceName: { eq: "develop" } }
+      filter: {
+        sourceInstanceName: { eq: "develop" }
+        relativeDirectory: { regex: "/^$|^..$/" }
+      }
       sort: { order: ASC, fields: birthtime }
     ) {
       nodes {
@@ -54,11 +57,11 @@ export const qurey = graphql`
       sort: { fields: childrenMarkdownRemark___frontmatter___date, order: DESC }
     ) {
       nodes {
+        relativeDirectory
         childMarkdownRemark {
           frontmatter {
             date(formatString: "MMMM DD , YYYY")
             slug
-            stack
             title
           }
           excerpt(truncate: true)

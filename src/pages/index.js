@@ -9,6 +9,7 @@ import './index.scss'
 const Home = () => {
   const pageName = 'home'
   const folderName = useTopLvFolderName()
+
   return (
     <Layout pageName={pageName} folderName={folderName}>
       <Seo title={pageName} />

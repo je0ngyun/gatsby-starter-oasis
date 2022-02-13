@@ -1,5 +1,6 @@
 const pathToFolderName = (path) => {
-  return path.slice(1).split('/')[0]
+  const pathNames = path.split('/').filter((p) => p)
+  return pathNames.length ? pathNames[0] : ''
 }
 
 export { pathToFolderName }

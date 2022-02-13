@@ -10,7 +10,7 @@ const PostNavigator = ({ pageContext }) => {
     <div className="post-navigator">
       {previous && (
         <div className="post-navigator-prev-link">
-          <Link to={`/${previous.stack}/${previous.slug}`}>
+          <Link to={`/${previous.relativeDirectory}/${previous.slug}`}>
             <div className="post-signpost">
               <i>
                 <FaCaretLeft size={20} />
@@ -23,7 +23,7 @@ const PostNavigator = ({ pageContext }) => {
       )}
       {next && (
         <div className="post-navigator-next-link">
-          <Link to={`/${next.stack}/${next.slug}`}>
+          <Link to={`/${next.relativeDirectory}/${next.slug}`}>
             <div className="post-signpost">
               <span>Next post</span>
               <i>
