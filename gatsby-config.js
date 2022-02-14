@@ -13,6 +13,14 @@ const config = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-sitemap`,
     {
+      resolve: `gatsby-plugin-gtag`,
+      options: {
+        trackingId: userMetadata.googleAnalyticsTrackingId,
+        head: true,
+        anonymize: true,
+      },
+    },
+    {
       resolve: `gatsby-plugin-feed`,
       options: {
         feeds: [

@@ -7,6 +7,7 @@ const userMetadata = {
   commentRepo: `je0ngyun/blog-comments`, // Please enter the Github repository where comments will be saved.
   googleVerification: ``, // Please enter the verification code from Google Search Console.
   naverVerification: ``, // Please enter the verification code from Naver Serarch Console.
+  googleAnalyticsTrackingId: ``, // Please enter the TrackingId from GoogleAnalytics.
 }
 
 const pageMetadata = {
