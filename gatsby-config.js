@@ -13,6 +13,58 @@ const config = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-sitemap`,
     {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        feeds: [
+          {
+            serialize: ({ query: { allFile } }) => {
+              return allFile.nodes.map((node) => {
+                const { sourceInstanceName } = node
+                const { excerpt, html, frontmatter } = node.childMarkdownRemark
+                const { slug } = node.childMarkdownRemark.fields
+                return {
+                  ...frontmatter,
+                  description: excerpt,
+                  url: `${userMetadata.siteUrl}/${sourceInstanceName}${slug}`,
+                  guid: `${userMetadata.siteUrl}/${sourceInstanceName}${slug}`,
+                  custom_elements: [{ 'content:encoded': html }],
+                }
+              })
+            },
+            query: `
+            {
+              allFile(
+                filter: { absolutePath: { regex: "/.md$/" } }
+                sort: {
+                  fields: childrenMarkdownRemark___frontmatter___period
+                  order: DESC
+                }
+              ) {
+                nodes {
+                  sourceInstanceName
+                  childMarkdownRemark {
+                    excerpt
+                    html
+                    frontmatter {
+                      title
+                      date
+                    }
+                    fields {
+                      slug
+                    }
+                  }
+                }
+              }
+            }
+          `,
+            title: userMetadata.title,
+            description: userMetadata.description,
+            output: '/rss.xml',
+          },
+        ],
+      },
+    },
+    {
       resolve: `gatsby-plugin-typography`,
       options: {
         pathToConfigModule: `src/utils/typography`,
