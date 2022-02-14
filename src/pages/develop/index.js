@@ -8,20 +8,20 @@ import { PostItems } from '../../components/post-items'
 import { PageDescription } from '../../components/page-description'
 import { PageTitle } from '../../components/page-title'
 import { capitalize } from '../../utils/capitalize'
-import { useTopLvFolderName } from '../../hooks'
+import { useTopLevelPathName } from '../../hooks'
 
 const Develop = ({ data }) => {
-  const firstPath = useTopLvFolderName()
-  const pageName = capitalize(firstPath)
+  const topLevelPathName = useTopLevelPathName()
+  const pageName = capitalize(topLevelPathName)
   const posts = data.posts.nodes
   const directorys = data.directorys.nodes
   const description =
     'It contains posts about concepts and troubleshooting processes required during development.'
 
   return (
-    <Layout folderName={firstPath}>
+    <Layout belongs={topLevelPathName}>
       <Seo title={pageName} description={description} />
-      <Sidebar directorys={directorys} currentCatName={firstPath} />
+      <Sidebar directorys={directorys} currentCatName={topLevelPathName} />
       <PageTitle title={pageName} />
       <PageDescription title={pageName} description={description} />
       <PostItems posts={posts} />
@@ -57,6 +57,7 @@ export const qurey = graphql`
       sort: { fields: childrenMarkdownRemark___frontmatter___date, order: DESC }
     ) {
       nodes {
+        sourceInstanceName
         childMarkdownRemark {
           frontmatter {
             date(formatString: "MMMM DD , YYYY")

@@ -7,12 +7,16 @@ import { Footer } from '../footer'
 import { MainContent } from '../main-content'
 import './index.scss'
 
-const Layout = ({ folderName, children }) => {
+const Layout = ({ belongs, children }) => {
   const { title, description, copyright, menu } = useMetadata()
 
   return (
     <div className="layout">
-      <Navbar folderName={folderName} title={title} menu={JSON.parse(menu)} />
+      <Navbar
+        highlightLinkName={belongs}
+        title={title}
+        menu={JSON.parse(menu)}
+      />
       <MainContent>
         <ThemeSwitch />
         {children}
@@ -23,7 +27,7 @@ const Layout = ({ folderName, children }) => {
 }
 
 Layout.propTypes = {
-  folderName: PropTypes.string.isRequired,
+  belongs: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
 }
 

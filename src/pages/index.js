@@ -3,15 +3,15 @@ import { Layout } from '../components/layout'
 import { Link } from 'gatsby'
 import { Title } from '../components/elements'
 import { Seo } from '../components/seo'
-import { useTopLvFolderName } from '../hooks'
+import { useTopLevelPathName } from '../hooks'
 import './index.scss'
 
 const Home = () => {
-  const firstPath = useTopLvFolderName()
+  const topLevelPathName = useTopLevelPathName()
   const pageName = 'home'
 
   return (
-    <Layout folderName={firstPath}>
+    <Layout belongs={topLevelPathName}>
       <Seo title={pageName} />
       <Title title="Gatsby-Starter-Oasis" />
       <h3 className="is-primary">Welcome Oasis starter!</h3>

@@ -11,13 +11,17 @@ const PostItems = ({ posts }) => {
   const [targetIndex, setTargetIndex] = useState(0)
   const [renderList, setRenderList] = useState([])
 
+  const slugToCategory = (slug) => {
+    return slug.split('/').slice(1, -2).join('/')
+  }
+
   useEffect(() => {
     const slicedItem = (base) => {
-      return posts.slice(targetIndex, targetIndex + base).map((file, i) => {
-        const { sourceInstanceName } = file
-        const { id, excerpt } = file.childMarkdownRemark
-        const { slug } = file.childMarkdownRemark.fields
-        const { title, date } = file.childMarkdownRemark.frontmatter
+      return posts.slice(targetIndex, targetIndex + base).map((post, i) => {
+        const { sourceInstanceName } = post
+        const { id, excerpt } = post.childMarkdownRemark
+        const { slug } = post.childMarkdownRemark.fields
+        const { title, date } = post.childMarkdownRemark.frontmatter
         return (
           <Link
             key={id}
@@ -30,7 +34,7 @@ const PostItems = ({ posts }) => {
             >
               <div className="post-item-title">{title}</div>
               <div className="post-item-info">
-                <div className="is-primary">{slug.slice(1)}</div>
+                <div className="is-primary">{slugToCategory(slug)}</div>
                 <div className="is-primary">|</div>
                 <Date className="post-item-date" date={date} />
               </div>

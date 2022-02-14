@@ -1,7 +1,6 @@
 ---
 title: '프로젝트 타이틀'
-slug: 'project-item-1'
-date: '2022-01-26T00:01+0900'
+date: '2022-01-26 16:00:30'
 tags: '프로젝트 태그 (프로젝트 주제)'
 tech: 'Vue,Vuex,Buefy,Axios,Socket.io'
 period: '2022.01 ~ 2022.01'

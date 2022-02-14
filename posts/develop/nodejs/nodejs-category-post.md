@@ -1,8 +1,6 @@
 ---
 title: 'Posts in the nodejs category'
-stack: 'nodejs'
-slug: 'nodejs-category-post'
-date: '2021-08-11'
+date: '2021-08-11 16:00:30'
 tags: 'Tag1,Tag2,Tag3'
 ---
 

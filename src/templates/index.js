@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
-import { pathToFolderName } from '../utils/pathToFolderName'
+import { toTopLevelPathName } from '../utils/toTopLevelPathName'
 import * as SmoothScroll from '../utils/smoothScroll'
 import { graphql } from 'gatsby'
 import { Layout } from '../components/layout'
@@ -22,7 +22,7 @@ const PostTemplate = ({ data, pageContext }) => {
   const { title, date, tags } = data.markdown.frontmatter
   const { curSrcInsName } = pageContext
   const directorys = data.directorys.nodes
-  const firstPath = pathToFolderName(data.markdown.fields.slug)
+  const topLevelPathName = toTopLevelPathName(data.markdown.fields.slug)
 
   useEffect(() => {
     SmoothScroll.init()
@@ -30,12 +30,12 @@ const PostTemplate = ({ data, pageContext }) => {
   }, [])
 
   return (
-    <Layout folderName={curSrcInsName}>
+    <Layout belongs={curSrcInsName}>
       <Seo title={title} desc={excerpt} />
       <Sidebar
         directorys={directorys}
         currentPostId={id}
-        currentCatName={firstPath}
+        currentCatName={topLevelPathName}
       />
       <Title title={title} />
       <PostTags tags={tags} />

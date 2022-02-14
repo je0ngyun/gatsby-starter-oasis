@@ -1,7 +1,6 @@
 ---
 title: 'Page Creation Guide'
-slug: 'page-creation-guide'
-date: '2022-01-30'
+date: '2022-02-01 18:02:43'
 tags: 'Guide,Page,Creation'
 ---
 

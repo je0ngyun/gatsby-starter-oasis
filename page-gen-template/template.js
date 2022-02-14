@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { useTopLvFolderName } from '../../hooks/'
+import { useTopLevelPathName } from '../../hooks/'
 import { graphql } from 'gatsby'
 import { Layout } from '../../components/layout'
 import { Seo } from '../../components/seo'
@@ -14,7 +14,7 @@ const Index = ({ data }) => {
   const pageName = capitalize('PN#####')
   const posts = data.posts.nodes
   const directorys = data.directorys.nodes
-  const folderName = useTopLvFolderName()
+  const folderName = useTopLevelPathName()
   const description = 'DS#####'
 
   return (
@@ -56,11 +56,9 @@ export const qurey = graphql`
       sort: { fields: childrenMarkdownRemark___frontmatter___date, order: DESC }
     ) {
       nodes {
-        relativeDirectory
         childMarkdownRemark {
           frontmatter {
             date(formatString: "MMMM DD , YYYY")
-            slug
             title
           }
           excerpt(truncate: true)

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
-import { pathToFolderName } from '../../utils/pathToFolderName'
+import { toTopLevelPathName } from '../../utils/toTopLevelPathName'
 import { rAFthrottle } from '../../utils/rAFthrottle'
 import { Link } from 'gatsby'
 import { Search } from '../search'
@@ -9,23 +9,24 @@ import { AiOutlineMenu } from 'react-icons/ai'
 
 import './index.scss'
 
-const Navbar = ({ folderName, title, menu }) => {
+const Navbar = ({ highlightLinkName, title, menu }) => {
   const scrollGaugeBar = useRef(null)
   const [isOpen, setIsOpen] = useState(false)
 
+  const onScroll = rAFthrottle(() => {
+    const docHeight = document.documentElement.scrollHeight
+    const winHeight = window.innerHeight
+    const scrollY = window.scrollY
+    const per = Math.round((scrollY / (docHeight - winHeight)) * 100)
+    if (scrollGaugeBar.current) {
+      scrollGaugeBar.current.style.width = `${per}%`
+    }
+  })
+
   useEffect(() => {
-    const scrollEventCb = rAFthrottle(() => {
-      const docHeight = document.documentElement.scrollHeight
-      const winHeight = window.innerHeight
-      const scrollY = window.scrollY
-      const per = Math.round((scrollY / (docHeight - winHeight)) * 100)
-      if (scrollGaugeBar.current) {
-        scrollGaugeBar.current.style.width = `${per}%`
-      }
-    })
-    window.addEventListener('scroll', scrollEventCb, { passive: true })
+    window.addEventListener('scroll', onScroll, { passive: true })
     return () =>
-      window.removeEventListener('scroll', scrollEventCb, { passive: true })
+      window.removeEventListener('scroll', onScroll, { passive: true })
   }, [])
 
   const handleCollapseClick = () => {
@@ -33,7 +34,7 @@ const Navbar = ({ folderName, title, menu }) => {
   }
 
   const renderMenuLinks = menu.map((m) => {
-    const isHighlight = folderName === pathToFolderName(m.path)
+    const isHighlight = highlightLinkName === toTopLevelPathName(m.path)
     return (
       <Link
         className={classNames({ 'is-primary': isHighlight })}
@@ -73,7 +74,7 @@ const Navbar = ({ folderName, title, menu }) => {
 }
 
 Navbar.propTypes = {
-  folderName: PropTypes.string,
+  highlightLinkName: PropTypes.string,
   title: PropTypes.string,
   menu: PropTypes.arrayOf(PropTypes.object),
 }

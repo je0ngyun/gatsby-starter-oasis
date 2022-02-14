@@ -8,20 +8,20 @@ import { ProjectList } from '../../components/project-list'
 import { PageDescription } from '../../components/page-description'
 import { PageTitle } from '../../components/page-title'
 import { capitalize } from '../../utils/capitalize'
-import { useTopLvFolderName } from '../../hooks'
+import { useTopLevelPathName } from '../../hooks'
 
 const Projects = ({ data }) => {
-  const firstPath = useTopLvFolderName()
-  const pageName = capitalize(firstPath)
+  const topLevelPathName = useTopLevelPathName()
+  const pageName = capitalize(topLevelPathName)
   const projects = data.posts.nodes
   const directorys = data.directorys.nodes
   const description =
     'The major projects that have been carried out so far are sorted in order of recent development.'
 
   return (
-    <Layout folderName={firstPath}>
+    <Layout belongs={topLevelPathName}>
       <Seo title={pageName} description={description} />
-      <Sidebar directorys={directorys} currentCatName={firstPath} />
+      <Sidebar directorys={directorys} currentCatName={topLevelPathName} />
       <PageTitle title={pageName} />
       <PageDescription title={pageName} description={description} />
       <ProjectList projects={projects} />

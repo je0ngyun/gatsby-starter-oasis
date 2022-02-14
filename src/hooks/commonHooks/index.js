@@ -1,2 +1,2 @@
-export * from './useTopLvFolderName'
+export * from './useTopLevelPathName'
 export * from './useTheme'
