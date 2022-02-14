@@ -1,6 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 import { capitalize } from '../../utils/capitalize'
+import { useTopLvFolderName } from '../../hooks'
 import { FaCaretRight, FaCaretDown } from 'react-icons/fa'
 import PropTypes from 'prop-types'
 import './index.scss'

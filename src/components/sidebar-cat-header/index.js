@@ -8,7 +8,7 @@ import './index.scss'
 const SidebarCatHeader = ({ headerData, currentCatName }) => {
   const { name, id } = headerData
   const isHighlight = currentCatName === name
-
+  console.log(isHighlight, currentCatName, name)
   return (
     <div
       className={classNames('side-bar-catgory-header', {

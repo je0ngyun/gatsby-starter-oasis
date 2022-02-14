@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { useTopLvFolderName } from '../../hooks/'
 import { graphql } from 'gatsby'
 import { Layout } from '../../components/layout'
 import { Seo } from '../../components/seo'
@@ -9,19 +8,20 @@ import { ProjectList } from '../../components/project-list'
 import { PageDescription } from '../../components/page-description'
 import { PageTitle } from '../../components/page-title'
 import { capitalize } from '../../utils/capitalize'
+import { useTopLvFolderName } from '../../hooks'
 
 const Projects = ({ data }) => {
-  const pageName = capitalize('projects')
+  const firstPath = useTopLvFolderName()
+  const pageName = capitalize(firstPath)
   const projects = data.posts.nodes
   const directorys = data.directorys.nodes
-  const folderName = useTopLvFolderName()
   const description =
     'The major projects that have been carried out so far are sorted in order of recent development.'
 
   return (
-    <Layout pageName={pageName} folderName={folderName}>
+    <Layout folderName={firstPath}>
       <Seo title={pageName} description={description} />
-      <Sidebar directorys={directorys} currentCatName={folderName} />
+      <Sidebar directorys={directorys} currentCatName={firstPath} />
       <PageTitle title={pageName} />
       <PageDescription title={pageName} description={description} />
       <ProjectList projects={projects} />
@@ -60,15 +60,17 @@ export const qurey = graphql`
       }
     ) {
       nodes {
-        relativeDirectory
+        sourceInstanceName
         childMarkdownRemark {
           frontmatter {
-            slug
             title
             tags
             tech
             desc
             period
+          }
+          fields {
+            slug
           }
           id
         }

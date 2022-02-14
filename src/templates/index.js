@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
-import { useTopLvFolderName } from '../hooks'
+import { pathToFolderName } from '../utils/pathToFolderName'
 import * as SmoothScroll from '../utils/smoothScroll'
 import { graphql } from 'gatsby'
 import { Layout } from '../components/layout'
@@ -22,7 +22,7 @@ const PostTemplate = ({ data, pageContext }) => {
   const { title, date, tags } = data.markdown.frontmatter
   const { curSrcInsName } = pageContext
   const directorys = data.directorys.nodes
-  const currentCatName = useTopLvFolderName()
+  const firstPath = pathToFolderName(data.markdown.fields.slug)
 
   useEffect(() => {
     SmoothScroll.init()
@@ -35,7 +35,7 @@ const PostTemplate = ({ data, pageContext }) => {
       <Sidebar
         directorys={directorys}
         currentPostId={id}
-        currentCatName={currentCatName}
+        currentCatName={firstPath}
       />
       <Title title={title} />
       <PostTags tags={tags} />
@@ -70,16 +70,17 @@ export const query = graphql`
         name
       }
     }
-    markdown: markdownRemark(frontmatter: { slug: { eq: $slug } }) {
+    markdown: markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       id
-      tableOfContents
       excerpt(pruneLength: 100)
+      fields {
+        slug
+      }
       frontmatter {
         title
         date(formatString: "MMMM DD , YYYY")
         tags
-        slug
       }
     }
   }

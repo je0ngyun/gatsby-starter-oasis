@@ -2,7 +2,7 @@ import React from 'react'
 import { Layout } from '../components/layout'
 
 const NotFound = () => (
-  <Layout pageName="NotFound">
+  <Layout folderName="none">
     <h1>
       <strong>404</strong>Not Found
     </h1>

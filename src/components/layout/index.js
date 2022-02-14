@@ -8,16 +8,11 @@ import { MainContent } from '../main-content'
 import './index.scss'
 
 const Layout = ({ folderName, children }) => {
-  const { title, slug, description, copyright, menu } = useMetadata()
+  const { title, description, copyright, menu } = useMetadata()
 
   return (
     <div className="layout">
-      <Navbar
-        folderName={folderName}
-        title={title}
-        slug={slug}
-        menu={JSON.parse(menu)}
-      />
+      <Navbar folderName={folderName} title={title} menu={JSON.parse(menu)} />
       <MainContent>
         <ThemeSwitch />
         {children}

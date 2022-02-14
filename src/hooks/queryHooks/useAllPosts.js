@@ -11,15 +11,17 @@ const useAllPosts = () => {
         }
       ) {
         nodes {
-          relativeDirectory
+          sourceInstanceName
           childMarkdownRemark {
             frontmatter {
-              slug
               title
               tags
               tech
               desc
               period
+            }
+            fields {
+              slug
             }
             id
           }

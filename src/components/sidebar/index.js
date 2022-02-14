@@ -44,9 +44,10 @@ const Sidebar = ({ directorys, currentPostId, currentCatName }) => {
   }
 
   const filterPosts = function (categoryName) {
-    return posts.filter(
-      (post) => pathToFolderName(post.relativeDirectory) === categoryName
-    )
+    return posts.filter((post) => {
+      const { slug } = post.childMarkdownRemark.fields
+      return pathToFolderName(slug) === categoryName
+    })
   }
 
   const renderCategorys = directorys.slice(1).map((directory) => {

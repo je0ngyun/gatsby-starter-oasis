@@ -1,4 +1,5 @@
 const path = require('path')
+const { createFilePath } = require(`gatsby-source-filesystem`)
 
 exports.createPages = async ({ graphql, actions }) => {
   const allFileEdges = await graphql(`
@@ -14,31 +15,32 @@ exports.createPages = async ({ graphql, actions }) => {
           next {
             childMarkdownRemark {
               frontmatter {
-                slug
                 title
+              }
+              fields {
+                slug
               }
             }
             sourceInstanceName
-            relativeDirectory
           }
           node {
             childMarkdownRemark {
-              frontmatter {
+              fields {
                 slug
               }
             }
             sourceInstanceName
-            relativeDirectory
           }
           previous {
             childMarkdownRemark {
               frontmatter {
-                slug
                 title
+              }
+              fields {
+                slug
               }
             }
             sourceInstanceName
-            relativeDirectory
           }
         }
       }
@@ -54,16 +56,18 @@ exports.createPages = async ({ graphql, actions }) => {
     return {
       previous: previous && {
         ...previous.childMarkdownRemark.frontmatter,
-        relativeDirectory: previous.relativeDirectory,
+        ...previous.childMarkdownRemark.fields,
+        sourceInstanceName: previous.sourceInstanceName,
       },
       current: {
         ...node.childMarkdownRemark.frontmatter,
+        ...node.childMarkdownRemark.fields,
         sourceInstanceName: node.sourceInstanceName,
-        relativeDirectory: node.relativeDirectory,
       },
       next: next && {
         ...next.childMarkdownRemark.frontmatter,
-        relativeDirectory: next.relativeDirectory,
+        ...next.childMarkdownRemark.fields,
+        sourceInstanceName: next.sourceInstanceName,
       },
     }
   })
@@ -71,7 +75,7 @@ exports.createPages = async ({ graphql, actions }) => {
   allPostData.forEach((data) => {
     const { previous, current, next } = data
     actions.createPage({
-      path: `/${current.relativeDirectory}/${current.slug}`,
+      path: `/${current.sourceInstanceName}${current.slug}`,
       component: path.resolve('./src/templates/index.js'),
       context: {
         slug: current.slug,
@@ -81,4 +85,18 @@ exports.createPages = async ({ graphql, actions }) => {
       },
     })
   })
+}
+
+exports.onCreateNode = ({ node, actions, getNode }) => {
+  const { createNodeField } = actions
+
+  if (node.internal.type === `MarkdownRemark`) {
+    const value = createFilePath({ node, getNode })
+
+    createNodeField({
+      name: `slug`,
+      node,
+      value,
+    })
+  }
 }

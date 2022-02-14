@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { useTopLvFolderName } from '../../hooks/'
 import { graphql } from 'gatsby'
 import { Layout } from '../../components/layout'
 import { Seo } from '../../components/seo'
@@ -9,19 +8,20 @@ import { PostItems } from '../../components/post-items'
 import { PageDescription } from '../../components/page-description'
 import { PageTitle } from '../../components/page-title'
 import { capitalize } from '../../utils/capitalize'
+import { useTopLvFolderName } from '../../hooks'
 
 const Develop = ({ data }) => {
-  const pageName = capitalize('develop')
+  const firstPath = useTopLvFolderName()
+  const pageName = capitalize(firstPath)
   const posts = data.posts.nodes
   const directorys = data.directorys.nodes
-  const folderName = useTopLvFolderName()
   const description =
     'It contains posts about concepts and troubleshooting processes required during development.'
 
   return (
-    <Layout pageName={pageName} folderName={folderName}>
+    <Layout folderName={firstPath}>
       <Seo title={pageName} description={description} />
-      <Sidebar directorys={directorys} currentCatName={folderName} />
+      <Sidebar directorys={directorys} currentCatName={firstPath} />
       <PageTitle title={pageName} />
       <PageDescription title={pageName} description={description} />
       <PostItems posts={posts} />
@@ -57,12 +57,13 @@ export const qurey = graphql`
       sort: { fields: childrenMarkdownRemark___frontmatter___date, order: DESC }
     ) {
       nodes {
-        relativeDirectory
         childMarkdownRemark {
           frontmatter {
             date(formatString: "MMMM DD , YYYY")
-            slug
             title
+          }
+          fields {
+            slug
           }
           excerpt(truncate: true)
           id

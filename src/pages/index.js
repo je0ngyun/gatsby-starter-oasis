@@ -1,17 +1,17 @@
 import React from 'react'
-import { useTopLvFolderName } from '../hooks/'
 import { Layout } from '../components/layout'
 import { Link } from 'gatsby'
 import { Title } from '../components/elements'
 import { Seo } from '../components/seo'
+import { useTopLvFolderName } from '../hooks'
 import './index.scss'
 
 const Home = () => {
+  const firstPath = useTopLvFolderName()
   const pageName = 'home'
-  const folderName = useTopLvFolderName()
 
   return (
-    <Layout pageName={pageName} folderName={folderName}>
+    <Layout folderName={firstPath}>
       <Seo title={pageName} />
       <Title title="Gatsby-Starter-Oasis" />
       <h3 className="is-primary">Welcome Oasis starter!</h3>

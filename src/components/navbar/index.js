@@ -75,7 +75,6 @@ const Navbar = ({ folderName, title, menu }) => {
 Navbar.propTypes = {
   folderName: PropTypes.string,
   title: PropTypes.string,
-  slug: PropTypes.string,
   menu: PropTypes.arrayOf(PropTypes.object),
 }
 

@@ -6,14 +6,15 @@ import './index.scss'
 
 const ProjectList = ({ projects }) => {
   const renderProjectList = projects.map((project) => {
-    const { relativeDirectory } = project
-    const { slug, title, period, tech, tags, desc } =
+    const { sourceInstanceName } = project
+    const { slug } = project.childMarkdownRemark.fields
+    const { title, period, tech, tags, desc } =
       project.childMarkdownRemark.frontmatter
     return (
       <Link
         className="project-link"
         key={project.childMarkdownRemark.id}
-        to={`/${relativeDirectory}/${slug}`}
+        to={`/${sourceInstanceName}${slug}`}
       >
         <div>
           <div className="project-link-title">{title}</div>

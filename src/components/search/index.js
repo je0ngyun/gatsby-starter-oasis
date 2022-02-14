@@ -39,12 +39,13 @@ const Search = () => {
     return (
       posts &&
       posts.map((post) => {
-        const { id, relativeDirectory } = post
-        const { title, slug } = post.childMarkdownRemark.frontmatter
+        const { id, sourceInstanceName } = post
+        const { slug } = post.childMarkdownRemark.fields
+        const { title } = post.childMarkdownRemark.frontmatter
         return (
           <Link
             key={id}
-            to={`/${relativeDirectory}/${slug}`}
+            to={`/${sourceInstanceName}${slug}`}
             className="search-result-item"
           >
             <div className="search-result-title">{title}</div>
