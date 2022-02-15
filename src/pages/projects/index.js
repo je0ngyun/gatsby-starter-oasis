@@ -20,7 +20,7 @@ const Projects = ({ data }) => {
 
   return (
     <Layout belongs={topLevelPathName}>
-      <Seo title={pageName} description={description} />
+      <Seo title={pageName} />
       <Sidebar directorys={directorys} currentCatName={topLevelPathName} />
       <PageTitle title={pageName} />
       <PageDescription description={description} />

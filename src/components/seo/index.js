@@ -4,12 +4,16 @@ import { Helmet } from 'react-helmet'
 import { useMetadata } from '../../hooks/queryHooks/useMetadata'
 import { capitalize } from '../../utils/capitalize'
 
-const Seo = ({ title, description, lang, meta }) => {
+const Seo = ({ title, lang, meta }) => {
   const defaultData = useMetadata()
   const { googleVerification, naverVerification } = defaultData
-  const metaDescription = description || defaultData.description
+
+  const metaDescription = defaultData.description
   const defaultTitle = defaultData.title
-  const currentTitle = capitalize(title)
+  const currentTitle = title ? capitalize(title) : defaultTitle
+  const ogTitle = title
+    ? `${capitalize(title)} | ${defaultTitle}`
+    : defaultTitle
 
   return (
     <Helmet
@@ -17,7 +21,7 @@ const Seo = ({ title, description, lang, meta }) => {
         lang,
       }}
       title={currentTitle}
-      titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
+      titleTemplate={title ? `%s | ${defaultTitle}` : null}
       meta={[
         {
           name: `description`,
@@ -25,7 +29,7 @@ const Seo = ({ title, description, lang, meta }) => {
         },
         {
           property: `og:title`,
-          content: currentTitle,
+          content: ogTitle,
         },
         {
           property: `og:description`,
@@ -45,7 +49,7 @@ const Seo = ({ title, description, lang, meta }) => {
         },
         {
           name: `twitter:title`,
-          content: currentTitle,
+          content: ogTitle,
         },
         {
           name: `twitter:description`,
@@ -71,10 +75,9 @@ Seo.defaultProps = {
 }
 
 Seo.propTypes = {
-  description: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
 }
 
 export { Seo }

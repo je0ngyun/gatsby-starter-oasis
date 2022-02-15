@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
-import { toTopLevelPathName } from '../utils/toTopLevelPathName'
-import * as SmoothScroll from '../utils/smoothScroll'
 import { graphql } from 'gatsby'
+import * as SmoothScroll from '../utils/smoothScroll'
+import { toTopLevelPathName } from '../utils/toTopLevelPathName'
 import { Layout } from '../components/layout'
 import { Sidebar } from '../components/sidebar'
 import { Comment } from '../components/comment'
@@ -10,7 +10,7 @@ import { Seo } from '../components/seo'
 import { Title } from '../components/elements'
 import { PostNavigator } from '../components/post-navigator'
 import { Date } from '../components/elements'
-import { PostContent } from '../components/post-content'
+import { MarkdownContent } from '../components/markdown-content'
 import { PostTags } from '../components/post-tags'
 import { Divider } from '../components/elements'
 
@@ -31,7 +31,7 @@ const PostTemplate = ({ data, pageContext }) => {
 
   return (
     <Layout belongs={curSrcInsName}>
-      <Seo title={title} desc={excerpt} />
+      <Seo title={title} />
       <Sidebar
         directorys={directorys}
         currentPostId={id}
@@ -41,7 +41,7 @@ const PostTemplate = ({ data, pageContext }) => {
       <PostTags tags={tags} />
       <Date date={date} className="post-date" />
       <Divider style={{ marginBottom: '50px' }} />
-      <PostContent html={html} />
+      <MarkdownContent html={html} />
       <Divider style={{ marginBottom: '50px' }} />
       <PostNavigator pageContext={pageContext} />
       <Comment />

@@ -81,7 +81,7 @@
 
   /* Inline code */
   :not(pre) > code[class*='language-'] {
-    padding: 0.25rem 0.2rem;
+    padding: 0px 0.08rem;
     border-radius: 3px;
     font-weight: 600;
   }

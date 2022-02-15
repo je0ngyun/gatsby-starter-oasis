@@ -2,12 +2,12 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import '../../styles/markdown.scss'
 
-const PostContent = ({ html }) => {
+const MarkdownContent = ({ html }) => {
   return <div id="markdown" dangerouslySetInnerHTML={{ __html: html }} />
 }
 
-PostContent.propTypes = {
+MarkdownContent.propTypes = {
   html: PropTypes.string,
 }
 
-export { PostContent }
+export { MarkdownContent }

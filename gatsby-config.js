@@ -152,15 +152,22 @@ const config = {
   ],
 }
 
-pageMetadata.directorys.forEach((dir) => {
-  const gsf = {
+const metaDirectorys = pageMetadata.directorys.map((dir) => {
+  return {
     resolve: `gatsby-source-filesystem`,
     options: {
       name: dir,
       path: `${__dirname}/posts/${dir}/`,
     },
   }
-  config.plugins.push(gsf)
+})
+
+config.plugins.push(...metaDirectorys, {
+  resolve: `gatsby-source-filesystem`,
+  options: {
+    name: `index`,
+    path: `${__dirname}/posts/`,
+  },
 })
 
 module.exports = config
