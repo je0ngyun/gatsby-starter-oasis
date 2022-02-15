@@ -1,9 +1,9 @@
 import React from 'react'
 import { Layout } from '../components/layout'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 import { Divider } from '../components/elements'
 import { MarkdownContent } from '../components/markdown-content'
-import { Title } from '../components/elements'
+import { Author } from '../components/author'
 import { Seo } from '../components/seo'
 import { useTopLevelPathName } from '../hooks'
 import './index.scss'
@@ -15,8 +15,10 @@ const Home = ({ data: { allMarkdownRemark } }) => {
   return (
     <Layout belongs={topLevelPathName}>
       <Seo />
+      <Author />
       <Divider style={{ marginBottom: '50px' }} />
       <MarkdownContent html={html} />
+      <Divider style={{ marginBottom: '50px' }} />
     </Layout>
   )
 }

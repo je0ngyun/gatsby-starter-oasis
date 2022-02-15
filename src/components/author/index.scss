@@ -1,0 +1,24 @@
+.author-container {
+  margin: 20px 0px;
+  padding: 0px 3px;
+  display: flex;
+  align-items: center;
+}
+
+.author-profile-img {
+  overflow: hidden;
+  isolation: isolate;
+  border-radius: 50px;
+}
+
+.author-description {
+  font-family: Catamaran;
+  font-size: larger;
+  font-weight: 500;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.author-other-link {
+  text-decoration: underline;
+}

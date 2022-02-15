@@ -2,6 +2,7 @@ const userMetadata = {
   title: `Gatsby-Starter-Oasis`, // Blog title - Used for display in the navbar and used for SEO.
   description: `Gatsby blog template`, //Blog Description - Used for SEO.
   author: `Je0ngyun`,
+  otherSite: `https://github.com/je0ngyun`,
   copyright: `Copyright ⓒ 2021 je0ngyun/JeongYun`,
   siteUrl: `https://www.xxx.xx`, // Enter the URL to deploy or deploy. Used to create a Sitemap and create Robots.txt.
   commentRepo: `je0ngyun/blog-comments`, // Please enter the Github repository where comments will be saved.

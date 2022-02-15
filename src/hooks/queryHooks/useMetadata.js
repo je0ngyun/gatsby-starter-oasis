@@ -12,6 +12,7 @@ const useMetadata = () => {
           siteUrl
           menu
           commentRepo
+          otherSite
           googleVerification
           naverVerification
         }
