@@ -1,13 +1,13 @@
 body.dark {
   /* body */
-  color: $dark-text-color-1;
-  background-color: $dark-background-color-1;
+  color: $dark-text-color;
+  background-color: $dark-background-color;
   text-shadow: $dark-text-shadow;
   /* body end */
 
   /* date */
   .date {
-    color: $dark-text-color-3;
+    color: $dark-text-color-darken-2;
   }
   /* date end */
 
@@ -19,7 +19,7 @@ body.dark {
 
   /* nav-bar */
   .nav {
-    background-color: $dark-background-color-1;
+    background-color: $dark-background-color;
   }
 
   .nav-title {
@@ -35,7 +35,7 @@ body.dark {
   }
 
   .nav-links--mobile {
-    background-color: $dark-background-color-1;
+    background-color: $dark-background-color;
   }
 
   .nav-underline {
@@ -49,14 +49,14 @@ body.dark {
 
   /* side-bar */
   .side-bar {
-    background-color: $dark-background-color-1;
+    background-color: $dark-background-color;
     border-color: $dark-item-box-border-color;
   }
 
   .side-bar-open-btn {
     background: $dark-primary-color;
     svg * {
-      color: $dark-background-color-1;
+      color: $dark-background-color;
     }
   }
 
@@ -90,7 +90,7 @@ body.dark {
 
   .side-bar-cat-links {
     a {
-      color: $dark-text-color-3;
+      color: $dark-text-color-darken-2;
       &:hover {
         color: $dark-primary-color;
       }
@@ -101,7 +101,7 @@ body.dark {
   /* markdown */
   #markdown {
     blockquote {
-      background-color: $dark-background-color-2;
+      background-color: $dark-background-color-darken-1;
       border-color: $dark-primary-color;
     }
 
@@ -112,13 +112,13 @@ body.dark {
 
     /* Inline code */
     :not(pre) > code[class*='language-'] {
-      background-color: $dark-background-color-2;
+      background-color: $dark-background-color-darken-1;
       color: $dark-primary-color;
     }
 
     /*table highdark*/
     table tr:nth-child(2n) {
-      background-color: $dark-background-color-2;
+      background-color: $dark-background-color-darken-1;
     }
   }
   /* markdown end */
@@ -150,13 +150,13 @@ body.dark {
     border-color: $dark-item-box-border-color;
     box-shadow: $dark-item-box-shadow;
     &:hover {
-      background: $dark-background-color-2;
+      background: $dark-background-color-darken-1;
     }
   }
 
   .post-item {
     &-excerpt {
-      color: $dark-text-color-2;
+      color: $dark-text-color-darken-1;
     }
   }
   /* post end */
@@ -166,7 +166,7 @@ body.dark {
     border-color: $dark-item-box-border-color;
     box-shadow: $dark-item-box-shadow;
     &:hover {
-      background-color: $dark-background-color-2;
+      background-color: $dark-background-color-darken-1;
     }
     .project-link-tech {
       * {
@@ -174,10 +174,10 @@ body.dark {
       }
     }
     .project-link-period {
-      color: $dark-text-color-3;
+      color: $dark-text-color-darken-2;
     }
     .project-link-desc {
-      color: $dark-text-color-2;
+      color: $dark-text-color-darken-1;
     }
   }
   /* project-link end */
@@ -185,7 +185,7 @@ body.dark {
   /* search */
   .search-box {
     svg * {
-      color: $dark-text-color-1;
+      color: $dark-text-color;
     }
     input {
       border-color: $dark-primary-color;
@@ -193,16 +193,16 @@ body.dark {
   }
 
   .search-result-container {
-    background-color: $dark-background-color-1;
+    background-color: $dark-background-color;
     border-color: $dark-item-box-border-color;
     box-shadow: $dark-item-box-shadow;
   }
 
   .search-result-item {
-    color: $dark-text-color-2;
+    color: $dark-text-color-darken-1;
     &:hover {
       .search-result-title {
-        background-color: $dark-background-color-2;
+        background-color: $dark-background-color-darken-1;
         border-color: $dark-item-box-border-color;
         box-shadow: $dark-item-box-shadow;
         color: $dark-primary-color;
@@ -210,13 +210,13 @@ body.dark {
     }
   }
   .search-result-title {
-    border-color: $dark-background-color-1;
+    border-color: $dark-background-color;
   }
   /* search end */
 
   /* page */
   .page-descripton {
-    color: $dark-text-color-2;
+    color: $dark-text-color-darken-1;
   }
   /* page end */
 }

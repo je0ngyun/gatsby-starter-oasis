@@ -23,7 +23,7 @@ const Projects = ({ data }) => {
       <Seo title={pageName} description={description} />
       <Sidebar directorys={directorys} currentCatName={topLevelPathName} />
       <PageTitle title={pageName} />
-      <PageDescription title={pageName} description={description} />
+      <PageDescription description={description} />
       <ProjectList projects={projects} />
     </Layout>
   )

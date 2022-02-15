@@ -1,9 +1,9 @@
 /* lightmode variables */
-$light-text-color-1: #000000;
-$light-text-color-2: #333333;
-$light-text-color-3: #636363;
-$light-background-color-1: #ffffff;
-$light-background-color-2: #f8f8f8;
+$light-text-color: #000000;
+$light-text-color-lighten-1: lighten($light-text-color, 20%);
+$light-text-color-lighten-2: lighten($light-text-color, 40%);
+$light-background-color: #ffffff;
+$light-background-color-darken-1: darken($light-background-color, 2%);
 $light-text-shadow: 0 0 0.6px rgba(0, 0, 0, 0.425);
 $light-primary-color: #2a7474;
 $light-nav-underline-background-color: linear-gradient(
@@ -22,11 +22,11 @@ $light-item-box-shadow: 0 1px 5px #00000024, 0 1px 1px #a9ceff63;
 /* lightmode variables end*/
 
 /* darkmode variables */
-$dark-text-color-1: #ffffff;
-$dark-text-color-2: #cccccc;
-$dark-text-color-3: #a8a8a8;
-$dark-background-color-1: #282c35;
-$dark-background-color-2: #23272e;
+$dark-text-color: #ffffff;
+$dark-text-color-darken-1: darken($dark-text-color, 15%);
+$dark-text-color-darken-2: darken($dark-text-color, 30%);
+$dark-background-color: #282c35;
+$dark-background-color-darken-1: darken($dark-background-color, 2%);
 $dark-text-shadow: 0 0 0.6px rgba(255, 255, 255, 0.425);
 $dark-primary-color: #ddc77f;
 $dark-nav-underline-background-color: linear-gradient(

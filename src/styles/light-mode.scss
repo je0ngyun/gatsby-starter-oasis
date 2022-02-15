@@ -1,13 +1,13 @@
 body.light {
   /* body */
-  color: $light-text-color-1;
-  background-color: $light-background-color-1;
+  color: $light-text-color;
+  background-color: $light-background-color;
   text-shadow: $light-text-shadow;
   /* body end */
 
   /* date */
   .date {
-    color: $light-text-color-3;
+    color: $light-text-color-lighten-2;
   }
   /* date end */
 
@@ -19,7 +19,7 @@ body.light {
 
   /* nav-bar */
   .nav {
-    background-color: $light-background-color-1;
+    background-color: $light-background-color;
   }
 
   .nav-title {
@@ -35,7 +35,7 @@ body.light {
   }
 
   .nav-links--mobile {
-    background-color: $light-background-color-1;
+    background-color: $light-background-color;
   }
 
   .nav-underline {
@@ -49,14 +49,14 @@ body.light {
 
   /* side-bar */
   .side-bar {
-    background-color: $light-background-color-1;
+    background-color: $light-background-color;
     border-color: $light-item-box-border-color;
   }
 
   .side-bar-open-btn {
     background: $light-primary-color;
     svg * {
-      color: $light-background-color-1;
+      color: $light-background-color;
     }
   }
 
@@ -90,7 +90,7 @@ body.light {
 
   .side-bar-cat-links {
     a {
-      color: $light-text-color-3;
+      color: $light-text-color-lighten-2;
       &:hover {
         color: $light-primary-color;
       }
@@ -101,7 +101,7 @@ body.light {
   /* markdown */
   #markdown {
     blockquote {
-      background-color: $light-background-color-2;
+      background-color: $light-background-color-darken-1;
       border-color: $light-primary-color;
     }
 
@@ -112,13 +112,13 @@ body.light {
 
     /* Inline code */
     :not(pre) > code[class*='language-'] {
-      background-color: $light-background-color-2;
+      background-color: $light-background-color-darken-1;
       color: $light-primary-color;
     }
 
     /*table highlight*/
     table tr:nth-child(2n) {
-      background-color: $light-background-color-2;
+      background-color: $light-background-color-darken-1;
     }
   }
   /* markdown end */
@@ -150,13 +150,13 @@ body.light {
     border-color: $light-item-box-border-color;
     box-shadow: $light-item-box-shadow;
     &:hover {
-      background: $light-background-color-2;
+      background: $light-background-color-darken-1;
     }
   }
 
   .post-item {
     &-excerpt {
-      color: $light-text-color-2;
+      color: $light-text-color-lighten-1;
     }
   }
   /* post end */
@@ -166,7 +166,7 @@ body.light {
     border-color: $light-item-box-border-color;
     box-shadow: $light-item-box-shadow;
     &:hover {
-      background-color: $light-background-color-2;
+      background-color: $light-background-color-darken-1;
     }
     .project-link-tech {
       * {
@@ -174,10 +174,10 @@ body.light {
       }
     }
     .project-link-period {
-      color: $light-text-color-3;
+      color: $light-text-color-lighten-2;
     }
     .project-link-desc {
-      color: $light-text-color-2;
+      color: $light-text-color-lighten-1;
     }
   }
   /* project-link end */
@@ -185,7 +185,7 @@ body.light {
   /* search */
   .search-box {
     svg * {
-      color: $light-text-color-1;
+      color: $light-text-color;
     }
     input {
       border-color: $light-primary-color;
@@ -193,16 +193,16 @@ body.light {
   }
 
   .search-result-container {
-    background-color: $light-background-color-1;
+    background-color: $light-background-color;
     border-color: $light-item-box-border-color;
     box-shadow: $light-item-box-shadow;
   }
 
   .search-result-item {
-    color: $light-text-color-2;
+    color: $light-text-color-lighten-1;
     &:hover {
       .search-result-title {
-        background-color: $light-background-color-2;
+        background-color: $light-background-color-darken-1;
         border-color: $light-item-box-border-color;
         box-shadow: $light-item-box-shadow;
         color: $light-primary-color;
@@ -210,13 +210,13 @@ body.light {
     }
   }
   .search-result-title {
-    border-color: $light-background-color-1;
+    border-color: $light-background-color;
   }
   /* search end */
 
   /* page */
   .page-descripton {
-    color: $light-text-color-2;
+    color: $light-text-color-lighten-1;
   }
   /* page end */
 }

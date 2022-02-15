@@ -23,7 +23,7 @@ const Develop = ({ data }) => {
       <Seo title={pageName} description={description} />
       <Sidebar directorys={directorys} currentCatName={topLevelPathName} />
       <PageTitle title={pageName} />
-      <PageDescription title={pageName} description={description} />
+      <PageDescription description={description} />
       <PostItems posts={posts} />
     </Layout>
   )

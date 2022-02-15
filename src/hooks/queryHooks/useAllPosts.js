@@ -6,12 +6,8 @@ const useAllPosts = () => {
       allFile(
         filter: { absolutePath: { regex: "/.md$/" } }
         sort: {
-          order: [ASC, DESC, DESC]
-          fields: [
-            childrenMarkdownRemark___fields___slug
-            childrenMarkdownRemark___frontmatter___period
-            childMarkdownRemark___frontmatter___date
-          ]
+          fields: childrenMarkdownRemark___frontmatter___date
+          order: DESC
         }
       ) {
         nodes {
