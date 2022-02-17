@@ -16,7 +16,7 @@ const googleFonts = [
   },
   {
     name: 'Catamaran',
-    styles: ['400', '500', '600', '700', '800'],
+    styles: ['500', '600', '700'],
   },
 ]
 
