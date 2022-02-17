@@ -39,7 +39,10 @@ const Search = () => {
     return (
       posts &&
       posts.map((post) => {
-        const { id, sourceInstanceName } = post
+        const {
+          sourceInstanceName,
+          childMarkdownRemark: { id },
+        } = post
         const { slug } = post.childMarkdownRemark.fields
         const { title } = post.childMarkdownRemark.frontmatter
         return (

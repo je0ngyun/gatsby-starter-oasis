@@ -3,20 +3,16 @@ import GitHubTheme from 'typography-theme-github'
 
 const googleFonts = [
   {
-    name: 'Do Hyeon',
-    styles: ['400'],
-  },
-  {
     name: 'Roboto Mono',
     styles: ['400', '500'],
   },
   {
     name: 'Noto Sans Korean',
-    styles: ['400', '500', '600', '700'],
+    styles: ['400', '500'],
   },
   {
     name: 'Catamaran',
-    styles: ['500', '600', '700'],
+    styles: ['500', '700'],
   },
 ]
 
