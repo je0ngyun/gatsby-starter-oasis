@@ -10,7 +10,7 @@ import { PageTitle } from '../../components/page-title'
 import { capitalize } from '../../utils/capitalize'
 import { useTopLevelPathName } from '../../hooks'
 
-const Projects = ({ data }) => {
+const Index = ({ data }) => {
   const topLevelPathName = useTopLevelPathName()
   const pageName = capitalize(topLevelPathName)
   const projects = data.posts.nodes
@@ -29,11 +29,11 @@ const Projects = ({ data }) => {
   )
 }
 
-Projects.propTypes = {
+Index.propTypes = {
   data: PropTypes.object,
 }
 
-export default Projects
+export default Index
 
 export const qurey = graphql`
   query ProjectPage {

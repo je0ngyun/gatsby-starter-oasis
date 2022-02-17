@@ -8,7 +8,7 @@ import { Seo } from '../components/seo'
 import { useTopLevelPathName } from '../hooks'
 import './index.scss'
 
-const Home = ({ data: { allMarkdownRemark } }) => {
+const Index = ({ data: { allMarkdownRemark } }) => {
   const { html } = allMarkdownRemark.nodes[0]
   const topLevelPathName = useTopLevelPathName()
 
@@ -23,7 +23,7 @@ const Home = ({ data: { allMarkdownRemark } }) => {
   )
 }
 
-export default Home
+export default Index
 
 export const qurey = graphql`
   query IndexMd {

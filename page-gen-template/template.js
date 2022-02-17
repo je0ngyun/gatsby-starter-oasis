@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { useTopLevelPathName } from '../../hooks/'
 import { graphql } from 'gatsby'
 import { Layout } from '../../components/layout'
 import { Seo } from '../../components/seo'
@@ -9,20 +8,23 @@ import { PostItems } from '../../components/post-items'
 import { PageDescription } from '../../components/page-description'
 import { PageTitle } from '../../components/page-title'
 import { capitalize } from '../../utils/capitalize'
+import { useTopLevelPathName } from '../../hooks'
+
+import './index.scss'
 
 const Index = ({ data }) => {
-  const pageName = capitalize('PN#####')
+  const topLevelPathName = useTopLevelPathName()
+  const pageName = capitalize(topLevelPathName)
   const posts = data.posts.nodes
   const directorys = data.directorys.nodes
-  const folderName = useTopLevelPathName()
   const description = 'DS#####'
 
   return (
-    <Layout pageName={pageName} folderName={folderName}>
-      <Seo title={pageName} description={description} />
-      <Sidebar directorys={directorys} currentCatName={folderName} />
+    <Layout belongs={topLevelPathName}>
+      <Seo title={pageName} />
+      <Sidebar directorys={directorys} currentCatName={topLevelPathName} />
       <PageTitle title={pageName} />
-      <PageDescription title={pageName} description={description} />
+      <PageDescription description={description} />
       <PostItems posts={posts} />
     </Layout>
   )
@@ -41,7 +43,7 @@ export const qurey = graphql`
         sourceInstanceName: { eq: "PN#####" }
         relativeDirectory: { regex: "/^$|^..$/" }
       }
-      sort: { order: ASC, fields: birthtime }
+      sort: { order: DESC, fields: relativeDirectory }
     ) {
       nodes {
         id
@@ -56,10 +58,14 @@ export const qurey = graphql`
       sort: { fields: childrenMarkdownRemark___frontmatter___date, order: DESC }
     ) {
       nodes {
+        sourceInstanceName
         childMarkdownRemark {
           frontmatter {
             date(formatString: "MMMM DD , YYYY")
             title
+          }
+          fields {
+            slug
           }
           excerpt(truncate: true)
           id
