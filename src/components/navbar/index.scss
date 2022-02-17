@@ -16,6 +16,13 @@
   flex-wrap: wrap;
   padding: 10px 15px;
   transition: background-color 0.4s;
+  button {
+    display: flex;
+    align-items: center;
+    svg {
+      display: none;
+    }
+  }
 }
 
 .nav-title {
@@ -55,14 +62,6 @@
     &:hover::after {
       transform: scale(1);
     }
-  }
-}
-
-.nav-menu-btn {
-  display: flex;
-  align-items: center;
-  svg {
-    display: none;
   }
 }
 
@@ -119,8 +118,8 @@
   .nav-links {
     display: none;
   }
-  .nav-menu-btn {
-    svg {
+  .nav {
+    button svg {
       display: inline;
     }
   }
