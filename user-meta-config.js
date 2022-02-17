@@ -7,7 +7,7 @@ const userMetadata = {
   siteUrl: `https://gatsby-starter-oasis.netlify.app`, // Enter the URL to deploy or deploy. Used to create a Sitemap and create Robots.txt.
   commentRepo: `je0ngyun/blog-comments`, // Please enter the Github repository where comments will be saved.
   googleVerification: `gVXI8__9H5fEKSWQJR8C7GRAdoYu_qkhdlKiDvpZa0w`, // Please enter the verification code from Google Search Console.
-  naverVerification: ``, // Please enter the verification code from Naver Serarch Console.
+  naverVerification: `e15d720818bf977e56d3355b823d9401c15f84dd`, // Please enter the verification code from Naver Serarch Console.
   googleAnalyticsTrackingId: ``, // Please enter the TrackingId from GoogleAnalytics.
 }
 
