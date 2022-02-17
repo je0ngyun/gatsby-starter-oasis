@@ -3,10 +3,8 @@ import { Layout } from '../components/layout'
 
 const NotFound = () => (
   <Layout belongs="none">
-    <h1>
-      <strong>404</strong>Not Found
-    </h1>
-    <h3>This request URL is not found on this server</h3>
+    <h1>404 Not Found</h1>
+    <strong>This request URL is not found on this server</strong>
   </Layout>
 )
 
