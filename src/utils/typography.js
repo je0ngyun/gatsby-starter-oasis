@@ -54,6 +54,12 @@ GitHubTheme.overrideThemeStyles = () => {
   }
 }
 const typography = new Typography(GitHubTheme)
+
+//font query suffix
+googleFonts[googleFonts.length - 1].styles.push(
+  googleFonts[googleFonts.length - 1].styles.pop() + `&display=swap`
+)
+
 typography.options.googleFonts.push(...googleFonts)
 typography.options.baseFontSize = baseFontSize
 typography.options.headerFontFamily.unshift(...baseFontFamily)
