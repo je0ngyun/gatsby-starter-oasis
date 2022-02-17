@@ -1,25 +1,6 @@
 import Typography from 'typography'
 import GitHubTheme from 'typography-theme-github'
 
-/*  Google Fonts can be added here. */
-/* 
-const googleFonts = [
-  {
-    name: 'Roboto Mono',
-    styles: ['400', '500'],
-  },
-  {
-    name: 'Catamaran',
-    styles: ['500', '700'],
-  },
-]
-
-//font query suffix
-googleFonts[googleFonts.length - 1].styles.push(
-  googleFonts[googleFonts.length - 1].styles.pop() + `&display=swap`
-)
-*/
-
 const baseFontSize = '18px'
 
 GitHubTheme.overrideThemeStyles = () => {
@@ -58,7 +39,27 @@ GitHubTheme.overrideThemeStyles = () => {
 }
 const typography = new Typography(GitHubTheme)
 
+/*  Google Fonts can be added here. */
+/* 
+const googleFonts = [
+  {
+    name: 'Roboto Mono',
+    styles: ['400', '500'],
+  },
+  {
+    name: 'Catamaran',
+    styles: ['500', '700'],
+  },
+]
+
+//font query suffix
+googleFonts[googleFonts.length - 1].styles.push(
+  googleFonts[googleFonts.length - 1].styles.pop() + `&display=swap`
+)
+
 typography.options.googleFonts.push(...googleFonts)
+*/
+
 typography.options.baseFontSize = baseFontSize
 
 export default typography
