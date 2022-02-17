@@ -63,7 +63,7 @@ export const query = graphql`
         sourceInstanceName: { eq: $curSrcInsName }
         relativeDirectory: { regex: "/^$|^..$/" }
       }
-      sort: { order: ASC, fields: birthtime }
+      sort: { order: DESC, fields: relativeDirectory }
     ) {
       nodes {
         id

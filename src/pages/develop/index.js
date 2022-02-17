@@ -42,7 +42,7 @@ export const qurey = graphql`
         sourceInstanceName: { eq: "develop" }
         relativeDirectory: { regex: "/^$|^..$/" }
       }
-      sort: { order: ASC, fields: birthtime }
+      sort: { order: DESC, fields: relativeDirectory }
     ) {
       nodes {
         id
