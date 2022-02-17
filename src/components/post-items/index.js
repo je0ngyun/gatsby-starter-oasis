@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react'
+import { useTopLevelPathName } from '../../hooks/'
+import { capitalize } from '../../utils/capitalize'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 import { Date } from '../elements/'
@@ -22,6 +24,7 @@ const PostItems = ({ posts }) => {
         const { id, excerpt } = post.childMarkdownRemark
         const { slug } = post.childMarkdownRemark.fields
         const { title, date } = post.childMarkdownRemark.frontmatter
+        const categoryName = slugToCategory(slug) || useTopLevelPathName()
         return (
           <Link
             key={id}
@@ -34,7 +37,7 @@ const PostItems = ({ posts }) => {
             >
               <div className="post-item-title">{title}</div>
               <div className="post-item-info">
-                <div className="is-primary">{slugToCategory(slug)}</div>
+                <div className="is-primary">{capitalize(categoryName)}</div>
                 <div className="is-primary">|</div>
                 <Date className="post-item-date" date={date} />
               </div>
