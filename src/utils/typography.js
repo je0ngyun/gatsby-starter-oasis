@@ -7,17 +7,12 @@ const googleFonts = [
     styles: ['400', '500'],
   },
   {
-    name: 'Noto Sans Korean',
-    styles: ['400', '500'],
-  },
-  {
     name: 'Catamaran',
     styles: ['500', '700'],
   },
 ]
 
 const baseFontSize = '18px'
-const baseFontFamily = ['Noto Sans Korean']
 
 GitHubTheme.overrideThemeStyles = () => {
   return {
@@ -51,6 +46,10 @@ GitHubTheme.overrideThemeStyles = () => {
       marginBottom: '20px',
       border: `none`,
     },
+
+    h3: {
+      fontWeight: 500,
+    },
   }
 }
 const typography = new Typography(GitHubTheme)
@@ -62,8 +61,6 @@ googleFonts[googleFonts.length - 1].styles.push(
 
 typography.options.googleFonts.push(...googleFonts)
 typography.options.baseFontSize = baseFontSize
-typography.options.headerFontFamily.unshift(...baseFontFamily)
-typography.options.bodyFontFamily.unshift(...baseFontFamily)
 
 export default typography
 export const rhythm = typography.rhythm
