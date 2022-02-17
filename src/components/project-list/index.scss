@@ -10,13 +10,14 @@
   color: inherit;
   > div {
     &:first-child {
-      flex-basis: 250px;
+      flex-basis: 25%;
       padding: 10px 10px 0px 10px;
       > * {
         margin-bottom: 5px;
       }
     }
     &:last-child {
+      flex-basis: 75%;
       padding: 10px;
       overflow: auto;
     }
@@ -61,6 +62,9 @@
   .project-link {
     > div {
       &:first-child {
+        flex-basis: 100%;
+      }
+      &:last-child {
         flex-basis: 100%;
       }
     }
