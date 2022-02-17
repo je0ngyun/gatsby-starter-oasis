@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { Layout } from '../components/layout'
 import { graphql } from 'gatsby'
 import { Divider } from '../components/elements'
@@ -21,6 +22,10 @@ const Index = ({ data: { allMarkdownRemark } }) => {
       <Divider style={{ marginBottom: '50px' }} />
     </Layout>
   )
+}
+
+Index.propTypes = {
+  data: PropTypes.object,
 }
 
 export default Index

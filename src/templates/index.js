@@ -18,7 +18,7 @@ import './index.scss'
 import 'katex/dist/katex.min.css'
 
 const PostTemplate = ({ data, pageContext }) => {
-  const { html, id, excerpt } = data.markdown
+  const { html, id } = data.markdown
   const { title, date, tags } = data.markdown.frontmatter
   const { curSrcInsName } = pageContext
   const directorys = data.directorys.nodes
