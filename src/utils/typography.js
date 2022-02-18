@@ -35,6 +35,7 @@ GitHubTheme.overrideThemeStyles = () => {
       marginBottom: '20px',
       border: `none`,
     },
+    h3: { fontSize: `1.3rem` },
   }
 }
 const typography = new Typography(GitHubTheme)
