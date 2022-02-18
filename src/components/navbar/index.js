@@ -57,7 +57,7 @@ const Navbar = ({ highlightLinkName, title, menu }) => {
             <Search />
           </div>
           <div className="nav-links">{renderMenuLinks}</div>
-          <button onClick={handleCollapseClick}>
+          <button onClick={handleCollapseClick} aria-label="collapse">
             <AiOutlineMenu size={24} />
           </button>
         </div>
