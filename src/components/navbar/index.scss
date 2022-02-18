@@ -80,6 +80,7 @@
       margin-bottom: 15px;
     }
     color: inherit;
+    font-size: 1.2rem;
     font-weight: 500;
     margin-bottom: 5px;
     display: none;
@@ -87,8 +88,7 @@
   &.is-open {
     opacity: 1;
     transform: scaleY(1);
-    animation-name: move;
-    animation-duration: 2s;
+    @include animation('toMH100', 2s);
     a {
       display: block;
     }
@@ -131,12 +131,10 @@
   }
 }
 
-@keyframes move {
-  /* keyframe */
+@include keyframes('toMH100') {
   from {
     max-height: 0;
   }
-  /* keyframe */
   to {
     max-height: 100vh;
   }
