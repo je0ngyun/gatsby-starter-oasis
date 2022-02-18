@@ -77,7 +77,9 @@ const Sidebar = ({ directorys, currentPostId, currentCatName }) => {
           }}
           className="side-bar-open-btn"
         >
-          <FaCaretRight size={26} />
+          <i>
+            <FaCaretRight size={26} />
+          </i>
         </button>
       )}
       {isOpen && (

@@ -55,14 +55,14 @@ body.light {
 
   .side-bar-open-btn {
     background: $light-primary-color;
-    svg * {
+    i {
       color: $light-background-color;
     }
   }
 
   .side-bar-catgory-header {
     &.is-primary {
-      border-color: $light-primary-color !important;
+      border-color: $light-primary-color;
     }
     a:hover {
       color: $light-primary-color;
@@ -71,17 +71,17 @@ body.light {
 
   .side-bar-category {
     &.is-primary {
-      border-color: $light-primary-color !important;
+      border-color: $light-primary-color;
     }
     button {
       &.is-primary {
-        i svg * {
+        i {
           color: $light-primary-color;
         }
       }
       &:hover {
         color: $light-primary-color;
-        i svg * {
+        i {
           color: $light-primary-color;
         }
       }

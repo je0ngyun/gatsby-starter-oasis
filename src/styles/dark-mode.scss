@@ -55,7 +55,7 @@ body.dark {
 
   .side-bar-open-btn {
     background: $dark-primary-color;
-    svg * {
+    i {
       color: $dark-background-color;
     }
   }
@@ -75,13 +75,13 @@ body.dark {
     }
     button {
       &.is-primary {
-        i svg * {
+        i {
           color: $dark-primary-color;
         }
       }
       &:hover {
         color: $dark-primary-color;
-        i svg * {
+        i {
           color: $dark-primary-color;
         }
       }
