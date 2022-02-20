@@ -1,3 +1,5 @@
+@import '../../styles/utils.scss';
+
 .main-container {
   display: flex;
   flex-wrap: wrap;
@@ -8,4 +10,10 @@
   width: 900px;
   overflow-x: hidden;
   padding: 60px 15px 0px 15px;
+}
+
+@include mobile {
+  .main {
+    padding: 60px 20px 0px 20px;
+  }
 }
