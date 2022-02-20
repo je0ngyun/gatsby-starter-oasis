@@ -10,14 +10,14 @@
   color: inherit;
   > div {
     &:first-child {
-      flex-basis: 25%;
+      flex-basis: 28%;
       padding: 10px 10px 0px 10px;
       > * {
         margin-bottom: 5px;
       }
     }
     &:last-child {
-      flex-basis: 75%;
+      flex-basis: 72%;
       padding: 10px;
       overflow: auto;
     }
@@ -26,10 +26,12 @@
 
 .project-link {
   &-title {
+    font-family: Catamaran;
     font-weight: 700;
     font-size: 1.3rem;
   }
   &-tags {
+    font-family: Catamaran;
     font-weight: 600;
     font-size: 1.15rem;
     margin-bottom: 10px;
