@@ -7,5 +7,10 @@ You can modify it in the `posts/index.md`
 
 ### Document
 
-- [Quick Start](./develop/docs/quick-start/)
+- [Quick start](./develop/docs/getting-start/)
 - [Page creation guide](./develop/docs/page-creation-guide/)
+- [Post preview](./develop/docs/post-preview/)
+
+### More information
+
+- [README](https://github.com/je0ngyun/gatsby-starter-oasis/blob/master/README.md)

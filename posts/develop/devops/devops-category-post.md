@@ -1,6 +1,6 @@
 ---
 title: 'Posts in the devops category'
-date: '2021-01-01'
+date: '2021-02-02'
 tags: 'Tag1,Tag2,Tag3'
 ---
 
