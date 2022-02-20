@@ -122,6 +122,12 @@ const config = {
             },
           },
           {
+            resolve: `gatsby-remark-image-attributes`,
+            options: {
+              dataAttributes: true,
+            },
+          },
+          {
             resolve: `gatsby-remark-images-medium-zoom`,
             options: {
               margin: 30,
