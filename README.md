@@ -9,7 +9,7 @@
 <sub>Project by <a href="https://github.com/je0ngyun">je0ngyun</a></sub>
 <br/>
 
-![](./assets/readme/main-img.png)
+![](./assets/readme/intro-img.png)
 
 ## 🖥 Demo
 
