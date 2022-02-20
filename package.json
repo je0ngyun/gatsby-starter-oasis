@@ -39,6 +39,7 @@
     "gatsby-plugin-sitemap": "^5.5.0",
     "gatsby-plugin-typography": "^4.6.0",
     "gatsby-remark-autolink-headers": "^5.5.0",
+    "gatsby-remark-copy-linked-files": "^5.7.0",
     "gatsby-remark-image-attributes": "^1.1.0",
     "gatsby-remark-images": "^6.6.0",
     "gatsby-remark-images-medium-zoom": "^1.7.0",
