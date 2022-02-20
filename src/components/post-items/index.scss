@@ -1,3 +1,5 @@
+@import '../../styles/utils.scss';
+
 .post-item-container {
   padding: 15px 20px;
   border-radius: 7px;
@@ -19,11 +21,18 @@
 
 .post-item-title {
   font-family: Catamaran;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 700;
-  margin-bottom: 8px;
+  margin-bottom: 2px;
 }
 
 .post-item-excerpt {
   font-size: 0.95rem;
+}
+
+@include mobile() {
+  .post-item-title {
+    font-size: x-large;
+    margin-bottom: 6px;
+  }
 }

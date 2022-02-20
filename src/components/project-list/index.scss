@@ -72,3 +72,9 @@
     }
   }
 }
+
+@include mobile {
+  .project-link-title {
+    font-size: 1.5rem;
+  }
+}
