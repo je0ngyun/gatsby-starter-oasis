@@ -52,18 +52,15 @@ const Sidebar = ({ directorys, currentPostId, currentCatName }) => {
 
   const renderCategorys = directorys.slice(1).map((directory) => {
     const { name: dirName } = directory
+    const filteredPosts = filterPosts(dirName)
     return (
       <SidebarCat
         categoryName={dirName}
-        currentCatName={currentCatName}
         isOpen={getCategoryStatus(dirName)}
         handleCategoryClick={handleCategoryClick}
         key={dirName}
       >
-        <SidebarCatLinks
-          posts={filterPosts(dirName)}
-          currentPostId={currentPostId}
-        />
+        <SidebarCatLinks posts={filteredPosts} currentPostId={currentPostId} />
       </SidebarCat>
     )
   })
