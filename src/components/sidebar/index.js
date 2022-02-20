@@ -56,6 +56,7 @@ const Sidebar = ({ directorys, currentPostId, currentCatName }) => {
     return (
       <SidebarCat
         categoryName={dirName}
+        isHighlight={currentCatName === dirName}
         isOpen={getCategoryStatus(dirName)}
         handleCategoryClick={handleCategoryClick}
         key={dirName}

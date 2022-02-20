@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import classNames from 'classnames'
 import { capitalize } from '../../utils/capitalize'
 import { GoTriangleRight, GoTriangleDown } from 'react-icons/go'
@@ -20,11 +20,10 @@ const getArrowIcon = function (isCatOpen) {
 const SidebarCat = ({
   children,
   categoryName,
+  isHighlight,
   isOpen,
   handleCategoryClick,
 }) => {
-  const [isHighlight] = useState(() => isOpen)
-
   return (
     <div
       className={classNames('side-bar-category', { 'is-primary': isHighlight })}
@@ -45,6 +44,7 @@ const SidebarCat = ({
 SidebarCat.propTypes = {
   children: PropTypes.node.isRequired,
   categoryName: PropTypes.string,
+  isHighlight: PropTypes.bool,
   isOpen: PropTypes.bool,
   handleCategoryClick: PropTypes.func,
 }
