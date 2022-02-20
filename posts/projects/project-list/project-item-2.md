@@ -1,7 +1,7 @@
 ---
 title: "CardMe"
 date: "2021-09-10 16:00:30"
-tags: "자신을 소개하는 간단한 카드형식의 SVG를 제공하는 서비스"
+tags: "자신을 소개하는 카드형식의 SVG를 제공하는 서비스"
 tech: "Java,SpringBoot,SpringSecurity,JPA,MySql"
 period: "2021.09 ~ 2021.11"
 desc: "백엔드 부분으로 REST API 구축;기본적인 회원관련 처리 및 사용자가 작성한 정보를 바탕으로 SVG를 생성
