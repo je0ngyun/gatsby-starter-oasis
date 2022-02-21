@@ -172,7 +172,12 @@
   }
 
   @include mobile() {
+    /* Static img width <img> tag */
     img[width] {
+      width: 100% !important;
+    }
+    /* Gatsby-remark-images with a given width attribute*/
+    .gatsby-img-attributes {
       width: 100% !important;
     }
     /* Code blocks */
