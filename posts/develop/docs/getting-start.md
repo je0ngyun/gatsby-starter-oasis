@@ -35,7 +35,7 @@ You can write
 - `posts/projects/ directory` - posts on the projects page.
 - `posts/develop/ directory` - posts on the develop page.
 
-If you want to know how the addresses of each post are generated, please read [Guide](#-Guide).
+If you want to know how the addresses of each post are generated, please read [Guide](https://github.com/je0ngyun/gatsby-starter-oasis#-Guide).
 
 ## 5. Deploy to Netlify
 

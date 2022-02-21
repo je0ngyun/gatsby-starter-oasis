@@ -42,11 +42,11 @@
 
 ```bash
 # Create a gatsby site using this starter
-npm install -g gatsby-cli
-gatsby new my-blog https://github.com/je0ngyun/gatsby-starter-oasis
+npx gatsby new my-blog https://github.com/je0ngyun/gatsby-starter-oasis
 
 # or
-npx gatsby new my-blog https://github.com/je0ngyun/gatsby-starter-oasis
+npm install -g gatsby-cli
+gatsby new my-blog https://github.com/je0ngyun/gatsby-starter-oasis
 ```
 
 ### 2. Enter your blog's information
