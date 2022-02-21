@@ -61,7 +61,7 @@ export const query = graphql`
     directorys: allDirectory(
       filter: {
         sourceInstanceName: { eq: $curSrcInsName }
-        relativeDirectory: { regex: "/^$|^..$/" }
+        relativeDirectory: { regex: "/^$|^\\.\\.$/" }
       }
       sort: { order: DESC, fields: relativeDirectory }
     ) {

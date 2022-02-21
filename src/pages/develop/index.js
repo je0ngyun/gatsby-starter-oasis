@@ -40,7 +40,7 @@ export const qurey = graphql`
     directorys: allDirectory(
       filter: {
         sourceInstanceName: { eq: "develop" }
-        relativeDirectory: { regex: "/^$|^..$/" }
+        relativeDirectory: { regex: "/^$|^\\.\\.$/" }
       }
       sort: { order: DESC, fields: relativeDirectory }
     ) {
