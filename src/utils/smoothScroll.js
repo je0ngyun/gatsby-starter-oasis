@@ -8,6 +8,7 @@ export function init() {
   scroll = new SmoothScroll('a[href*="#"]', {
     speed: 450,
     speedAsDuration: true,
+    offset: 100,
   })
 
   return scroll
