@@ -17,6 +17,7 @@ tags: 'Quick Start,Start,Tip'
 
 ```bash
 # You can specify width
+# However, it is fixed to 100% width on mobile screen
 ![img](../../../assets/favicon.png '#width=30%;')
 ```
 
