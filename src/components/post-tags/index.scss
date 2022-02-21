@@ -1,4 +1,7 @@
 .post-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
   padding-top: 5px;
   padding-bottom: 5px;
   div {
@@ -6,10 +9,5 @@
     font-size: small;
     border-radius: 3px;
     padding: 2px 8px;
-    margin-left: 9px;
-    margin-bottom: 4px;
-  }
-  div:first-child {
-    margin-left: 0px;
   }
 }
