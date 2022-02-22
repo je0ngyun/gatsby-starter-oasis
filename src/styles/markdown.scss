@@ -186,5 +186,9 @@
       margin-left: -20px;
       width: 110%;
     }
+    /* Inline code */
+    :not(pre) > code[class*='language-'] {
+      white-space: normal;
+    }
   }
 }
