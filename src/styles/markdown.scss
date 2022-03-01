@@ -1,6 +1,16 @@
 @import './utils.scss';
 
 #markdown {
+  .gatsby-highlight-code-line {
+    box-sizing: content-box;
+    display: block;
+    position: relative;
+    left: -1rem;
+    padding-left: calc(1rem - 4px);
+    width: calc(100% + 1rem);
+    border-left: 4px solid;
+  }
+
   blockquote {
     padding: 10px 0px;
     border-left: 5px solid;
@@ -73,6 +83,9 @@
 
   /* Code blocks */
   pre[class*='language-'] {
+    * {
+      font-size: 0.9rem;
+    }
     padding: 1rem;
     overflow: auto;
     border-radius: 7px;

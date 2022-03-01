@@ -100,6 +100,11 @@ body.light {
 
   /* markdown */
   #markdown {
+    .gatsby-highlight-code-line {
+      background-color: $light-markdown-code-highlight-line-background-color;
+      border-color: $light-markdown-code-highlight-line-border-color;
+    }
+
     blockquote {
       background-color: $light-background-color-darken-1;
       border-color: $light-primary-color;
