@@ -43,10 +43,18 @@ tags: 'Quick Start,Start,Tip'
 
 ### Code Highlight with [Roboto mono font](https://fonts.google.com/specimen/Roboto+Mono)
 
-```js
+You can write the line number to highlight like this
+
+<pre class="language-text">
+```js{2,3} 
+// your code
+```
+</pre>
+
+```js{2,3}
 function Me(_name) {
-  this.name = _name
-  this.email = `Jeongyunniim@gmail.com`
+  this.name = _name // highlight line
+  this.email = `Jeongyunniim@gmail.com` // highlight line
 }
 
 const jy = new Me(`JeongYun`)
