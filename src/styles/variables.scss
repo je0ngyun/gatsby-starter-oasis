@@ -13,8 +13,14 @@ $light-nav-underline-background-color: linear-gradient(
   rgba(51, 126, 199, 1) 88%
 );
 $light-markdown-code-background-color: #0e1116;
-$light-markdown-code-highlight-line-background-color: #06242e;
-$light-markdown-code-highlight-line-border-color: #679ec5;
+$light-markdown-code-highlight-line-background-color: linear-gradient(
+  90deg,
+  rgba(6, 36, 46, 1) 74%,
+  rgba(6, 36, 46, 0.9640449929971989) 80%,
+  rgba(6, 36, 46, 0.7931766456582633) 87%,
+  rgba(255, 255, 255, 0) 100%
+);
+$light-markdown-code-highlight-line-border-color: #4991a3;
 $light-post-tag-color: #f8f8f8;
 $light-post-tag-background-color: #585858;
 $light-post-navigator-background-color: #f6f8fa;
@@ -38,8 +44,14 @@ $dark-nav-underline-background-color: linear-gradient(
   rgba(238, 205, 51, 1) 88%
 );
 $dark-markdown-code-background-color: #0e1116;
-$dark-markdown-code-highlight-line-background-color: #06242e;
-$dark-markdown-code-highlight-line-border-color: #679ec5;
+$dark-markdown-code-highlight-line-background-color: linear-gradient(
+  90deg,
+  rgba(6, 36, 46, 1) 74%,
+  rgba(6, 36, 46, 0.9640449929971989) 80%,
+  rgba(6, 36, 46, 0.7931766456582633) 87%,
+  rgba(255, 255, 255, 0) 100%
+);
+$dark-markdown-code-highlight-line-border-color: #4991a3;
 $dark-post-tag-background-color: #585858;
 $dark-post-tag-color: #f8f8f8;
 $dark-post-navigator-background-color: #202020;

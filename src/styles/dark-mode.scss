@@ -101,7 +101,7 @@ body.dark {
   /* markdown */
   #markdown {
     .gatsby-highlight-code-line {
-      background-color: $dark-markdown-code-highlight-line-background-color;
+      background: $dark-markdown-code-highlight-line-background-color;
       border-color: $dark-markdown-code-highlight-line-border-color;
     }
 
