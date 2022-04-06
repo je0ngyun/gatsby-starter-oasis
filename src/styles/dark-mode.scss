@@ -29,8 +29,11 @@ body.dark {
   }
 
   .nav-links {
-    a::after {
-      background-color: $dark-primary-color;
+    a {
+      color: $dark-text-color;
+      &::after {
+        background-color: $dark-primary-color;
+      }
     }
   }
 
