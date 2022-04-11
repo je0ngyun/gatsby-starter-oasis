@@ -4,7 +4,7 @@ $light-text-color-lighten-1: lighten($light-text-color, 20%);
 $light-text-color-lighten-2: lighten($light-text-color, 40%);
 $light-background-color: #ffffff;
 $light-background-color-darken-1: darken($light-background-color, 3%);
-$light-text-shadow: 0 0 0.6px rgba(0, 0, 0, 0.425);
+$light-text-shadow: 0 0 0.1px rgba(0, 0, 0, 0.3);
 $light-primary-color: #2a7474;
 $light-nav-underline-background-color: linear-gradient(
   90deg,
@@ -35,7 +35,7 @@ $dark-text-color-darken-1: darken($dark-text-color, 15%);
 $dark-text-color-darken-2: darken($dark-text-color, 30%);
 $dark-background-color: #282c35;
 $dark-background-color-darken-1: darken($dark-background-color, 2%);
-$dark-text-shadow: 0 0 0.6px rgba(255, 255, 255, 0.425);
+$dark-text-shadow: 0 0 0.1px rgba(255, 255, 255, 0.3);
 $dark-primary-color: #ddc77f;
 $dark-nav-underline-background-color: linear-gradient(
   90deg,
