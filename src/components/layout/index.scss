@@ -4,6 +4,9 @@
 
 * {
   box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo',
+    Pretendard, Roboto, 'Noto Sans KR', 'Segoe UI', 'Malgun Gothic',
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
 }
 
 html {
@@ -40,4 +43,11 @@ input[type='reset'] {
   font: inherit;
   cursor: pointer;
   outline: inherit;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-display: swap;
+  src: url('/fonts/Pretendard.woff') format('woff');
 }
