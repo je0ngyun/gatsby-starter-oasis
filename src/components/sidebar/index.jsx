@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from 'react'
 import PropTypes from 'prop-types'
-import { toTopLevelPathName } from '../../utils/toTopLevelPathName'
+import { extractTopLevelPathName } from '../../utils/extractTopLevelPathName'
 import { useAllPosts } from '../../hooks'
 import { FaCaretRight } from 'react-icons/fa'
 import { IoClose } from 'react-icons/io5'
@@ -46,7 +46,7 @@ const Sidebar = ({ directorys, currentPostId, currentCatName }) => {
   const filterPosts = function (categoryName) {
     return posts.filter((post) => {
       const { slug } = post.childMarkdownRemark.fields
-      return toTopLevelPathName(slug) === categoryName
+      return extractTopLevelPathName(slug) === categoryName
     })
   }
 

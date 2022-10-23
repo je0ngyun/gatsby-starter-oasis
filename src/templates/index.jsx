@@ -1,8 +1,7 @@
 import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
-import * as SmoothScroll from '../utils/smoothScroll'
-import { toTopLevelPathName } from '../utils/toTopLevelPathName'
+import { extractTopLevelPathName } from '../utils/extractTopLevelPathName'
 import { Layout } from '../components/Layout'
 import { Sidebar } from '../components/Sidebar'
 import { Comment } from '../components/Comment'
@@ -12,6 +11,7 @@ import { PostNavigator } from '../components/PostNavigator'
 import { Date } from '../components/Elements'
 import { MarkdownContent } from '../components/MarkdownContent'
 import { PostTags } from '../components/PostTags'
+import * as SmoothScroll from '../utils/smoothScroll'
 
 import './index.scss'
 import 'katex/dist/katex.min.css'
@@ -21,7 +21,7 @@ const PostTemplate = ({ data, pageContext }) => {
   const { title, date, tags } = data.markdown.frontmatter
   const { curSrcInsName } = pageContext
   const directorys = data.directorys.nodes
-  const topLevelPathName = toTopLevelPathName(data.markdown.fields.slug)
+  const topLevelPathName = extractTopLevelPathName(data.markdown.fields.slug)
 
   useEffect(() => {
     SmoothScroll.init()
