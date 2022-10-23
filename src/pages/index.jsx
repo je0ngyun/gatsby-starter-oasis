@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Layout } from '../components/Layout'
 import { graphql } from 'gatsby'
-import { Divider } from '../components/Elements'
 import { MarkdownContent } from '../components/MarkdownContent'
 import { Author } from '../components/Author'
 import { Seo } from '../components/Seo'
@@ -17,9 +16,7 @@ const Index = ({ data: { allMarkdownRemark } }) => {
     <Layout belongs={topLevelPathName}>
       <Seo />
       <Author />
-      <Divider style={{ marginBottom: '50px' }} />
       <MarkdownContent html={html} />
-      <Divider style={{ marginBottom: '50px' }} />
     </Layout>
   )
 }

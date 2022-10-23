@@ -1,6 +1,9 @@
 @import './utils.scss';
 
 #markdown {
+  margin-top: 50px;
+  margin-bottom: 50px;
+
   .gatsby-highlight-code-line {
     box-sizing: content-box;
     display: block;
