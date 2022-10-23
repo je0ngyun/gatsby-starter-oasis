@@ -4,7 +4,7 @@ import classNames from 'classnames'
 import { toTopLevelPathName } from '../../utils/toTopLevelPathName'
 import { rAFthrottle } from '../../utils/rAFthrottle'
 import { Link } from 'gatsby'
-import { Search } from '../search'
+import { Search } from '../Search'
 import { AiOutlineMenu } from 'react-icons/ai'
 
 import './index.scss'

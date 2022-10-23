@@ -76,7 +76,7 @@ exports.createPages = async ({ graphql, actions }) => {
     const { previous, current, next } = data
     actions.createPage({
       path: `/${current.sourceInstanceName}${current.slug}`,
-      component: path.resolve('./src/templates/index.js'),
+      component: path.resolve('./src/templates/index.jsx'),
       context: {
         slug: current.slug,
         curSrcInsName: current.sourceInstanceName,

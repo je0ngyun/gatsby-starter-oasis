@@ -1,3 +1,3 @@
-export * from './divider'
-export * from './date'
-export * from './title'
+export * from './Divider'
+export * from './Date'
+export * from './Title'

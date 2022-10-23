@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'gatsby'
-import { useAllPosts } from '../../hooks/'
+import { useAllPosts } from '../../hooks'
 import { AiOutlineSearch } from 'react-icons/ai'
 import './index.scss'
 

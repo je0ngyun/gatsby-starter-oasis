@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { GatsbyImage } from 'gatsby-plugin-image'
 import { useProfileImg, useMetadata } from '../../hooks'
-import { Title } from '../elements'
+import { Title } from '../Elements'
 import './index.scss'
 
 const PageTitle = ({ title }) => {

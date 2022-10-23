@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
-import { useTopLevelPathName } from '../../hooks/'
+import { useTopLevelPathName } from '../../hooks'
 import { capitalize } from '../../utils/capitalize'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
-import { Date } from '../elements/'
+import { Date } from '../Elements'
 
 import './index.scss'
 
