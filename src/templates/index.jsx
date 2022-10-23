@@ -12,7 +12,6 @@ import { PostNavigator } from '../components/PostNavigator'
 import { Date } from '../components/Elements'
 import { MarkdownContent } from '../components/MarkdownContent'
 import { PostTags } from '../components/PostTags'
-import { Divider } from '../components/Elements'
 
 import './index.scss'
 import 'katex/dist/katex.min.css'
@@ -40,9 +39,7 @@ const PostTemplate = ({ data, pageContext }) => {
       <Title title={title} />
       <PostTags tags={tags} />
       <Date date={date} className="post-date" />
-      <Divider style={{ marginBottom: '50px' }} />
       <MarkdownContent html={html} />
-      <Divider style={{ marginBottom: '50px' }} />
       <PostNavigator pageContext={pageContext} />
       <Comment />
     </Layout>
