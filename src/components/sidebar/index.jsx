@@ -4,9 +4,9 @@ import { toTopLevelPathName } from '../../utils/toTopLevelPathName'
 import { useAllPosts } from '../../hooks'
 import { FaCaretRight } from 'react-icons/fa'
 import { IoClose } from 'react-icons/io5'
-import { SidebarCat } from '../sidebar-cat'
-import { SidebarCatLinks } from '../../components/sidebar-cat-links'
-import { SidebarCatHeader } from '../sidebar-cat-header'
+import { SidebarCat } from '../SidebarCat'
+import { SidebarCatLinks } from '../SidebarCatLinks'
+import { SidebarCatHeader } from '../SidebarCatHeader'
 import './index.scss'
 
 const Sidebar = ({ directorys, currentPostId, currentCatName }) => {

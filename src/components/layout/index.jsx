@@ -1,10 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { useMetadata } from '../../hooks/'
-import { Navbar } from '../navbar'
-import { ThemeSwitch } from '../theme-switch'
+import { Navbar } from '../Navbar'
+import { ThemeSwitch } from '../ThemeSwitch'
 import { Footer } from '../footer'
-import { MainContent } from '../main-content'
+import { MainContent } from '../MainContent'
 import './index.scss'
 
 const Layout = ({ belongs, children }) => {
