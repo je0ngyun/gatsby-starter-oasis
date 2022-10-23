@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
-import { toTopLevelPathName } from '../../utils/toTopLevelPathName'
+import { extractTopLevelPathName } from '../../utils/extractTopLevelPathName'
 import { rAFthrottle } from '../../utils/rAFthrottle'
 import { Link } from 'gatsby'
 import { Search } from '../Search'
@@ -34,7 +34,7 @@ const Navbar = ({ highlightLinkName, title, menu }) => {
   }
 
   const renderMenuLinks = menu.map((m) => {
-    const isHighlight = highlightLinkName === toTopLevelPathName(m.path)
+    const isHighlight = highlightLinkName === extractTopLevelPathName(m.path)
     return (
       <Link
         className={classNames({ 'is-primary': isHighlight })}
