@@ -17,7 +17,7 @@ const getArrowIcon = function (isCatOpen) {
   )
 }
 
-const SidebarCat = ({
+const SidebarCategory = ({
   children,
   categoryName,
   isHighlight,
@@ -41,7 +41,7 @@ const SidebarCat = ({
   )
 }
 
-SidebarCat.propTypes = {
+SidebarCategory.propTypes = {
   children: PropTypes.node.isRequired,
   categoryName: PropTypes.string,
   isHighlight: PropTypes.bool,
@@ -49,4 +49,4 @@ SidebarCat.propTypes = {
   handleCategoryClick: PropTypes.func,
 }
 
-export { SidebarCat }
+export { SidebarCategory }

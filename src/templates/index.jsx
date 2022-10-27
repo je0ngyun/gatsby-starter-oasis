@@ -34,7 +34,7 @@ const PostTemplate = ({ data, pageContext }) => {
       <Sidebar
         directorys={directorys}
         currentPostId={id}
-        currentCatName={topLevelPathName}
+        currentCategoryName={topLevelPathName}
       />
       <Title title={title} />
       <PostTags tags={tags} />

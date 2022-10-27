@@ -33,15 +33,15 @@ const Navbar = ({ highlightLinkName, title, menu }) => {
     setIsOpen((isOpen) => !isOpen)
   }
 
-  const renderMenuLinks = menu.map((m) => {
-    const isHighlight = highlightLinkName === extractTopLevelPathName(m.path)
+  const renderMenuLinks = menu.map(({ path, linkname }) => {
+    const isHighlight = highlightLinkName === extractTopLevelPathName(path)
     return (
       <Link
         className={classNames({ 'is-primary': isHighlight })}
-        to={m.path}
-        key={m.path}
+        to={path}
+        key={path}
       >
-        {m.linkname}
+        {linkname}
       </Link>
     )
   })

@@ -5,9 +5,9 @@ import { Link } from 'gatsby'
 import { capitalize } from '../../utils/capitalize'
 import './index.scss'
 
-const SidebarCatHeader = ({ headerData, currentCatName }) => {
+const SidebarCategoryHeader = ({ headerData, currentCategoryName }) => {
   const { name, id } = headerData
-  const isHighlight = currentCatName === name
+  const isHighlight = currentCategoryName === name
 
   return (
     <div
@@ -21,9 +21,9 @@ const SidebarCatHeader = ({ headerData, currentCatName }) => {
   )
 }
 
-SidebarCatHeader.propTypes = {
+SidebarCategoryHeader.propTypes = {
   headerData: PropTypes.object,
-  currentCatName: PropTypes.string,
+  currentCategoryName: PropTypes.string,
 }
 
-export { SidebarCatHeader }
+export { SidebarCategoryHeader }

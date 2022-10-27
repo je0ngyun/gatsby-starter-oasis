@@ -4,7 +4,7 @@ import classNames from 'classnames'
 import { Link } from 'gatsby'
 import './index.scss'
 
-const SidebarCatLinks = ({ posts, currentPostId }) => {
+const SidebarCategoryLinks = ({ posts, currentPostId }) => {
   const renderLinks = posts.map((post) => {
     const { sourceInstanceName } = post
     const { id } = post.childMarkdownRemark
@@ -26,9 +26,9 @@ const SidebarCatLinks = ({ posts, currentPostId }) => {
   return <div className="side-bar-cat-links">{renderLinks}</div>
 }
 
-SidebarCatLinks.propTypes = {
+SidebarCategoryLinks.propTypes = {
   posts: PropTypes.arrayOf(PropTypes.object),
   currentPostId: PropTypes.string,
 }
 
-export { SidebarCatLinks }
+export { SidebarCategoryLinks }
