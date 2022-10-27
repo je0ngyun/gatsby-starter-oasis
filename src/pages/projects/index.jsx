@@ -21,7 +21,7 @@ const Index = ({ data }) => {
   return (
     <Layout belongs={topLevelPathName}>
       <Seo title={pageName} />
-      <Sidebar directorys={directorys} currentCatName={topLevelPathName} />
+      <Sidebar directorys={directorys} currentCategoryName={topLevelPathName} />
       <PageTitle title={pageName} />
       <PageDescription description={description} />
       <ProjectList projects={projects} />

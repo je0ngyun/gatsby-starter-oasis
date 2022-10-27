@@ -4,24 +4,24 @@ import { extractTopLevelPathName } from '../../utils/extractTopLevelPathName'
 import { useAllPosts } from '../../hooks'
 import { FaCaretRight } from 'react-icons/fa'
 import { IoClose } from 'react-icons/io5'
-import { SidebarCat } from '../SidebarCat'
-import { SidebarCatLinks } from '../SidebarCatLinks'
-import { SidebarCatHeader } from '../SidebarCatHeader'
+import { SidebarCategory } from '../SidebarCategory'
+import { SidebarCategoryLinks } from '../SidebarCategoryLinks'
+import { SidebarCategoryHeader } from '../SidebarCategoryHeader'
 import './index.scss'
 
-const Sidebar = ({ directorys, currentPostId, currentCatName }) => {
+const Sidebar = ({ directorys, currentPostId, currentCategoryName }) => {
   const [categoryStatus, setCategoryStatus] = useState(initCategoryStatus)
   const [isOpen, setIsOpen] = useState(false)
   const posts = useAllPosts()
-  const catHeaderData = directorys[0]
+  const categoryHeaderData = directorys[0]
 
   function initCategoryStatus() {
     const status = {}
-    directorys.forEach((dir) => {
-      if (currentCatName === dir.name) {
-        status[dir.name] = true
+    directorys.forEach((directory) => {
+      if (currentCategoryName === directory.name) {
+        status[directory.name] = true
       } else {
-        status[dir.name] = false
+        status[directory.name] = false
       }
     })
     return status
@@ -43,7 +43,7 @@ const Sidebar = ({ directorys, currentPostId, currentCatName }) => {
     return false
   }
 
-  const filterPosts = function (categoryName) {
+  const extractPostsbyCategory = function (categoryName) {
     return posts.filter((post) => {
       const { slug } = post.childMarkdownRemark.fields
       return extractTopLevelPathName(slug) === categoryName
@@ -51,18 +51,21 @@ const Sidebar = ({ directorys, currentPostId, currentCatName }) => {
   }
 
   const renderCategorys = directorys.slice(1).map((directory) => {
-    const { name: dirName } = directory
-    const filteredPosts = filterPosts(dirName)
+    const { name: directoryName } = directory
+    const filteredPosts = extractPostsbyCategory(directoryName)
     return (
-      <SidebarCat
-        categoryName={dirName}
-        isHighlight={currentCatName === dirName}
-        isOpen={getCategoryStatus(dirName)}
+      <SidebarCategory
+        categoryName={directoryName}
+        isHighlight={currentCategoryName === directoryName}
+        isOpen={getCategoryStatus(directoryName)}
         handleCategoryClick={handleCategoryClick}
-        key={dirName}
+        key={directoryName}
       >
-        <SidebarCatLinks posts={filteredPosts} currentPostId={currentPostId} />
-      </SidebarCat>
+        <SidebarCategoryLinks
+          posts={filteredPosts}
+          currentPostId={currentPostId}
+        />
+      </SidebarCategory>
     )
   })
 
@@ -91,9 +94,9 @@ const Sidebar = ({ directorys, currentPostId, currentCatName }) => {
               <IoClose size={24} />
             </button>
           </div>
-          <SidebarCatHeader
-            headerData={catHeaderData}
-            currentCatName={currentCatName}
+          <SidebarCategoryHeader
+            headerData={categoryHeaderData}
+            currentCategoryName={currentCategoryName}
           />
           {renderCategorys}
         </div>
@@ -104,7 +107,7 @@ const Sidebar = ({ directorys, currentPostId, currentCatName }) => {
 
 Sidebar.propTypes = {
   directorys: PropTypes.arrayOf(PropTypes.object),
-  currentCatName: PropTypes.string,
+  currentCategoryName: PropTypes.string,
   currentPostId: PropTypes.string,
 }
 

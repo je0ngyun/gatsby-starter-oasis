@@ -36,26 +36,23 @@ const Search = () => {
 
   const renderSearchResults = function () {
     const posts = filteredData
-    return (
-      posts &&
-      posts.map((post) => {
-        const {
-          sourceInstanceName,
-          childMarkdownRemark: { id },
-        } = post
-        const { slug } = post.childMarkdownRemark.fields
-        const { title } = post.childMarkdownRemark.frontmatter
-        return (
-          <Link
-            key={id}
-            to={`/${sourceInstanceName}${slug}`}
-            className="search-result-item"
-          >
-            <div className="search-result-title">{title}</div>
-          </Link>
-        )
-      })
-    )
+    return posts?.map((post) => {
+      const {
+        sourceInstanceName,
+        childMarkdownRemark: { id },
+      } = post
+      const { slug } = post.childMarkdownRemark.fields
+      const { title } = post.childMarkdownRemark.frontmatter
+      return (
+        <Link
+          key={id}
+          to={`/${sourceInstanceName}${slug}`}
+          className="search-result-item"
+        >
+          <div className="search-result-title">{title}</div>
+        </Link>
+      )
+    })
   }
 
   return (
@@ -74,7 +71,7 @@ const Search = () => {
         <div
           role="button"
           tabIndex={0}
-          onMouseDown={(e) => handleResultMouseDown(e)}
+          onMouseDown={handleResultMouseDown}
           className="search-result-container"
         >
           {renderSearchResults()}
