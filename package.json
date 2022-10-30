@@ -24,6 +24,7 @@
   ],
   "license": "0BSD",
   "dependencies": {
+    "@toss/hangul": "^1.0.3",
     "classnames": "^2.3.1",
     "gatsby": "^4.5.2",
     "gatsby-plugin-feed": "^4.7.0",
