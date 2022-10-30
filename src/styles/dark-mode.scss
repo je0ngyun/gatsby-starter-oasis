@@ -191,6 +191,19 @@ body.dark {
   /* project-link end */
 
   /* search */
+  //
+  .search-bar-container {
+    input {
+      &::placeholder {
+        color: $dark-text-color;
+      }
+      color: $dark-text-color;
+    }
+    i {
+      color: $dark-text-color-darken-2;
+    }
+  }
+  //
   .search-box {
     svg * {
       color: $dark-text-color;

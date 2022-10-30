@@ -55,7 +55,7 @@ const PostItems = ({ posts }) => {
     setRenderList((list) => {
       return [...list, ...slicedItem(baseOfSlice)]
     })
-  }, [posts, targetIndex])
+  }, [targetIndex])
 
   const onIntersect = async ([entry], observer) => {
     if (entry.isIntersecting) {
