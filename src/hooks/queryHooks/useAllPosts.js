@@ -4,7 +4,10 @@ const useAllPosts = () => {
   return useStaticQuery(graphql`
     query AllPosts {
       allFile(
-        filter: { absolutePath: { regex: "/.md$/" } }
+        filter: {
+          absolutePath: { regex: "/.md$/" }
+          sourceInstanceName: { nin: "index" }
+        }
         sort: {
           fields: childrenMarkdownRemark___frontmatter___date
           order: DESC
@@ -13,7 +16,9 @@ const useAllPosts = () => {
         nodes {
           sourceInstanceName
           childMarkdownRemark {
+            excerpt(truncate: true)
             frontmatter {
+              date(formatString: "MMMM DD , YYYY")
               title
               tags
               tech

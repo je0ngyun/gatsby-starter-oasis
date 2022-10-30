@@ -191,6 +191,19 @@ body.light {
   /* project-link end */
 
   /* search */
+  //
+  .search-bar-container {
+    input {
+      &::placeholder {
+        color: $light-text-color;
+      }
+      color: $light-text-color;
+    }
+    i {
+      color: $light-text-color-lighten-2;
+    }
+  }
+  //
   .search-box {
     svg * {
       color: $light-text-color;

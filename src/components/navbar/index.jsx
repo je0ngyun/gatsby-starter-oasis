@@ -4,8 +4,8 @@ import classNames from 'classnames'
 import { extractTopLevelPathName } from '../../utils/extractTopLevelPathName'
 import { rAFthrottle } from '../../utils/rAFthrottle'
 import { Link } from 'gatsby'
-import { Search } from '../Search'
 import { AiOutlineMenu } from 'react-icons/ai'
+import { AiOutlineSearch } from 'react-icons/ai'
 
 import './index.scss'
 
@@ -53,13 +53,20 @@ const Navbar = ({ highlightLinkName, title, menu }) => {
           <div className="nav-title">
             <Link to="/">{title}</Link>
           </div>
-          <div className="nav-search">
-            <Search />
+          <div className="nav-search--mobile">
+            <Link to="/search">
+              <AiOutlineSearch size={25} />
+            </Link>
           </div>
           <div className="nav-links">{renderMenuLinks}</div>
           <button onClick={handleCollapseClick} aria-label="collapse">
             <AiOutlineMenu size={24} />
           </button>
+          <div className="nav-search">
+            <Link to="/search">
+              <AiOutlineSearch size={25} />
+            </Link>
+          </div>
         </div>
         <div className={classNames('nav-links--mobile', { 'is-open': isOpen })}>
           {renderMenuLinks}

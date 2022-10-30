@@ -36,9 +36,22 @@
   }
 }
 
+.nav-search,
+.nav-search--mobile {
+  a {
+    color: inherit;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+}
+
 .nav-search {
-  display: flex;
-  align-items: center;
+  margin-left: 15px;
+}
+
+.nav-search--mobile {
+  margin-right: 10px;
 }
 
 .nav-links {
@@ -113,6 +126,10 @@
   transition: width 0.6s ease-out;
 }
 
+.nav-search--mobile {
+  display: none;
+}
+
 @include mobile {
   .nav-links {
     display: none;
@@ -122,9 +139,9 @@
       display: inline;
     }
   }
-}
-
-@include tablets {
+  .nav-search--mobile {
+    display: block;
+  }
   .nav-search {
     display: none;
   }
