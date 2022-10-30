@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { useMetadata } from '../../hooks/'
 import { Navbar } from '../Navbar'
 import { ThemeSwitch } from '../ThemeSwitch'
-import { Footer } from '../footer'
+import { Footer } from '../Footer'
 import { MainContent } from '../MainContent'
 import './index.scss'
 
