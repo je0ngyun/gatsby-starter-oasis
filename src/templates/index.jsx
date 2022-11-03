@@ -10,6 +10,7 @@ import { Title } from '../components/Elements'
 import { PostNavigator } from '../components/PostNavigator'
 import { Date } from '../components/Elements'
 import { MarkdownContent } from '../components/MarkdownContent'
+import { TableOfContent } from '../components/TableOfContent'
 import { PostTags } from '../components/PostTags'
 import * as SmoothScroll from '../utils/smoothScroll'
 
@@ -17,7 +18,7 @@ import './index.scss'
 import 'katex/dist/katex.min.css'
 
 const PostTemplate = ({ data, pageContext }) => {
-  const { html, id } = data.markdown
+  const { html, id, tableOfContents } = data.markdown
   const { title, date, tags } = data.markdown.frontmatter
   const { curSrcInsName } = pageContext
   const directorys = data.directorys.nodes
@@ -36,6 +37,7 @@ const PostTemplate = ({ data, pageContext }) => {
         currentPostId={id}
         currentCategoryName={topLevelPathName}
       />
+      <TableOfContent toc={tableOfContents} />
       <Title title={title} />
       <PostTags tags={tags} />
       <Date date={date} className="post-date" />
@@ -71,6 +73,7 @@ export const query = graphql`
       html
       id
       excerpt(pruneLength: 100)
+      tableOfContents
       fields {
         slug
       }

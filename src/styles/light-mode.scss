@@ -191,7 +191,6 @@ body.light {
   /* project-link end */
 
   /* search */
-  //
   .search-bar-container {
     input {
       &::placeholder {
@@ -203,7 +202,6 @@ body.light {
       color: $light-text-color-lighten-2;
     }
   }
-  //
   .search-box {
     svg * {
       color: $light-text-color;
@@ -240,4 +238,16 @@ body.light {
     color: $light-text-color-lighten-1;
   }
   /* page end */
+
+  /*table of content*/
+  .toc-containter {
+    .toc-highlight-bar {
+      background: $light-toc-left-background-color;
+    }
+    .toc-highlight {
+      color: $light-primary-color;
+      text-shadow: 2px 3px 5px rgba(255, 255, 255, 0.783);
+    }
+  }
+  /*table of content end*/
 }

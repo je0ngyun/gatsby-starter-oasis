@@ -12,6 +12,11 @@ $light-nav-underline-background-color: linear-gradient(
   rgba(42, 116, 116, 1) 51%,
   rgba(51, 126, 199, 1) 88%
 );
+$light-toc-left-background-color: linear-gradient(
+  rgba(113, 107, 172, 1) 0%,
+  rgba(42, 116, 116, 1) 51%,
+  rgba(51, 126, 199, 1) 88%
+);
 $light-markdown-code-background-color: #0e1116;
 $light-markdown-code-highlight-line-background-color: linear-gradient(
   90deg,
@@ -39,6 +44,11 @@ $dark-text-shadow: 0 0 0.1px rgba(255, 255, 255, 0.3);
 $dark-primary-color: #ddc77f;
 $dark-nav-underline-background-color: linear-gradient(
   90deg,
+  rgba(174, 221, 123, 1) 0%,
+  rgba(213, 195, 139, 1) 45%,
+  rgba(238, 205, 51, 1) 88%
+);
+$dark-toc-left-background-color: linear-gradient(
   rgba(174, 221, 123, 1) 0%,
   rgba(213, 195, 139, 1) 45%,
   rgba(238, 205, 51, 1) 88%

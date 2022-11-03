@@ -1,0 +1,48 @@
+@import '../../styles/utils.scss';
+
+.toc-containter {
+  position: fixed;
+  left: 80%;
+  top: 180px;
+  min-height: 200px;
+  width: 300px;
+  display: flex;
+  gap: 10px;
+  .toc-highlight-bar {
+    width: 3px;
+    flex-shrink: 0;
+    border-radius: 20px;
+  }
+  h3 {
+    margin: 0;
+    margin-left: 3px;
+    margin-bottom: 15px;
+    font-family: Catamaran, Pretendard;
+  }
+  a {
+    color: inherit;
+  }
+  ul {
+    margin-left: 2px;
+  }
+  ul * {
+    transition: transform 0.2s;
+    transform-origin: left;
+    display: block;
+    list-style: none;
+  }
+  ul > li {
+    margin-left: 5px;
+  }
+  .toc-highlight {
+    font-weight: 500;
+    transform: scale(1.08);
+    text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.1);
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .toc-containter {
+    display: none;
+  }
+}

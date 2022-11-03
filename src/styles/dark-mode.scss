@@ -191,7 +191,6 @@ body.dark {
   /* project-link end */
 
   /* search */
-  //
   .search-bar-container {
     input {
       &::placeholder {
@@ -203,7 +202,7 @@ body.dark {
       color: $dark-text-color-darken-2;
     }
   }
-  //
+
   .search-box {
     svg * {
       color: $dark-text-color;
@@ -240,4 +239,16 @@ body.dark {
     color: $dark-text-color-darken-1;
   }
   /* page end */
+
+  /*table of content*/
+  .toc-containter {
+    .toc-highlight-bar {
+      background: $dark-toc-left-background-color;
+    }
+    .toc-highlight {
+      color: $dark-primary-color;
+      text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.1);
+    }
+  }
+  /*table of content end*/
 }
