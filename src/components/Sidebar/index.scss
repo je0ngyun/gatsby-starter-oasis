@@ -3,7 +3,7 @@
 .side-bar {
   position: fixed;
   height: 100%;
-  width: 275px;
+  width: 280px;
   z-index: 999;
   top: 58px;
   left: 0;
@@ -15,6 +15,7 @@
     margin-bottom: 7px;
     border-left: 5px solid #00000000;
   }
+  transition: all 0.4s, color 0.4s;
   @include animation('slideRight', 0.3s);
 }
 

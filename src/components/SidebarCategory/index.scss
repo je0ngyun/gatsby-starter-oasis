@@ -13,5 +13,19 @@
       align-items: center;
       justify-content: center;
     }
+    div {
+      display: flex;
+      gap: 1px;
+      position: relative;
+      margin-left: 3px;
+      font-size: 0.8rem;
+      font-weight: 400;
+      top: 1px;
+    }
   }
+}
+
+.num-of-post {
+  position: relative;
+  top: 1px;
 }

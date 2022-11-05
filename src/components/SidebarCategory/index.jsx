@@ -23,6 +23,7 @@ const SidebarCategory = ({
   isHighlight,
   isOpen,
   handleCategoryClick,
+  numOfPost,
 }) => {
   return (
     <div
@@ -34,6 +35,11 @@ const SidebarCategory = ({
         }}
       >
         {capitalize(categoryName)}
+        <div>
+          <span>{'('}</span>
+          <span className="num-of-post">{numOfPost}</span>
+          <span>{')'}</span>
+        </div>
         {getArrowIcon(isOpen)}
       </button>
       {isOpen && children}
@@ -47,6 +53,7 @@ SidebarCategory.propTypes = {
   isHighlight: PropTypes.bool,
   isOpen: PropTypes.bool,
   handleCategoryClick: PropTypes.func,
+  numOfPost: PropTypes.number,
 }
 
 export { SidebarCategory }
