@@ -20,7 +20,7 @@ const ProjectList = ({ projects }) => {
           <div className="project-link-title">{title}</div>
           <Date date={period} className="project-link-period" />
           <div className="project-link-tech">
-            {tech.split(',').map((tech, index) => {
+            {tech?.split(',').map((tech, index) => {
               return <div key={index}>{tech}</div>
             })}
           </div>
@@ -29,7 +29,7 @@ const ProjectList = ({ projects }) => {
           <div className="project-link-tags">{tags}</div>
           <div className="project-link-desc">
             <ul>
-              {desc.split(';').map((desc, index) => {
+              {desc?.split(';').map((desc, index) => {
                 return <li key={index}>{desc}</li>
               })}
             </ul>
