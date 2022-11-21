@@ -80,7 +80,7 @@
     "start": "gatsby clean && gatsby develop",
     "serve": "gatsby clean && gatsby serve",
     "clean": "gatsby clean",
-    "page": "gatsby clean && node ./page-ganerator.js",
+    "page": "gatsby clean && node ./page-ganerator/page-ganerator.js",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js' 'posts/**/*.md' 'page-gen-template/*.js'",
     "lint": "./node_modules/.bin/eslint ./src"
   }
