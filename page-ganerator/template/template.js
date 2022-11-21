@@ -3,14 +3,12 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import { Layout } from '../../components/Layout'
 import { Seo } from '../../components/Seo'
-import { Sidebar } from '../../components/sidebar'
+import { Sidebar } from '../../components/Sidebar'
 import { PostItems } from '../../components/PostItems'
 import { PageDescription } from '../../components/PageDescription'
 import { PageTitle } from '../../components/PageTitle'
 import { capitalize } from '../../utils/capitalize'
 import { useTopLevelPathName } from '../../hooks'
-
-import './index.scss'
 
 const Index = ({ data }) => {
   const topLevelPathName = useTopLevelPathName()
