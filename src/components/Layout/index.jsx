@@ -5,7 +5,6 @@ import { Navbar } from '../Navbar'
 import { ThemeSwitch } from '../ThemeSwitch'
 import { Footer } from '../Footer'
 import { MainContent } from '../MainContent'
-import './index.scss'
 
 const Layout = ({ belongs, children }) => {
   const { title, description, copyright, menu } = useMetadata()
