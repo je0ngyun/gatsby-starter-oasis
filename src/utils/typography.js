@@ -5,6 +5,12 @@ const baseFontSize = '18px'
 
 GitHubTheme.overrideThemeStyles = () => {
   return {
+    body: {
+      'font-family': `Pretendard, -apple-system, BlinkMacSystemFont,
+      'Apple SD Gothic Neo', Roboto, 'Noto Sans KR', 'Segoe UI', 'Malgun Gothic',
+      'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif`,
+    },
+
     a: {
       boxShadow: `none`,
       textDecoration: `none`,
